@@ -5,7 +5,7 @@ const Navbar = props => {
         <div className="site-header frosted-glass">
             <div style={{minHeight: '62px'}} className="container">
                 <Link href="/">
-                    <h4 className="mb-0">Brian Cilenti</h4>
+                    <h4 className="mb-0">End Rock</h4>
                 </Link>
 
                 <ul className="list-inline">

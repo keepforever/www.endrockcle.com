@@ -1,0 +1,202 @@
+.cta-wrapper {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    max-height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(-120);
+
+    .content {
+        color: $white;
+        position: relative;
+        z-index: 1;
+        padding: 0 1rem;
+        text-align: center;
+
+        ul {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    @media #{$small} {
+        .content {
+            padding: 0;
+        }
+    }
+}
+.background-wrapper {
+    clip-path: inset(0);
+    clip: rect(0,auto,auto,0);
+    max-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-self: flex-start;
+    justify-self: flex-start;
+    overflow: hidden;
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    background-image: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(255,255,255,0) 100%);
+}
+.bg-video {
+    object-fit: cover;
+    height: 100vh;
+    max-height: 1080px;
+    min-width: 100vw;
+    top: 0;
+}
+
+.page-home > .container {
+    background-color: $white;
+    position: relative;
+    z-index: 2;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #282732 url('../../images/crow-hero.png');
+        height: rem(130);
+        color: $white;
+        text-align: center;
+        border-bottom: solid 1px $white;
+
+        a {
+            color: $white;
+            margin: 0 auto;
+        }
+
+        svg {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        &:last-child {
+            border-right: none;
+            border-bottom: none;
+        }
+
+        @media #{$retina} {
+            background-image: url('../../images/crow-hero.png');
+            background-size: rem(102) rem(108);
+            background-position: center rem(-25);
+        }
+    }
+    @media #{$medium} {
+        flex-direction: row;
+
+        .feature {
+            width: calc(100vw / 3);
+            border-right: solid 1px $white;
+            border-bottom: none;
+        }
+    }
+}
+
+.about, .culture {
+    padding: rem(60) 0;
+
+    .container, .row {
+        height: 100%;
+        flex: 1;
+    }
+
+    @media #{$medium} {
+        min-height: rem(380);
+    }
+}
+
+.about {
+    $small-gradient: linear-gradient(to top, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.75) 100%);
+    $medium-gradient: linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%);
+
+    background-position: right center;
+    background-repeat: no-repeat;
+    @media #{$small} {
+        background-image:$small-gradient, url('../../images/crow-hero.png');
+    }
+    @media #{$small2x} {
+        background-image:$small-gradient, url('../../images/crow-hero.png');
+        background-size: rem(868) rem(385);
+    }
+    @media #{$medium} {
+        background-image: $medium-gradient, url('../../images/crow-hero.png');
+    }
+    @media #{$medium2x} {
+        background-image: $medium-gradient, url('../../images/crow-hero.png');
+        background-size: rem(868) rem(385);
+    }
+
+    @media #{$large} {
+        background-image:$medium-gradient, url('../../images/crow-hero.png');
+    }
+    @media #{$large2x} {
+        background-image:$medium-gradient, url('../../images/crow-hero.png');
+        background-size: rem(868) rem(385);
+    }
+
+    @media #{$xlarge} {
+        background-image:url('../../images/crow-hero.png');
+    }
+    @media #{$xlarge2x} {
+        background-image:url('../../images/crow-hero.png');
+        background-size: rem(868) rem(385);
+    }
+
+}
+
+.culture {
+    background-image: url('../../images/crow-hero.png');
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: rem(514);
+
+    h2, p, a {
+        color: $white;
+    }
+
+    @media #{$retina} {
+        background-image: url('../../images/crow-hero.png');
+    }
+}
+
+.brands {
+    .brand-item p {
+        width: 90%;
+    }
+}
+@keyframes bounce {
+    0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+}
+.more {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: rem(20);
+        text-align: center;
+        svg {
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-name: bounce;
+        }
+    }
