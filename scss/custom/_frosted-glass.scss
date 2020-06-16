@@ -1,0 +1,19 @@
+$active-glass-color: $blue;
+
+.frosted-glass {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 6px 7px $black;
+    color: $white;
+
+    transition: all ease-in-out 400ms;
+
+    &.glass-link {
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: 0px 3px 4px $active-glass-color;
+            color: $active-glass-color;
+            background: rgba(0, 0, 0, 0.50);
+        }
+    }
+}

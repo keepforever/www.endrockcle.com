@@ -1,0 +1,68 @@
+.site-header {
+    background: $white;
+    // padding: 1rem;
+    padding: 0.25rem;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 1rem;
+
+    .fixed & {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        padding-right: 1rem;
+    }
+
+    .hasScrollbars.fixed & {
+        padding-right: calc(1rem + 15px);
+    }
+
+    .branding a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $font-color;
+
+        svg {
+            margin-right: .5rem;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            text-decoration: underline;
+            text-decoration-color: $blue;
+            border-bottom: none;
+        }
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 6;
+    }
+
+    .container,
+    .container-sm,
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    &.dark-header {
+        background: #2B2B35;
+        color: $white;
+
+        h1 a {
+            color: $white;
+        }
+    }
+}
