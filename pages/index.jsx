@@ -1,56 +1,143 @@
 import Link from 'next/link';
+import { FaBeer } from 'react-icons/fa';
 
-const Home = props => {
+const Home = (props) => {
     return (
-        <div style={{ flex: 1 }}>
-            <div style={{ maxWidth: '500px' }} className="container frosted-glass mb-6">
-                <div className="row">
-                    <div className="col-xs-12 center-xs">
-                        <h1 style={{ fontSize: '64px' }} className="wssb">
-                            Brian
-                        </h1>
-                    </div>
-                    <div className="col-xs-12 center-xs">
-                        <h3 className="wst">is a web developer.</h3>
-                    </div>
-                    <div className="col-xs-12 center-xs">
-                        <h1 style={{ fontSize: '48px' }} className="wssb">
-                            good at
-                        </h1>
-                    </div>
-                    <div className="col-xs-12 center-xs">
-                        <h3 className="wst">JavaScript and React</h3>
+        <div className="page-home">
+            <div className="cta-wrapper">
+                <div className="content">
+                    <h1>Cleveland's Premier 90's-ish Rock Cover Band</h1>
+                    <ul className="list-flex-inline">
+                        <li>
+                            <Link href="/experience">
+                                <a>Retailers</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/experience">
+                                <a>Retailers</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/experience">
+                                <a>Retailers</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/experience">
+                                <a>Retailers</a>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="background-wrapper">
+                    <video
+                        autoPlay={true}
+                        className="bg-video"
+                        id="myVideo"
+                        src="/header-video.mp4"
+                        poster="/crow-hero.png"
+                        muted
+                        loop
+                    />
+                    <div className="video-overlay"></div>
+                </div>
+                <div className="more">
+                    <button className="btn btn-link">
+                        <FaBeer onClick={() => {}} />
+                        Arrow Down
+                    </button>
+                </div>
+            </div>
+            <div className="features">
+                <div className="feature">foo</div>
+                <div className="feature">
+                    <Link href="/">
+                        <a>Retailers</a>
+                    </Link>
+                </div>
+                <div className="feature">
+                    <Link href="/">
+                        <a>Retailers</a>
+                    </Link>
+                </div>
+            </div>
+            <div id="about" className="about">
+                <div className="container">
+                    <div className="row middle-sm">
+                        <div className="col-xs-12 col-md-8 col-lg-4">
+                            <h2>About Findaway</h2>
+                            <p>
+                                We are an audio technology company &mdash; innovating every day to bring more audiobooks
+                                to more listeners around the globe.
+                            </p>
+                            <Link href="/">
+                                <a>Retailers</a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div style={{ maxWidth: '500px' }} className="container">
-                <Link href="/experience">
-                    <div className="row frosted-glass mb-4 center-xs middle-xs glass-link py-3 pointer">
-                        <div className="col-xs-12">
-                            <h3 className="wssb">Experience</h3>
-                            <p className="mb-0">Paid professional experience history and accomplishments</p>
+            <div className="culture">
+                <div className="container">
+                    <div className="row middle-sm">
+                        <div className="col-xs-12 col-md-5 col-md-offset-7">
+                            <h2>The Findawayers that make it happen.</h2>
+                            <p>
+                                Hungry. Passionate. Creative. Ready to change the world. Findawayers have an
+                                unmistakable DNA that feeds our culture and our work.
+                            </p>
+                            <Link href="/">
+                                <a>Retailers</a>
+                            </Link>
                         </div>
                     </div>
-                </Link>
+                </div>
+            </div>
 
-                <Link href="/consulting">
-                    <div className="row frosted-glass mb-4 center-xs middle-xs glass-link py-3 pointer">
-                        <div className="col-xs-12">
-                            <h3 className="wssb">Consulting</h3>
-                            <p className="mb-0">Learn more about how I can help you</p>
+            <div className="brands py-5">
+                <div className="container">
+                    <h3 className="mb-4">Findaway is a multi-product, multi-brand company.</h3>
+                    <div className="row">
+                        <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
+                            <Link href="/">
+                                <a>Retailers</a>
+                            </Link>
+                            <p>
+                                Proprietary technology that enables retailers and libraries to deliver digital
+                                audiobooks to million of listeners around the globe.
+                            </p>
+                        </div>
+                        <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
+                            <Link href="/">
+                                <a>Retailers</a>
+                            </Link>
+                            <p>
+                                The world’s largest audiobook distributor, creating opportunities for publishing
+                                partners to succeed in a rapidly changing audiobook market.
+                            </p>
+                        </div>
+                        <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
+                            <Link href="/">
+                                <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
+                            </Link>
+                            <p>
+                                Access to the world's largest network of audiobook sellers and everything authors need
+                                to create professional audiobooks.
+                            </p>
+                        </div>
+                        <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
+                            <Link href="/">
+                                <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
+                            </Link>
+                            <p>
+                                Audiobooks, learning apps, videos, and read-alongs built for circulation in libraries,
+                                schools, and military installments.
+                            </p>
                         </div>
                     </div>
-                </Link>
-
-                <Link href="/about">
-                    <div className="row frosted-glass mb-4 center-xs middle-xs glass-link py-3 pointer">
-                        <div className="col-xs-12">
-                            <h3 className="wssb">About</h3>
-                            <p className="mb-0">The man behind the legend</p>
-                        </div>
-                    </div>
-                </Link>
+                </div>
             </div>
         </div>
     );

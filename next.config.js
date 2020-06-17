@@ -7,3 +7,6 @@ module.exports = withImages();
 
 const withFonts = require('nextjs-fonts');
 module.exports = withFonts();
+
+const withVideos = require('next-videos')
+module.exports = withVideos()
