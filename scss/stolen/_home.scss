@@ -112,8 +112,6 @@
 
         @media #{$retina} {
             background-image: url('/person-playing-guitar-dark.jpg');
-            background-size: rem(102) rem(108);
-            background-position: center rem(-25);
         }
     }
     @media #{$medium} {

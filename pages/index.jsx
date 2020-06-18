@@ -37,11 +37,7 @@ const Home = (props) => {
                         </li>
                         <li>
                             <Link href="/experience">
-                                <a
-                                    href="https://www.facebook.com/EndRockCle"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <a href="https://www.facebook.com/EndRockCle" target="_blank" rel="noopener noreferrer">
                                     <FaFacebook size={32} style={{ color: 'red' }} />
                                 </a>
                             </Link>
@@ -60,6 +56,8 @@ const Home = (props) => {
                         id="myVideo"
                         src="/concert-placeholder-video.mp4"
                         poster="/crow-hero.png"
+                        playsInline={true}
+                        disablePictureInPicture={true}
                         muted
                         loop
                     />
