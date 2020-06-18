@@ -61,25 +61,25 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                         <animated.div key={key} className="navigation" style={props}>
                             <nav className="container">
                                 <Link className="nav-item" href="/about" activeClassName="txt-bold">
-                                    <span>About Findaway</span>
+                                    <a>About Findaway</a>
                                 </Link>
                                 <div className="nav-group">
-                                    <span className="nav-group-header">Our Partners</span>
+                                    <a className="nav-group-header">Our Partners</a>
                                     <Link className="nav-item" href="/retailers" activeClassName="txt-bold">
-                                        <span>Retailers</span>
+                                        <a>Retailers</a>
                                     </Link>
                                     <Link className="nav-item" href="/publishers" activeClassName="txt-bold">
-                                        <span>Publishers</span>
+                                        <a>Publishers</a>
                                     </Link>
                                     <Link className="nav-item" href="/authors" activeClassName="txt-bold">
-                                        <span>Authors</span>
+                                        <a>Authors</a>
                                     </Link>
                                     <Link className="nav-item" href="/institutions" activeClassName="txt-bold">
-                                        <span>Institutions</span>
+                                        <a>Institutions</a>
                                     </Link>
                                 </div>
                                 <Link className="nav-item" href="/whats-happening" activeClassName="txt-bold">
-                                    <span>News Center</span>
+                                    <a>News Center</a>
                                 </Link>
                                 <Link
                                     className="nav-item"
@@ -88,7 +88,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                     partiallyActive={true}
                                     activeClassName="txt-bold"
                                 >
-                                    <span>Being a Findawayer</span>
+                                    <a>Being a Findawayer</a>
                                 </Link>
                                 <Link
                                     className="nav-item"
@@ -97,10 +97,10 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                     onClick={() => closeMenu()}
                                     activeClassName="txt-bold"
                                 >
-                                    <span>Become a Findawayer</span>
+                                    <a>Become a Findawayer</a>
                                 </Link>
                                 <Link className="nav-item" href="/contact" activeClassName="txt-bold">
-                                    <span>Contact Us</span>
+                                    <a>Contact Us</a>
                                 </Link>
                             </nav>
                         </animated.div>

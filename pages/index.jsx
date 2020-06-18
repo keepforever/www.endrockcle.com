@@ -1,12 +1,26 @@
 import Link from 'next/link';
 import { FaBeer } from 'react-icons/fa';
+import { scrollIntoView } from 'scroll-js';
+
+const scrollToElement = (id) => {
+    var myElement = document.getElementById(id);
+    scrollIntoView(myElement, document.body, { behavior: 'smooth' });
+};
 
 const Home = (props) => {
     return (
         <div className="page-home">
             <div className="cta-wrapper">
                 <div className="content">
-                    <h1>Cleveland's Premier 90's-ish Rock Cover Band</h1>
+                    <img
+                        style={{
+                            height: '99px',
+                            width: '492px',
+                        }}
+                        src="/EndRock_logo_color_nobg.png"
+                        alt="band logo"
+                    />
+                    <h1>Cleveland's Alternative Rock Cover Band</h1>
                     <ul className="list-flex-inline">
                         <li>
                             <Link href="/experience">
@@ -43,9 +57,8 @@ const Home = (props) => {
                     <div className="video-overlay"></div>
                 </div>
                 <div className="more">
-                    <button className="btn btn-link">
-                        <FaBeer onClick={() => {}} />
-                        Arrow Down
+                    <button className="btn btn-link" onClick={() => scrollToElement('about')}>
+                        <FaBeer size="2rem" onClick={() => {}} />
                     </button>
                 </div>
             </div>
