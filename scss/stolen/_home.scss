@@ -137,40 +137,33 @@
 }
 
 .about {
-    $small-gradient: linear-gradient(to top, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);
-    $medium-gradient: linear-gradient(to top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    $about-gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+
+    color: white;
 
     background-position: right center;
     background-repeat: no-repeat;
+    background-image: $about-gradient, url('/audience-band-concert-crowd.jpg');
+
+    background-size: cover;
+
     @media #{$small} {
-        background-image: $small-gradient, url('/crow-hero.png');
+        background-image: $about-gradient, url('/audience-band-concert-crowd.jpg');
+        // outline: 5px solid yellow;
     }
-    @media #{$small2x} {
-        background-image: $small-gradient, url('/crow-hero.png');
-        background-size: rem(868) rem(385);
-    }
+
     @media #{$medium} {
-        background-image: $medium-gradient, url('/crow-hero.png');
-    }
-    @media #{$medium2x} {
-        background-image: $medium-gradient, url('/crow-hero.png');
-        background-size: rem(868) rem(385);
+        background-image: $about-gradient, url('/audience-band-concert-crowd-2x.jpg');
+        // outline: 5px solid green;
     }
 
     @media #{$large} {
-        background-image: $medium-gradient, url('/crow-hero.png');
-    }
-    @media #{$large2x} {
-        background-image: $medium-gradient, url('/crow-hero.png');
-        background-size: rem(868) rem(385);
+        background-image: $about-gradient, url('/audience-band-concert-crowd-2x.jpg');
+        outline: 5px solid $red;
     }
 
     @media #{$xlarge} {
-        background-image: url('/crow-hero.png');
-    }
-    @media #{$xlarge2x} {
-        background-image: url('/crow-hero.png');
-        background-size: rem(868) rem(385);
+        background-image: $about-gradient, url('/audience-band-concert-crowd-2x.jpg');
     }
 }
 

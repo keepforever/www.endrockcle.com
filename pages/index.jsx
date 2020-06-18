@@ -68,6 +68,9 @@ const Home = (props) => {
                     </Link>
                 </div>
             </div>
+
+            {/* About */}
+
             <div id="about" className="about">
                 <div className="container">
                     <div className="row middle-sm">
@@ -84,6 +87,8 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
+
+            {/* Culture */}
 
             <div className="culture">
                 <div className="container">

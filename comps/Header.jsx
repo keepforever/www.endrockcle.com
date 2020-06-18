@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import classnames from 'classnames';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { FaWindowClose } from 'react-icons/fa';
-
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 import { useTransition, animated } from 'react-spring';
 
@@ -51,7 +49,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                             }}
                         >
                             {!menuOpen && <AiOutlineMenu size={32} />}
-                            {menuOpen && <FaWindowClose size={32} />}
+                            {menuOpen && <AiOutlineClose size={32} />}
                         </a>
                     </div>
                 </div>
@@ -65,28 +63,28 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                     <a>About End Rock</a>
                                 </Link>
                                 <div className="nav-group">
-                                    <a className="nav-group-header">Our Partners</a>
-                                    <Link href="/retailers">
-                                        <a className="nav-item">Retailers</a>
+                                    <a className="nav-group-header">Retailer</a>
+                                    <Link href="/">
+                                        <a className="nav-item">Retailer</a>
                                     </Link>
-                                    <Link href="/publishers">
-                                        <a className="nav-item">Publishers</a>
+                                    <Link href="/">
+                                        <a className="nav-item">Retailer</a>
                                     </Link>
-                                    <Link href="/authors">
-                                        <a className="nav-item">Authors</a>
+                                    <Link href="/">
+                                        <a className="nav-item">Retailer</a>
                                     </Link>
-                                    <Link href="/institutions">
-                                        <a className="nav-item">Institutions</a>
+                                    <Link href="/">
+                                        <a className="nav-item">Retailer</a>
                                     </Link>
                                 </div>
                                 <Link href="/whats-happening">
-                                    <a>News Center</a>
+                                    <a>Retailer</a>
                                 </Link>
-                                <Link href="/being-a-findawayer">
-                                    <a>Being a Findawayer</a>
+                                <Link href="/">
+                                    <a>Retailer</a>
                                 </Link>
-                                <Link href="/being-a-findawayer/#join-us">
-                                    <a>Become a Findawayer</a>
+                                <Link href="/">
+                                    <a>Retailer</a>
                                 </Link>
                                 <Link href="/contact">
                                     <a>Contact Us</a>
