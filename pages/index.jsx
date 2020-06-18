@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaBeer } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 import { scrollIntoView } from 'scroll-js';
 
 const scrollToElement = (id) => {
@@ -12,14 +12,7 @@ const Home = (props) => {
         <div className="page-home">
             <div className="cta-wrapper">
                 <div className="content">
-                    <img
-                        style={{
-                            height: '99px',
-                            width: '492px',
-                        }}
-                        src="/EndRock_logo_color_nobg.png"
-                        alt="band logo"
-                    />
+                    <img className="center-logo" src="/EndRock_logo_color_nobg.png" alt="band logo" />
                     <h1>Cleveland's Alternative Rock Cover Band</h1>
                     <ul className="list-flex-inline">
                         <li>
@@ -58,7 +51,7 @@ const Home = (props) => {
                 </div>
                 <div className="more">
                     <button className="btn btn-link" onClick={() => scrollToElement('about')}>
-                        <FaBeer size="2rem" onClick={() => {}} />
+                        <FaArrowDown size="2rem" onClick={() => {}} />
                     </button>
                 </div>
             </div>

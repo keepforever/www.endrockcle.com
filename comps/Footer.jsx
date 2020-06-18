@@ -19,8 +19,8 @@ const Footer = (props) => (
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2 col-md-offset-1 mb-xs-4 mb-md-0">
-                    <Link href="/about" className="col-header">
-                        About Findaway
+                    <Link href="/about">
+                        <a>Retailers</a>
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2 mb-xs-4 mb-md-0">

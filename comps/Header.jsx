@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import classnames from 'classnames';
-import { FaHamburger } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { FaWindowClose } from 'react-icons/fa';
+
 
 import { useTransition, animated } from 'react-spring';
 
@@ -49,8 +50,8 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                 setFixed(!menuOpen);
                             }}
                         >
-                            {!menuOpen && <FaHamburger width={30} height={30} />}
-                            {menuOpen && <FaWindowClose width={30} height={30} />}
+                            {!menuOpen && <AiOutlineMenu size={32} />}
+                            {menuOpen && <FaWindowClose size={32} />}
                         </a>
                     </div>
                 </div>
@@ -60,46 +61,34 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                     item && (
                         <animated.div key={key} className="navigation" style={props}>
                             <nav className="container">
-                                <Link className="nav-item" href="/about" activeClassName="txt-bold">
-                                    <a>About Findaway</a>
+                                <Link href="/about">
+                                    <a>About End Rock</a>
                                 </Link>
                                 <div className="nav-group">
                                     <a className="nav-group-header">Our Partners</a>
-                                    <Link className="nav-item" href="/retailers" activeClassName="txt-bold">
-                                        <a>Retailers</a>
+                                    <Link href="/retailers">
+                                        <a className="nav-item">Retailers</a>
                                     </Link>
-                                    <Link className="nav-item" href="/publishers" activeClassName="txt-bold">
-                                        <a>Publishers</a>
+                                    <Link href="/publishers">
+                                        <a className="nav-item">Publishers</a>
                                     </Link>
-                                    <Link className="nav-item" href="/authors" activeClassName="txt-bold">
-                                        <a>Authors</a>
+                                    <Link href="/authors">
+                                        <a className="nav-item">Authors</a>
                                     </Link>
-                                    <Link className="nav-item" href="/institutions" activeClassName="txt-bold">
-                                        <a>Institutions</a>
+                                    <Link href="/institutions">
+                                        <a className="nav-item">Institutions</a>
                                     </Link>
                                 </div>
-                                <Link className="nav-item" href="/whats-happening" activeClassName="txt-bold">
+                                <Link href="/whats-happening">
                                     <a>News Center</a>
                                 </Link>
-                                <Link
-                                    className="nav-item"
-                                    href="/being-a-findawayer"
-                                    onClick={() => closeMenu()}
-                                    partiallyActive={true}
-                                    activeClassName="txt-bold"
-                                >
+                                <Link href="/being-a-findawayer">
                                     <a>Being a Findawayer</a>
                                 </Link>
-                                <Link
-                                    className="nav-item"
-                                    href="/being-a-findawayer/#join-us"
-                                    partiallyActive={true}
-                                    onClick={() => closeMenu()}
-                                    activeClassName="txt-bold"
-                                >
+                                <Link href="/being-a-findawayer/#join-us">
                                     <a>Become a Findawayer</a>
                                 </Link>
-                                <Link className="nav-item" href="/contact" activeClassName="txt-bold">
+                                <Link href="/contact">
                                     <a>Contact Us</a>
                                 </Link>
                             </nav>
