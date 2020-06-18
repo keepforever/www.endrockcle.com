@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import classnames from 'classnames';
 
-import Header from './header';
-import Footer from './footer';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ children, dark = false }) => {
     const [fixed, setFixed] = useState(false);
