@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { FaArrowDown } from 'react-icons/fa';
+import { FaInstagramSquare, FaFacebook } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 import { scrollIntoView } from 'scroll-js';
 
 const scrollToElement = (id) => {
@@ -17,22 +19,36 @@ const Home = (props) => {
                     <ul className="list-flex-inline">
                         <li>
                             <Link href="/experience">
-                                <a>Retailers</a>
+                                <a href="mailto:endrockcle@gmail.com">
+                                    <FiMail size={32} style={{ color: 'red' }} />
+                                </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/experience">
-                                <a>Retailers</a>
+                                <a
+                                    href="https://www.instagram.com/endrockcle"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FaInstagramSquare size={32} style={{ color: 'red' }} />
+                                </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/experience">
-                                <a>Retailers</a>
+                                <a
+                                    href="https://www.facebook.com/EndRockCle"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FaFacebook size={32} style={{ color: 'red' }} />
+                                </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/experience">
-                                <a>Retailers</a>
+                                <a>Link</a>
                             </Link>
                         </li>
                     </ul>
@@ -42,7 +58,7 @@ const Home = (props) => {
                         autoPlay={true}
                         className="bg-video"
                         id="myVideo"
-                        src="/header-video.mp4"
+                        src="/concert-placeholder-video.mp4"
                         poster="/crow-hero.png"
                         muted
                         loop
@@ -51,21 +67,22 @@ const Home = (props) => {
                 </div>
                 <div className="more">
                     <button className="btn btn-link" onClick={() => scrollToElement('about')}>
-                        <FaArrowDown size="2rem" onClick={() => {}} />
+                        <FaArrowDown size="2rem" onClick={() => {}} style={{ color: 'red' }} />
                     </button>
                 </div>
             </div>
             <div className="features">
-                <div className="feature">foo</div>
                 <div className="feature">
-                    <Link href="/">
-                        <a>Retailers</a>
-                    </Link>
+                    <h4>"End Rock rocked so hard I literally shit my pants!"</h4>
+                    <h5 className="pl-3">&mdash; Your Grandma</h5>
                 </div>
                 <div className="feature">
-                    <Link href="/">
-                        <a>Retailers</a>
-                    </Link>
+                    <h4>"After going to and End Rock show my dick grew an extra inch!"</h4>
+                    <h5 className="pl-3">&mdash; Your Dad</h5>
+                </div>
+                <div className="feature">
+                    <h4>"Becoming an End Rock fan was made everyone at work respect me again!"</h4>
+                    <h5 className="pl-3">&mdash; Jan (in accounting)</h5>
                 </div>
             </div>
 
@@ -75,13 +92,14 @@ const Home = (props) => {
                 <div className="container">
                     <div className="row middle-sm">
                         <div className="col-xs-12 col-md-8 col-lg-4">
-                            <h2>About Findaway</h2>
+                            <h2>About End Rock</h2>
                             <p>
-                                We are an audio technology company &mdash; innovating every day to bring more audiobooks
-                                to more listeners around the globe.
+                                We are an alternative rock cover baned based in <strong>Cleveland Ohio</strong>. Five
+                                good time dudes &mdash; always working to add new songs to our set and deliver an
+                                entertaining show.
                             </p>
                             <Link href="/">
-                                <a>Retailers</a>
+                                <a>Book Us!</a>
                             </Link>
                         </div>
                     </div>
@@ -94,13 +112,13 @@ const Home = (props) => {
                 <div className="container">
                     <div className="row middle-sm">
                         <div className="col-xs-12 col-md-5 col-md-offset-7">
-                            <h2>The Findawayers that make it happen.</h2>
+                            <h2>The End Rock members that make it happen.</h2>
                             <p>
-                                Hungry. Passionate. Creative. Ready to change the world. Findawayers have an
-                                unmistakable DNA that feeds our culture and our work.
+                                Hungry. Passionate. Dedicated. Ready to un-fuck the world with the joy of song. End
+                                Rockers have an unmistakable DNA that feeds our desire to entertain.
                             </p>
                             <Link href="/">
-                                <a>Retailers</a>
+                                <a>Link</a>
                             </Link>
                         </div>
                     </div>
@@ -109,33 +127,24 @@ const Home = (props) => {
 
             <div className="brands py-5">
                 <div className="container">
-                    <h3 className="mb-4">Findaway is a multi-product, multi-brand company.</h3>
+                    <h3 className="mb-4">End Rock is a Millennial Rock Band.</h3>
                     <div className="row">
                         <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
                             <Link href="/">
-                                <a>Retailers</a>
+                                <a>Link</a>
                             </Link>
                             <p>
-                                Proprietary technology that enables retailers and libraries to deliver digital
-                                audiobooks to million of listeners around the globe.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua
                             </p>
                         </div>
                         <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
                             <Link href="/">
-                                <a>Retailers</a>
+                                <a>Link</a>
                             </Link>
                             <p>
-                                The world’s largest audiobook distributor, creating opportunities for publishing
-                                partners to succeed in a rapidly changing audiobook market.
-                            </p>
-                        </div>
-                        <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
-                            <Link href="/">
-                                <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
-                            </Link>
-                            <p>
-                                Access to the world's largest network of audiobook sellers and everything authors need
-                                to create professional audiobooks.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua
                             </p>
                         </div>
                         <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
@@ -143,8 +152,17 @@ const Home = (props) => {
                                 <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
                             </Link>
                             <p>
-                                Audiobooks, learning apps, videos, and read-alongs built for circulation in libraries,
-                                schools, and military installments.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua
+                            </p>
+                        </div>
+                        <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
+                            <Link href="/">
+                                <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
+                            </Link>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua
                             </p>
                         </div>
                     </div>

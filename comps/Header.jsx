@@ -14,6 +14,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
     });
 
     const closeMenu = () => {
+        console.log('\n', `hello close menu `, '\n');
         setMenuOpen(false);
         setFixed(false);
     };
@@ -32,6 +33,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                 style={{
                                     height: '33px',
                                     width: '164px',
+                                    cursor: 'pointer',
                                 }}
                                 src="/EndRock_logo_color_nobg.png"
                                 alt="band logo"
@@ -48,8 +50,8 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                 setFixed(!menuOpen);
                             }}
                         >
-                            {!menuOpen && <AiOutlineMenu size={32} />}
-                            {menuOpen && <AiOutlineClose size={32} />}
+                            {!menuOpen && <AiOutlineMenu style={{ color: 'red' }} size={32} />}
+                            {menuOpen && <AiOutlineClose style={{ color: 'red' }} size={32} />}
                         </a>
                     </div>
                 </div>
@@ -60,34 +62,15 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                         <animated.div key={key} className="navigation" style={props}>
                             <nav className="container">
                                 <Link href="/about">
-                                    <a>About End Rock</a>
+                                    <a className="nav-group-header" onClick={closeMenu}>
+                                        About
+                                    </a>
                                 </Link>
-                                <div className="nav-group">
-                                    <a className="nav-group-header">Retailer</a>
-                                    <Link href="/">
-                                        <a className="nav-item">Retailer</a>
-                                    </Link>
-                                    <Link href="/">
-                                        <a className="nav-item">Retailer</a>
-                                    </Link>
-                                    <Link href="/">
-                                        <a className="nav-item">Retailer</a>
-                                    </Link>
-                                    <Link href="/">
-                                        <a className="nav-item">Retailer</a>
-                                    </Link>
-                                </div>
-                                <Link href="/whats-happening">
-                                    <a>Retailer</a>
-                                </Link>
-                                <Link href="/">
-                                    <a>Retailer</a>
-                                </Link>
-                                <Link href="/">
-                                    <a>Retailer</a>
-                                </Link>
-                                <Link href="/contact">
-                                    <a>Contact Us</a>
+
+                                <Link href="/experience">
+                                    <a className="nav-group-header" onClick={closeMenu}>
+                                        Contact
+                                    </a>
                                 </Link>
                             </nav>
                         </animated.div>
