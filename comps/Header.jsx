@@ -60,14 +60,24 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                 ({ item, key, props }) =>
                     item && (
                         <animated.div key={key} className="navigation" style={props}>
-                            <nav className="container">
+                            <nav className="container center-xs">
+                                <Link href="/">
+                                    <a className="nav-group-header" onClick={closeMenu}>
+                                        Home
+                                    </a>
+                                </Link>
+                                <Link href="/song-list">
+                                    <a className="nav-group-header" onClick={closeMenu}>
+                                        Song List
+                                    </a>
+                                </Link>
                                 <Link href="/about">
                                     <a className="nav-group-header" onClick={closeMenu}>
                                         About
                                     </a>
                                 </Link>
 
-                                <Link href="/experience">
+                                <Link href="/contact">
                                     <a className="nav-group-header" onClick={closeMenu}>
                                         Contact
                                     </a>

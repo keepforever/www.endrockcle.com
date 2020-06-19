@@ -15,7 +15,7 @@ const Navbar = props => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/experience">
+                        <Link href="/contact">
                             <a className="btn btn-primary">Experience</a>
                         </Link>
                     </li>

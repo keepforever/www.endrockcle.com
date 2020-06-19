@@ -18,14 +18,14 @@ const Home = (props) => {
                     <h1>Cleveland's Alternative Rock Cover Band</h1>
                     <ul className="list-flex-inline">
                         <li>
-                            <Link href="/experience">
+                            <Link href="/contact">
                                 <a href="mailto:endrockcle@gmail.com">
                                     <FiMail size={32} style={{ color: 'red' }} />
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/experience">
+                            <Link href="/contact">
                                 <a
                                     href="https://www.instagram.com/endrockcle"
                                     target="_blank"
@@ -36,14 +36,14 @@ const Home = (props) => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/experience">
+                            <Link href="/contact">
                                 <a href="https://www.facebook.com/EndRockCle" target="_blank" rel="noopener noreferrer">
                                     <FaFacebook size={32} style={{ color: 'red' }} />
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/experience">
+                            <Link href="/contact">
                                 <a>Link</a>
                             </Link>
                         </li>
@@ -55,7 +55,7 @@ const Home = (props) => {
                         className="bg-video"
                         id="myVideo"
                         src="/concert-placeholder-video.mp4"
-                        poster="/crow-hero.png"
+                        poster="/audience-band-concert-crowd-2x.jpg"
                         playsInline={true}
                         disablePictureInPicture={true}
                         muted
@@ -123,7 +123,7 @@ const Home = (props) => {
                 </div>
             </div>
 
-            <div className="brands py-5">
+            <div className="brands py-5 txt-white">
                 <div className="container">
                     <h3 className="mb-4">End Rock is a Millennial Rock Band.</h3>
                     <div className="row">
@@ -147,7 +147,7 @@ const Home = (props) => {
                         </div>
                         <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
                             <Link href="/">
-                                <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
+                                <a>LINK</a>
                             </Link>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -156,7 +156,7 @@ const Home = (props) => {
                         </div>
                         <div className="brand-item col-xs-12 co-sm-6 col-lg-3">
                             <Link href="/">
-                                <a className="fancy-cta d-inline-block mb-2">FANCY LINK</a>
+                                <a>LINK</a>
                             </Link>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

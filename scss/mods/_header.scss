@@ -92,6 +92,10 @@
 
     .nav-group-header {
         margin-bottom: 1rem;
+
+        &:hover {
+            color: $red;
+        }
     }
 
     .nav-group .nav-item {

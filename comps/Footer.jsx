@@ -24,12 +24,12 @@ const Footer = (props) => (
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2 mb-xs-4 mb-md-0">
-                    <Link href="/experience">
+                    <Link href="/contact">
                         <a>Set List</a>
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2">
-                    <Link href="/experience">
+                    <Link href="/contact">
                         <a className="col-header mb-4">Contact</a>
                     </Link>
                 </div>
