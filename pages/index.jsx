@@ -88,7 +88,7 @@ const Home = (props) => {
             {/* About */}
 
             <div id="about" className="about">
-                <div className="container txt-silver">
+                <div className="container txt-white">
                     <div className="row middle-sm">
                         <div className="col-xs-12 col-md-8 col-lg-4">
                             <h2>About End Rock</h2>

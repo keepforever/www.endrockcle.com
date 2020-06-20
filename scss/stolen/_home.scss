@@ -178,7 +178,7 @@
     background-repeat: no-repeat;
     min-height: rem(414);
     max-height: rem(414);
-    color: $silver;
+    color: $white;
 
     @media #{$retina} {
         background-image: $culture-gradient, url('/end-rock-stellas-large.jpg');
