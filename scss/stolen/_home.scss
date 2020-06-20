@@ -144,8 +144,6 @@
 .about {
     $about-gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
 
-    color: white;
-
     background-position: right center;
     background-repeat: no-repeat;
     background-image: $about-gradient, url('/end-rock-at-sly-fox.jpg');
@@ -180,12 +178,7 @@
     background-repeat: no-repeat;
     min-height: rem(414);
     max-height: rem(414);
-
-    h2,
-    p,
-    a {
-        color: $silver;
-    }
+    color: $silver;
 
     @media #{$retina} {
         background-image: $culture-gradient, url('/end-rock-stellas-large.jpg');

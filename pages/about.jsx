@@ -16,8 +16,14 @@ const About = (props) => {
         <>
             <div className="masthead masthead-about"></div>
             <div className="container txt-white">
+                <div className="row my-3">
+                    <h1 className="txt-silver">End Rock</h1>
+                </div>
                 <div className="row">
-                    <h3>hello about</h3>
+                    <h3 className="txt-silver">
+                        A band of five exquisite Cleveland, Ohio based primates with highly evolved a senses of rhythm,
+                        tonality, and a passion for alternative rock we want to share with the world.
+                    </h3>
                 </div>
             </div>
         </>

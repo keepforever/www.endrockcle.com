@@ -1,16 +1,3 @@
-import Link from 'next/link';
-import { FaArrowDown } from 'react-icons/fa';
-import { FaInstagramSquare, FaFacebook } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
-import { scrollIntoView } from 'scroll-js';
-
-import { songList } from '../utils/songs';
-
-const scrollToElement = (id) => {
-    var myElement = document.getElementById(id);
-    scrollIntoView(myElement, document.body, { behavior: 'smooth' });
-};
-
 const Shows = (props) => {
     return (
         <>

@@ -99,7 +99,7 @@ const Home = (props) => {
                             </p>
 
                             <Link href="/shows">
-                                <a style={{ fontSize: '32px' }} className="txt-silver">
+                                <a style={{ fontSize: '32px' }} className="txt-er-red">
                                     Live Shows
                                 </a>
                             </Link>
@@ -120,7 +120,7 @@ const Home = (props) => {
                                 Rockers have an unmistakable DNA that feeds our desire to entertain.
                             </p>
 
-                            <a href={myMailTo} style={{ fontSize: '32px' }}>
+                            <a href={myMailTo} style={{ fontSize: '32px' }} className="txt-er-red">
                                 Book Us!
                             </a>
                         </div>
