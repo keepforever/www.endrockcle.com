@@ -9,20 +9,19 @@ const scrollToElement = (id) => {
     scrollIntoView(myElement, document.body, { behavior: 'smooth' });
 };
 
+const myMailTo = 'mailto:endrockcle@gmail.com?subject=%3Cyour-biz-or-name%3E%20-%20BOOKING&body=Rock%20and%20Roll%20ain\'t%20noise%20pollution!'
+
 const Home = (props) => {
     return (
         <div className="page-home">
             <div className="cta-wrapper">
                 <div className="content">
-                    <img className="center-logo" src="/EndRock_logo_color_nobg.png" alt="band logo" />
-                    <h1>Cleveland's Alternative Rock Cover Band</h1>
-                    <ul className="list-flex-inline">
+                    <img className="center-logo" src="/erc-logo-yellow-border.png" alt="band logo" />
+                    <ul className="list-flex-inline mt-2">
                         <li>
-                            <Link href="/contact">
-                                <a href="mailto:endrockcle@gmail.com">
-                                    <FiMail size={32} style={{ color: 'red' }} />
-                                </a>
-                            </Link>
+                            <a href={myMailTo}>
+                                <FiMail size={32} className="txt-er-red" />
+                            </a>
                         </li>
                         <li>
                             <Link href="/contact">
@@ -31,20 +30,15 @@ const Home = (props) => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <FaInstagramSquare size={32} style={{ color: 'red' }} />
+                                    <FaInstagramSquare size={32} className="txt-er-red" />
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/contact">
                                 <a href="https://www.facebook.com/EndRockCle" target="_blank" rel="noopener noreferrer">
-                                    <FaFacebook size={32} style={{ color: 'red' }} />
+                                    <FaFacebook size={32} className="txt-er-red" />
                                 </a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/contact">
-                                <a>Link</a>
                             </Link>
                         </li>
                     </ul>
@@ -65,11 +59,11 @@ const Home = (props) => {
                 </div>
                 <div className="more">
                     <button className="btn btn-link" onClick={() => scrollToElement('about')}>
-                        <FaArrowDown size="2rem" onClick={() => {}} style={{ color: 'red' }} />
+                        <FaArrowDown size="2rem" onClick={() => {}} className="txt-er-red" />
                     </button>
                 </div>
             </div>
-            <div className="features">
+            {/* <div className="features">
                 <div className="feature">
                     <h4>"End Rock rocked so hard I literally shit my pants!"</h4>
                     <h5 className="pl-3">&mdash; Your Grandma</h5>
@@ -82,7 +76,7 @@ const Home = (props) => {
                     <h4>"Becoming an End Rock fan was made everyone at work respect me again!"</h4>
                     <h5 className="pl-3">&mdash; Jan (in accounting)</h5>
                 </div>
-            </div>
+            </div> */}
 
             {/* About */}
 
@@ -96,9 +90,11 @@ const Home = (props) => {
                                 good time dudes &mdash; always working to add new songs to our set and deliver an
                                 entertaining show.
                             </p>
-                            <Link href="/">
-                                <a>Book Us!</a>
-                            </Link>
+                            
+
+                            
+                                <a href={myMailTo} >Book Us!</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -123,7 +119,7 @@ const Home = (props) => {
                 </div>
             </div>
 
-            <div className="brands py-5 txt-white">
+            {/* <div className="brands py-5 txt-white">
                 <div className="container">
                     <h3 className="mb-4">End Rock is a Millennial Rock Band.</h3>
                     <div className="row">
@@ -166,6 +162,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
+         */}
         </div>
     );
 };

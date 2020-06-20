@@ -13,7 +13,7 @@ const Footer = (props) => (
                                 height: '33px',
                                 width: '164px',
                             }}
-                            src="/EndRock_logo_color_nobg.jpg"
+                            src="/erc-logo-yellow-header.png"
                             alt="band logo"
                         />
                     </Link>
@@ -24,13 +24,13 @@ const Footer = (props) => (
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2 mb-xs-4 mb-md-0">
-                    <Link href="/contact">
-                        <a>Set List</a>
+                    <Link href="/song-list">
+                        <a>Song List</a>
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2">
                     <Link href="/contact">
-                        <a className="col-header mb-4">Contact</a>
+                        <a className="mb-4">Contact</a>
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-3">

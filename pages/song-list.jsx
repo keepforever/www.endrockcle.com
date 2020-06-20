@@ -18,8 +18,8 @@ const SongList = (props) => {
                 {songList.map((s) => {
                     return (
                         <h5
-                            className="mr-3 txt-white p-3"
-                            style={{ border: '2px solid red' }}
+                            className="mr-3 p-3"
+                            style={{ border: '2px solid #ee3342', borderRadius: '8px', color: 'lightgray' }}
                         >{`"${s.song}",  ${s.artist}`}</h5>
                     );
                 })}

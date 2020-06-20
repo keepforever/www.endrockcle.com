@@ -29,13 +29,14 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                 <div className="row middle-xs">
                     <div className="col-xs-11">
                         <Link href="/">
+                            
                             <img
                                 style={{
                                     height: '33px',
                                     width: '164px',
                                     cursor: 'pointer',
                                 }}
-                                src="/EndRock_logo_color_nobg.png"
+                                src="/erc-logo-yellow-header.png"
                                 alt="band logo"
                             />
                         </Link>
@@ -50,8 +51,8 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                 setFixed(!menuOpen);
                             }}
                         >
-                            {!menuOpen && <AiOutlineMenu style={{ color: 'red' }} size={32} />}
-                            {menuOpen && <AiOutlineClose style={{ color: 'red' }} size={32} />}
+                            {!menuOpen && <AiOutlineMenu className="txt-er-red" size={32} />}
+                            {menuOpen && <AiOutlineClose className="txt-er-red" size={32} />}
                         </a>
                     </div>
                 </div>
