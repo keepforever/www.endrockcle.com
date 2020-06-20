@@ -13,18 +13,24 @@ const scrollToElement = (id) => {
 
 const SongList = (props) => {
     return (
-        <div className="container">
-            <div className="row">
-                {songList.map((s) => {
-                    return (
-                        <h5
-                            className="mr-3 p-3"
-                            style={{ border: '2px solid #ee3342', borderRadius: '8px', color: 'lightgray' }}
-                        >{`"${s.song}",  ${s.artist}`}</h5>
-                    );
-                })}
+        <>
+            <div className="masthead masthead-song-list"></div>
+            <div className="container mt-4">
+                <h1 className="txt-silver">The gist...</h1>
+                <hr />
+                <div className="row mt-3">
+                    {songList.map((s) => {
+                        return (
+                            <h5
+                                key={s.song + '_' + s.artist}
+                                className="mr-3 my-3 p-3"
+                                style={{ border: '2px solid #ee3342', borderRadius: '8px', color: 'lightgray' }}
+                            >{`"${s.song}",  ${s.artist}`}</h5>
+                        );
+                    })}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

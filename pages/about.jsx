@@ -13,11 +13,14 @@ const scrollToElement = (id) => {
 
 const About = (props) => {
     return (
-        <div className="container txt-white">
-            <div className="row">
-                <h3>hello about</h3>
+        <>
+            <div className="masthead masthead-about"></div>
+            <div className="container txt-white">
+                <div className="row">
+                    <h3>hello about</h3>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

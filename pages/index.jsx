@@ -9,7 +9,8 @@ const scrollToElement = (id) => {
     scrollIntoView(myElement, document.body, { behavior: 'smooth' });
 };
 
-const myMailTo = 'mailto:endrockcle@gmail.com?subject=%3Cyour-biz-or-name%3E%20-%20BOOKING&body=Rock%20and%20Roll%20ain\'t%20noise%20pollution!'
+const myMailTo =
+    "mailto:endrockcle@gmail.com?subject=%3Cyour-biz-or-name%3E%20-%20BOOKING&body=Rock%20and%20Roll%20ain't%20noise%20pollution!";
 
 const Home = (props) => {
     return (
@@ -42,6 +43,12 @@ const Home = (props) => {
                             </Link>
                         </li>
                     </ul>
+
+                    <div className="row center-xs mt-4">
+                        <Link href="/shows">
+                            <h4 className="txt-er-red pointer live-events">Live Events</h4>
+                        </Link>
+                    </div>
                 </div>
                 <div className="background-wrapper">
                     <video
@@ -49,7 +56,7 @@ const Home = (props) => {
                         className="bg-video"
                         id="myVideo"
                         src="/concert-placeholder-video.mp4"
-                        poster="/audience-band-concert-crowd-2x.jpg"
+                        poster="/end-rock-stellas-large.jpg"
                         playsInline={true}
                         disablePictureInPicture={true}
                         muted
@@ -81,7 +88,7 @@ const Home = (props) => {
             {/* About */}
 
             <div id="about" className="about">
-                <div className="container">
+                <div className="container txt-silver">
                     <div className="row middle-sm">
                         <div className="col-xs-12 col-md-8 col-lg-4">
                             <h2>About End Rock</h2>
@@ -90,11 +97,12 @@ const Home = (props) => {
                                 good time dudes &mdash; always working to add new songs to our set and deliver an
                                 entertaining show.
                             </p>
-                            
 
-                            
-                                <a href={myMailTo} >Book Us!</a>
-                            
+                            <Link href="/shows">
+                                <a style={{ fontSize: '32px' }} className="txt-silver">
+                                    Live Shows
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -111,9 +119,10 @@ const Home = (props) => {
                                 Hungry. Passionate. Dedicated. Ready to un-fuck the world with the joy of song. End
                                 Rockers have an unmistakable DNA that feeds our desire to entertain.
                             </p>
-                            <Link href="/">
-                                <a>Link</a>
-                            </Link>
+
+                            <a href={myMailTo} style={{ fontSize: '32px' }}>
+                                Book Us!
+                            </a>
                         </div>
                     </div>
                 </div>

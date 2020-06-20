@@ -1,0 +1,103 @@
+.masthead {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(-120);
+    padding-top: rem(120);
+    min-height: rem(430);
+    position: relative;
+    background-color: $gray;
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+
+    .content {
+        height: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: rem(18);
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 700;
+        color: $white;
+    }
+
+    svg {
+        color: $white;
+    }
+
+    @media #{$medium} {
+        .content {
+            max-width: 70%;
+        }
+    }
+
+    @media #{$large} {
+        min-height: 27.5rem;
+        .content {
+            max-width: 50%;
+        }
+    }
+
+    @media #{$xlarge} {
+        .content {
+            max-width: 50%;
+        }
+    }
+}
+
+.masthead h1 {
+    color: $white;
+    margin: 0 0 1rem;
+
+    @media #{$medium} {
+        margin-bottom: 0;
+    }
+}
+
+.masthead .overlap-wrapper {
+    @media #{$medium} {
+        position: absolute;
+        bottom: -21px;
+        width: 100%;
+    }
+}
+
+$gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+
+.masthead-about {
+    background-image: #{$gradient}, url('/end-rock-stellas-large.jpg');
+    min-height: rem(630);
+    // @media #{$retina} {
+    //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
+    // }
+}
+
+.masthead-shows {
+    min-height: rem(530);
+    background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
+    // @media #{$retina} {
+    //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
+    // }
+}
+
+.masthead-contact {
+    min-height: rem(630);
+    background-image: #{$gradient}, url('/end-rock-at-sly-fox.jpg');
+    // @media #{$retina} {
+    //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
+    // }
+}
+
+.masthead-song-list {
+    min-height: rem(630);
+    background-image: #{$gradient}, url('/end-rock-at-sly-fox.jpg');
+    // @media #{$retina} {
+    //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
+    // }
+}

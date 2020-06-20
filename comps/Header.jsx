@@ -29,7 +29,6 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                 <div className="row middle-xs">
                     <div className="col-xs-11">
                         <Link href="/">
-                            
                             <img
                                 style={{
                                     height: '33px',
@@ -63,24 +62,36 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                         <animated.div key={key} className="navigation" style={props}>
                             <nav className="container center-xs">
                                 <Link href="/">
-                                    <a className="nav-group-header" onClick={closeMenu}>
-                                        Home
-                                    </a>
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}></a>
                                 </Link>
+
                                 <Link href="/song-list">
-                                    <a className="nav-group-header" onClick={closeMenu}>
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}>
                                         Song List
                                     </a>
                                 </Link>
+
                                 <Link href="/about">
-                                    <a className="nav-group-header" onClick={closeMenu}>
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}>
                                         About
                                     </a>
                                 </Link>
 
                                 <Link href="/contact">
-                                    <a className="nav-group-header" onClick={closeMenu}>
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}>
                                         Contact
+                                    </a>
+                                </Link>
+
+                                <Link href="/shows">
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}>
+                                        Shows
+                                    </a>
+                                </Link>
+
+                                <Link href="/">
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}>
+                                        Home
                                     </a>
                                 </Link>
                             </nav>

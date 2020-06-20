@@ -19,39 +19,55 @@ const Footer = (props) => (
                     </Link>
                 </div>
                 <div className="col-xs-12 col-md-2 col-md-offset-1 mb-xs-4 mb-md-0">
-                    <Link href="/about">
-                        <a>About</a>
-                    </Link>
+                    <div className="row">
+                        <Link href="/shows">
+                            <a>Shows</a>
+                        </Link>
+                    </div>
+                    <div className="row mt-2">
+                        <Link href="/about">
+                            <a>About</a>
+                        </Link>
+                    </div>
                 </div>
                 <div className="col-xs-12 col-md-2 mb-xs-4 mb-md-0">
-                    <Link href="/song-list">
-                        <a>Song List</a>
-                    </Link>
+                    <div className="row">
+                        <Link href="/song-list">
+                            <a>Song List</a>
+                        </Link>
+                    </div>
                 </div>
                 <div className="col-xs-12 col-md-2">
-                    <Link href="/contact">
-                        <a className="mb-4">Contact</a>
-                    </Link>
+                    <div className="row">
+                        <Link href="/contact">
+                            <a className="mb-4">Contact</a>
+                        </Link>
+                    </div>
                 </div>
                 <div className="col-xs-12 col-md-3">
-                    <p className="mb-4">69420 Green Love Dr., Cleveland OH, 44069</p>
-                    <ul className="list-inline">
-                        <li>
-                            <a href="https://www.facebook.com/EndRockCle/" target="_blank" rel="noopener noreferrer">
-                                <FaFacebook />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com/wearefindaway" target="_blank" rel="noopener noreferrer">
-                                <FaInstagramSquare />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/wearefindaway" target="_blank" rel="noopener noreferrer">
-                                <FiMail />
-                            </a>
-                        </li>
-                    </ul>
+                    <div className="row">
+                        <ul className="list-inline">
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/EndRockCle/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FaFacebook />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/wearefindaway" target="_blank" rel="noopener noreferrer">
+                                    <FaInstagramSquare />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/wearefindaway" target="_blank" rel="noopener noreferrer">
+                                    <FiMail />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <p>
