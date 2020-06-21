@@ -77,6 +77,16 @@
         height: rem(99);
         width: rem(492);
     }
+
+    @media #{$large} {
+        height: rem(124);
+        width: rem(625);
+    }
+
+    @media #{$xlarge} {
+        height: rem(124 * 1.25);
+        width: rem(625 * 1.25);
+    }
 }
 
 .features {

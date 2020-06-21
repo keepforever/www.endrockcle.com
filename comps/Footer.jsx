@@ -13,7 +13,7 @@ const Footer = (props) => (
                                 height: '33px',
                                 width: '164px',
                             }}
-                            src="/erc-logo-yellow-header.png"
+                            src="/logo-navbar.png"
                             alt="band logo"
                         />
                     </Link>

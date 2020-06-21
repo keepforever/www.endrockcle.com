@@ -35,7 +35,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                                     width: '164px',
                                     cursor: 'pointer',
                                 }}
-                                src="/erc-logo-yellow-header.png"
+                                src="/logo-navbar.png"
                                 alt="band logo"
                             />
                         </Link>

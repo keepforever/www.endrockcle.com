@@ -17,7 +17,7 @@ const Home = (props) => {
         <div className="page-home">
             <div className="cta-wrapper">
                 <div className="content">
-                    <img className="center-logo" src="/erc-logo-yellow-border.png" alt="band logo" />
+                    <img className="center-logo" src="logo-main-for-dark-bg.png" alt="band logo" />
                     <ul className="list-flex-inline mt-2">
                         <li>
                             <a href={myMailTo}>
@@ -46,7 +46,7 @@ const Home = (props) => {
 
                     <div className="row center-xs mt-4">
                         <Link href="/shows">
-                            <h4 className="txt-er-red pointer live-events">Live Events</h4>
+                            <h3 className="txt-er-red pointer live-events">shows</h3>
                         </Link>
                     </div>
                 </div>
@@ -55,7 +55,9 @@ const Home = (props) => {
                         autoPlay={true}
                         className="bg-video"
                         id="myVideo"
-                        src="/concert-placeholder-video.mp4"
+                        // src="/concert-placeholder-video.mp4"
+                        // src="/puppies-video.mp4"
+                        src="/lady-bug-humping.mp4"
                         poster="/end-rock-stellas-large.jpg"
                         playsInline={true}
                         disablePictureInPicture={true}
