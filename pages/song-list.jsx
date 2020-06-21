@@ -5,8 +5,7 @@ const SongList = (props) => {
         <>
             <div className="masthead masthead-song-list"></div>
             <div className="container mt-4">
-                <h1 className="txt-silver">The gist...</h1>
-                <hr />
+                <h1 className="txt-silver">Songs like:</h1>
                 <div className="row mt-3">
                     {songList.map((s) => {
                         return (

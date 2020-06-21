@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FaArrowDown } from 'react-icons/fa';
 import { FaInstagramSquare, FaFacebook } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { GiPartyFlags } from 'react-icons/gi';
 import { scrollIntoView } from 'scroll-js';
 import { songList } from '../utils/songs';
 
@@ -69,10 +70,10 @@ const Home = ({ artistList }) => {
                         className="bg-video"
                         id="myVideo"
                         // src="/concert-placeholder-video.mp4"
-                        src="/puppies-video.mp4"
+                        // src="/puppies-video.mp4"
                         // src="/bug-crawl-movie.mp4"
                         // src="/lady-bug-humping.mp4"
-                        // src="/skull-candels-movie.mp4"
+                        src="/skull-candels-movie.mp4"
                         poster="/end-rock-stellas-large.jpg"
                         playsInline={true}
                         disablePictureInPicture={true}
@@ -115,10 +116,21 @@ const Home = ({ artistList }) => {
                             </p>
 
                             <Link href="/shows">
-                                <a style={{ fontSize: '32px' }} className="txt-er-red">
-                                    Live Shows
+                                <a href={myMailTo} style={{ fontSize: '32px' }} className="txt-er-red">
+                                    <div className="row middle-xs center-xs">
+                                        <GiPartyFlags size={32} className="txt-er-red mr-3" />
+                                        Live Shows
+                                    </div>
                                 </a>
                             </Link>
+
+                            <div className="row middle-xs center-xs">
+                                <Link href="/shows">
+                                    <a style={{ fontSize: '16px' }} className="txt-er-yellow">
+                                        lets party
+                                    </a>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,10 +148,19 @@ const Home = ({ artistList }) => {
                                 summer dates, we're available for show inquiries. Send us and email and we'll get back
                                 to you!
                             </p>
-
                             <a href={myMailTo} style={{ fontSize: '32px' }} className="txt-er-red">
-                                Book Us!
+                                <div className="row middle-xs center-xs">
+                                    <FiMail size={32} className="txt-er-red mr-3" />
+                                    Book Us!
+                                </div>
                             </a>
+                            <div className="row middle-xs center-xs">
+                                <Link href="/contact">
+                                    <a style={{ fontSize: '16px' }} className="txt-er-yellow">
+                                        contact
+                                    </a>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
