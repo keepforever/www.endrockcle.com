@@ -152,7 +152,12 @@
 }
 
 .about {
-    $about-gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+    $about-gradient: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(255, 255, 255, 0.146) 100%
+    );
 
     background-position: right center;
     background-repeat: no-repeat;
@@ -182,7 +187,13 @@
 }
 
 .culture {
-    $culture-gradient: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+    $culture-gradient: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.817) 50%,
+        rgba(255, 255, 255, 0.146) 100%
+    );
+
     background-image: $culture-gradient, url('/end-rock-stellas-large.jpg');
     background-size: cover;
     background-repeat: no-repeat;

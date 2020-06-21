@@ -56,8 +56,10 @@ const Home = (props) => {
                         className="bg-video"
                         id="myVideo"
                         // src="/concert-placeholder-video.mp4"
-                        // src="/puppies-video.mp4"
-                        src="/lady-bug-humping.mp4"
+                        src="/puppies-video.mp4"
+                        // src="/bug-crawl-movie.mp4"
+                        // src="/lady-bug-humping.mp4"
+                        // src="/skull-candels-movie.mp4"
                         poster="/end-rock-stellas-large.jpg"
                         playsInline={true}
                         disablePictureInPicture={true}
