@@ -3,6 +3,7 @@ import { FaArrowDown } from 'react-icons/fa';
 import { FaInstagramSquare, FaFacebook } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { scrollIntoView } from 'scroll-js';
+import { songList } from '../utils/songs';
 
 const scrollToElement = (id) => {
     var myElement = document.getElementById(id);
@@ -12,7 +13,19 @@ const scrollToElement = (id) => {
 const myMailTo =
     "mailto:endrockcle@gmail.com?subject=%3Cyour-biz-or-name%3E%20-%20BOOKING&body=Rock%20and%20Roll%20ain't%20noise%20pollution!";
 
-const Home = (props) => {
+export async function getStaticProps(context) {
+    const artistList = songList.map((s) => {
+        return s.artist;
+    });
+
+    return {
+        props: {
+            artistList: [...new Set(artistList)],
+        }, // will be passed to the page component as props
+    };
+}
+
+const Home = ({ artistList }) => {
     return (
         <div className="page-home">
             <div className="cta-wrapper">
@@ -94,12 +107,11 @@ const Home = (props) => {
             <div id="about" className="about">
                 <div className="container txt-white">
                     <div className="row middle-sm">
-                        <div className="col-xs-12 col-md-8 col-lg-4">
+                        <div className="col-xs-12 col-md-8 col-lg-6">
                             <h2>About End Rock</h2>
                             <p>
-                                We are an alternative rock cover baned based in <strong>Cleveland Ohio</strong>. Five
-                                good time dudes &mdash; always working to add new songs to our set and deliver an
-                                entertaining show.
+                                End Rock is an alternative rock cover baned based in <strong>Cleveland, Ohio</strong>.
+                                We play music from bands like {artistList.join(', ')}
                             </p>
 
                             <Link href="/shows">
@@ -117,11 +129,12 @@ const Home = (props) => {
             <div className="culture">
                 <div className="container">
                     <div className="row middle-sm">
-                        <div className="col-xs-12 col-md-5 col-md-offset-7">
-                            <h2>The End Rock members that make it happen.</h2>
+                        <div className="col-xs-12 col-md-6 col-md-offset-6">
+                            <h2>Available for bars, private parties, and bowling alleys</h2>
                             <p>
-                                Hungry. Passionate. Dedicated. Ready to un-fuck the world with the joy of song. End
-                                Rockers have an unmistakable DNA that feeds our desire to entertain.
+                                We're always open to picking up new gigs. With COVID disrupting out previously scheduled
+                                summer dates, we're available for show inquiries. Send us and email and we'll get back
+                                to you!
                             </p>
 
                             <a href={myMailTo} style={{ fontSize: '32px' }} className="txt-er-red">

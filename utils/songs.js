@@ -30,5 +30,5 @@ export const songList = [
     { song: "What's My Age Again", artist: 'Blink 182' },
     { song: 'Where is My Mind', artist: 'The Pixies' },
     { song: 'Zombie', artist: 'The Cranberries' },
-    { song: 'And so on...', artist: 'And so forth...' },
+    { song: 'And so on...', artist: 'and so forth...' },
 ];

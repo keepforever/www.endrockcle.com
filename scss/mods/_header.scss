@@ -121,3 +121,14 @@
         }
     }
 }
+
+.header-logo-img {
+    cursor: pointer;
+    height: rem(33 * 0.7);
+    width: rem(164 * 0.7);
+
+    @media #{$medium} {
+        height: rem(33);
+        width: rem(164);
+    }
+}

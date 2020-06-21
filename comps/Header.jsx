@@ -30,11 +30,8 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                     <div className="col-xs-11">
                         <Link href="/">
                             <img
-                                style={{
-                                    height: '33px',
-                                    width: '164px',
-                                    cursor: 'pointer',
-                                }}
+                            className="header-logo-img"
+
                                 src="/logo-navbar.png"
                                 alt="band logo"
                             />
