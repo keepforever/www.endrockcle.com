@@ -72,14 +72,14 @@ $gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 1
 
 .masthead-about {
     background-image: #{$gradient}, url('/end-rock-stellas-large.jpg');
-    min-height: rem(630);
+    min-height: rem(315);
     // @media #{$retina} {
     //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
     // }
 }
 
 .masthead-shows {
-    min-height: rem(530);
+    min-height: rem(315);
     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
     // @media #{$retina} {
     //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
@@ -87,7 +87,7 @@ $gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 1
 }
 
 .masthead-contact {
-    min-height: rem(630);
+    min-height: rem(315);
     background-image: #{$gradient}, url('/end-rock-at-sly-fox.jpg');
     // @media #{$retina} {
     //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
@@ -95,7 +95,7 @@ $gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 1
 }
 
 .masthead-song-list {
-    min-height: rem(630);
+    min-height: rem(315);
     background-image: #{$gradient}, url('/end-rock-at-sly-fox.jpg');
     // @media #{$retina} {
     //     background-image: #{$gradient}, url('/summer-concert-series-banner-alpha.png');
