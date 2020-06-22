@@ -73,7 +73,8 @@ const Home = ({ artistList }) => {
                         // src="/puppies-video.mp4"
                         // src="/bug-crawl-movie.mp4"
                         // src="/lady-bug-humping.mp4"
-                        src="/skull-candels-movie.mp4"
+                        // src="/skull-candels-movie.mp4"
+                        src="/end-rock-hero-video.mp4"
                         poster="/end-rock-stellas-large.jpg"
                         playsInline={true}
                         disablePictureInPicture={true}
@@ -110,7 +111,7 @@ const Home = ({ artistList }) => {
                     <div className="row middle-sm">
                         <div className="col-xs-12 col-md-8 col-lg-6 center-xs">
                             <h2>About End Rock</h2>
-                            <p>
+                            <p className="pt-3">
                                 End Rock is an alternative rock cover baned based in <strong>Cleveland, Ohio</strong>.
                                 We play music from bands like {artistList.join(', ')}
                             </p>
@@ -140,7 +141,7 @@ const Home = ({ artistList }) => {
                     <div className="row middle-sm center-xs">
                         <div className="col-xs-12 col-md-6 col-md-offset-6">
                             <h2>Available for bars, private parties, and bowling alleys</h2>
-                            <p>
+                            <p className="pt-3">
                                 We're open to picking up new gigs. With COVID disrupting our previously scheduled summer
                                 dates we currently have dates to fill. Send us and email and we'll get back to you!
                             </p>
