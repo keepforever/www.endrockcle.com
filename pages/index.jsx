@@ -144,9 +144,8 @@ const Home = ({ artistList }) => {
                         <div className="col-xs-12 col-md-6 col-md-offset-6">
                             <h2>Available for bars, private parties, and bowling alleys</h2>
                             <p>
-                                We're always open to picking up new gigs. With COVID disrupting out previously scheduled
-                                summer dates, we're available for show inquiries. Send us and email and we'll get back
-                                to you!
+                                We're open to picking up new gigs. With COVID disrupting our previously scheduled summer
+                                dates we currently have dates to fill. Send us and email and we'll get back to you!
                             </p>
                             <a href={myMailTo} style={{ fontSize: '32px' }} className="txt-er-red">
                                 <div className="row middle-xs center-xs">
