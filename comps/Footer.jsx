@@ -4,7 +4,7 @@ import { FiMail } from 'react-icons/fi';
 
 const Footer = (props) => (
     <footer>
-        <div className="container txt-er-red">
+        <div className="container">
             <div className="row mb-5">
                 <div className="col-xs-12 col-md-2 mb-xs-3">
                     <Link href="/">
@@ -53,17 +53,17 @@ const Footer = (props) => (
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <FaFacebook className="txt-er-red"/>
+                                    <FaFacebook className="txt-er-red" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://instagram.com/wearefindaway" target="_blank" rel="noopener noreferrer">
-                                    <FaInstagramSquare className="txt-er-red"/>
+                                    <FaInstagramSquare className="txt-er-red" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/wearefindaway" target="_blank" rel="noopener noreferrer">
-                                    <FiMail className="txt-er-red"/>
+                                    <FiMail className="txt-er-red" />
                                 </a>
                             </li>
                         </ul>
@@ -71,7 +71,7 @@ const Footer = (props) => (
                 </div>
             </div>
             <p>
-                <strong>&copy; 2020 End Rock LLC</strong>
+                <strong className=" txt-er-yellow">&copy; 2020 End Rock LLC</strong>
             </p>
         </div>
     </footer>
