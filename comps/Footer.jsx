@@ -4,7 +4,7 @@ import { FiMail } from 'react-icons/fi';
 
 const Footer = (props) => (
     <footer>
-        <div className="container">
+        <div className="container txt-er-red">
             <div className="row mb-5">
                 <div className="col-xs-12 col-md-2 mb-xs-3">
                     <Link href="/">
@@ -21,26 +21,26 @@ const Footer = (props) => (
                 <div className="col-xs-12 col-md-2 col-md-offset-1 mb-xs-4 mb-md-0">
                     <div className="row">
                         <Link href="/shows">
-                            <a>Shows</a>
+                            <a className="txt-er-red">Shows</a>
                         </Link>
                     </div>
                     <div className="row mt-2">
                         <Link href="/about">
-                            <a>About</a>
+                            <a className="txt-er-red">About</a>
                         </Link>
                     </div>
                 </div>
                 <div className="col-xs-12 col-md-2 mb-xs-4 mb-md-0">
                     <div className="row">
                         <Link href="/song-list">
-                            <a>Song List</a>
+                            <a className="txt-er-red">Song List</a>
                         </Link>
                     </div>
                 </div>
                 <div className="col-xs-12 col-md-2">
                     <div className="row">
                         <Link href="/contact">
-                            <a className="mb-4">Contact</a>
+                            <a className="mb-4 txt-er-red">Contact</a>
                         </Link>
                     </div>
                 </div>
@@ -53,17 +53,17 @@ const Footer = (props) => (
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <FaFacebook />
+                                    <FaFacebook className="txt-er-red"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://instagram.com/wearefindaway" target="_blank" rel="noopener noreferrer">
-                                    <FaInstagramSquare />
+                                    <FaInstagramSquare className="txt-er-red"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/wearefindaway" target="_blank" rel="noopener noreferrer">
-                                    <FiMail />
+                                    <FiMail className="txt-er-red"/>
                                 </a>
                             </li>
                         </ul>
