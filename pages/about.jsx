@@ -21,8 +21,8 @@ const About = (props) => {
                 </div>
                 <div className="row">
                     <h3 className="txt-silver">
-                        A band of five exquisite Cleveland, Ohio based primates with highly evolved a senses of rhythm,
-                        tonality, and a passion for alternative rock we want to share with the world.
+                        Just five dudes from Cleveland, Ohio with highly evolved senses of rhythm, tonality, a passion
+                        for alternative rock, and a desire to get the damn party started already.
                     </h3>
                 </div>
             </div>
