@@ -60,7 +60,12 @@ const Home = ({ artistList }) => {
 
                     <div className="row center-xs mt-4">
                         <Link href="/shows">
-                            <h3 className="txt-er-red pointer live-events">shows</h3>
+                            <h4 className="txt-er-red pointer live-events">shows</h4>
+                        </Link>
+                    </div>
+                    <div className="row center-xs mt-4">
+                        <Link href="/media">
+                            <h4 className="txt-er-red pointer live-events">media</h4>
                         </Link>
                     </div>
                 </div>
@@ -155,6 +160,23 @@ const Home = ({ artistList }) => {
                                     contact
                                 </a>
                             </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about" className="hype-vid">
+                <div className="container txt-white">
+                    <div className="row middle-sm">
+                        <div className="col-xs-12 col-md-8 col-lg-6 center-xs">
+                            <iframe
+                                width="100%"
+                                height="315"
+                                src="https://www.youtube.com/embed/vI3DbQcGr7Q"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </div>
                 </div>

@@ -36,6 +36,11 @@ const Footer = (props) => (
                             <a className="txt-er-red">Song List</a>
                         </Link>
                     </div>
+                    <div className="row mt-2">
+                        <Link href="/media">
+                            <a className="txt-er-red">Media</a>
+                        </Link>
+                    </div>
                 </div>
                 <div className="col-xs-12 col-md-2">
                     <div className="row">

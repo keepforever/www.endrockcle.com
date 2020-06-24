@@ -29,12 +29,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                 <div className="row middle-xs">
                     <div className="col-xs-11">
                         <Link href="/">
-                            <img
-                            className="header-logo-img"
-
-                                src="/logo-navbar.png"
-                                alt="band logo"
-                            />
+                            <img className="header-logo-img" src="/logo-navbar.png" alt="band logo" />
                         </Link>
                     </div>
                     <div className="col-xs-1 center-xs">
@@ -60,6 +55,12 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
                             <nav className="container center-xs">
                                 <Link href="/">
                                     <a className="nav-group-header txt-silver" onClick={closeMenu}></a>
+                                </Link>
+
+                                <Link href="/media">
+                                    <a className="nav-group-header txt-silver" onClick={closeMenu}>
+                                        Media Gallery
+                                    </a>
                                 </Link>
 
                                 <Link href="/song-list">

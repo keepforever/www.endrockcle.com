@@ -225,6 +225,42 @@
     }
 }
 
+.hype-vid {
+    $about-gradient: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(255, 255, 255, 0.146) 100%
+    );
+
+    background-position: right center;
+    background-repeat: no-repeat;
+    // background-image: $about-gradient, url('/end-rock-at-sly-fox.jpg');
+    background-color: $black;
+
+    background-size: cover;
+
+    @media #{$small} {
+        background-image: $about-gradient, url('/media/aug-3-4.jpg');
+        // outline: 5px solid yellow;
+    }
+
+    @media #{$medium} {
+        background-image: $about-gradient, url('/media/aug-3-4.jpg');
+        // outline: 5px solid green;
+    }
+
+    @media #{$large} {
+        background-image: $about-gradient, url('/media/aug-3-4.jpg');
+        // outline: 5px solid $red;
+    }
+
+    @media #{$xlarge} {
+        background-image: $about-gradient, url('/media/aug-3-4.jpg');
+        // outline: 5px solid $blue;
+    }
+}
+
 .brands {
     .brand-item p {
         width: 90%;
