@@ -5,7 +5,6 @@ export const songList = [
     { song: 'All Star', artist: 'Smashmouth' },
     { song: 'All the Small Things', artist: 'Blink 182' },
     { song: 'American Girl', artist: 'Tom Petty' },
-    { song: 'And so on...', artist: 'and so forth...' },
     { song: 'Basket Case', artist: 'Green Day' },
     { song: 'Buddy Holly', artist: 'Weezer' },
     { song: 'Cleveland Rocks', artist: 'POTUS' },
@@ -38,4 +37,5 @@ export const songList = [
     { song: 'When I Come Around', artist: 'Green Day' },
     { song: 'Where is My Mind', artist: 'The Pixies' },
     { song: 'Zombie', artist: 'The Cranberries' },
+    { song: 'And so on...', artist: 'and so forth...' },
 ];
