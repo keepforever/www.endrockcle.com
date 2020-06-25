@@ -102,15 +102,15 @@ const Home = ({ artistList }) => {
                             <p style={{ fontSize: '18px' }} className="pt-3">
                                 End Rock is a high-energy, alternative rock cover band based in{' '}
                                 <strong>Cleveland, Ohio.</strong> We play alternative rock from the ‘90s and early ‘00s,
-                                and also like to break out a classic or two when the crowd is feeling it. We’re all
-                                about having a great time with great tunes to get your body moving and toe tapping (and
-                                sometimes head banging!) ‘till the end of the night. Check out our
+                                and also like to break out a classic or two when the crowd is feeling it. <br /> <br />{' '}
+                                We’re all about having a great time with great tunes to get your body moving and toe
+                                tapping (and sometimes head banging!) ‘till the end of the night. Check out our
                                 <span className="mx-2">
                                     <Link href="/song-list">
                                         <a className="txt-er-red">Song List Page</a>
                                     </Link>
                                 </span>
-                                to see what we cover, and make sure to catch us at one of our{' '}
+                                to get a feel for our set, and make sure to come see us at one of our
                                 <span className="mx-2">
                                     <Link href="/shows">
                                         <a className="txt-er-red">Upcoming Shows</a>
