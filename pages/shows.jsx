@@ -8,12 +8,6 @@ const Shows = (props) => {
                 </div>
 
                 <div className="row start-xs my-2 txt-silver">
-                    <h5 className="">July 11th &mdash; Stella's Music Club, Cleveland</h5>
-                </div>
-
-                <hr />
-
-                <div className="row start-xs my-2 txt-silver">
                     <h5 className="">July 25th &mdash; Shooters on the Water, Cleveland</h5>
                 </div>
                 <hr />
