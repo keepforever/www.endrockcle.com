@@ -16,7 +16,7 @@ const Media = ({ files = [] }) => {
                             maxWidth: '100%',
                         }}
                         src="https://www.youtube.com/embed/vI3DbQcGr7Q"
-                        frameborder="0"
+                        frameBorder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
