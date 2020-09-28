@@ -7,13 +7,15 @@ const Shows = (props) => {
                     <h1 className="m">Summer 2020</h1>
                 </div>
                 <hr />
-                <div className="row start-xs mt-5 txt-silver">
+                {/* <div className="row start-xs mt-5 txt-silver">
                     <h5 className="">September 5th &mdash; Shooters on the Water, Cleveland</h5>
-                </div>
+                </div> */}
                 <div className="row my-5">
                     <p className="mx-3 txt-italic">
-                        {' '}
-                        <small>Unfortunately, we have had many COVID-19 cancellations.</small>{' '}
+                        {/* <small>
+                        </small> */}
+                        Unfortunately, we have had many COVID-19 cancellations. We hope to be playing out again as soon
+                        as it's safe.{' '}
                     </p>
                 </div>
             </div>

@@ -16,6 +16,7 @@ export const songList = [
     { song: 'Flagpole Sita', artist: 'Harvey Danger' },
     { song: 'Good', artist: 'Better than Ezra' },
     { song: 'Hey Jealousy', artist: 'Gin Blossoms' },
+    { song: 'I Believe in a Thing Called Love', artist: 'The Darkness' },
     { song: 'Killing in the Name', artist: 'RATM' },
     { song: 'Machine Head', artist: 'Bush' },
     { song: 'Man in the Box', artist: 'Alice in Chains' },
