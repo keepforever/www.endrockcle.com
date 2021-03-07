@@ -14,7 +14,7 @@ const Header = ({ siteTitle = '', dark = false, setFixed }) => {
     });
 
     const closeMenu = () => {
-        console.log('\n', `hello close menu `, '\n');
+        // console.log('\n', `hello close menu `, '\n');
         setMenuOpen(false);
         setFixed(false);
     };
