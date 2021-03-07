@@ -14,7 +14,7 @@ const SongList = (props) => {
                 <h1 className="txt-silver">Songs like:</h1>
                 <div className="row">
                     <Link href="/setlist-builder">
-                        <a>Builder</a>
+                        <a style={{ color: '#000000', opacity: 0.1 }}>Builder</a>
                     </Link>
                 </div>
                 <div className="row mt-3">

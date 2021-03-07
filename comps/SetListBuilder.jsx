@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactToPrint from 'react-to-print';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 import initialData from '../utils/initial-data';
@@ -71,19 +72,29 @@ class SetListBuilder extends React.Component {
     };
 
     render() {
-        // console.log('\n', '\n', `this.state = `, this.state, '\n', '\n');
-        // console.log('\n', `this.state.columns['column-1'].taskIds = `, this.state.columns['column-1'].taskIds, '\n');
         return (
-            <DragDropContext onDragEnd={this.onDragEnd}>
-                <div style={{ display: 'flex' }}>
-                    {this.state.columnOrder.map((columnId) => {
-                        const column = this.state.columns[columnId];
-                        const tasks = column.taskIds.map((taskId) => this.state.tasks[taskId]);
-                        // console.log('\n', '\n', `tasks = `, tasks, '\n', '\n');
-                        return <Column key={column.id} column={column} tasks={tasks} />;
-                    })}
-                </div>
-            </DragDropContext>
+            <>
+                <DragDropContext onDragEnd={this.onDragEnd}>
+                    <div style={{ display: 'flex' }} ref={(el) => (this.componentRef = el)}>
+                        <div style={{ flex: 1 }}>
+                            <div className="row center-xs">
+                                <ReactToPrint
+                                    trigger={() => {
+                                        return <button className="btn btn-primary btn-lg">Print</button>;
+                                    }}
+                                    content={() => this.componentRef}
+                                />
+                            </div>
+                        </div>
+                        {this.state.columnOrder.map((columnId) => {
+                            const column = this.state.columns[columnId];
+                            const tasks = column.taskIds.map((taskId) => this.state.tasks[taskId]);
+                            // console.log('\n', '\n', `tasks = `, tasks, '\n', '\n');
+                            return <Column key={column.id} column={column} tasks={tasks} />;
+                        })}
+                    </div>
+                </DragDropContext>
+            </>
         );
     }
 }

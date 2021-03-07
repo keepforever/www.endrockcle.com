@@ -20,6 +20,7 @@
         "react-icons": "^3.10.0",
         "react-no-ssr": "^1.1.0",
         "react-spring": "^8.0.27",
+        "react-to-print": "^2.12.3",
         "scroll-js": "^3.2.0"
     }
 }
