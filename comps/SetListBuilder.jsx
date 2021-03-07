@@ -76,14 +76,27 @@ class SetListBuilder extends React.Component {
             <>
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <div style={{ display: 'flex' }} ref={(el) => (this.componentRef = el)}>
-                        <div style={{ flex: 1 }}>
-                            <div className="row center-xs">
-                                <ReactToPrint
-                                    trigger={() => {
-                                        return <button className="btn btn-primary btn-lg">Print</button>;
-                                    }}
-                                    content={() => this.componentRef}
-                                />
+                        <div style={{ flex: 2 }}>
+                            <div className="container">
+                                <div className="row center-xs">
+                                    <h3 style={{ color: 'lightgray' }}>
+                                        Instructions
+                                    </h3>
+                                </div>
+                                <div className="row center-xs">
+                                    <div className="col-xs-12">
+                                        <p style={{ color: 'lightgray' }}>
+                                            Move around the songs till you see something you like, then hit print.
+                                            Refreshing the page will re-scramble the songs.
+                                        </p>
+                                        <ReactToPrint
+                                            trigger={() => {
+                                                return <button className="btn btn-primary btn-lg">Print</button>;
+                                            }}
+                                            content={() => this.componentRef}
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         {this.state.columnOrder.map((columnId) => {
