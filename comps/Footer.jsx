@@ -76,7 +76,7 @@ const Footer = (props) => (
                 </div>
             </div>
             <p>
-                <strong className=" txt-er-yellow">&copy; 2020 End Rock LLC</strong>
+                <strong className=" txt-er-yellow">&copy; 2021 End Rock LLC</strong>
             </p>
         </div>
     </footer>
