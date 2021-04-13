@@ -14,6 +14,12 @@ const Shows = (props) => {
                 <div className="row start-xs mt-5 txt-silver">
                     <h4 className="">August 27th &mdash; Collision Bend Brewery &mdash; Cleveland: 9p - 12a </h4>
                 </div>
+                <div className="row start-xs mt-5 txt-silver">
+                    <h4 className="">
+                        September 4th &mdash; McArthur's Brew House &mdash; 2721 Front St, Cuyahoga Falls, OH 44221:
+                        6:30p - 10:30p{' '}
+                    </h4>
+                </div>
             </div>
         </>
     );
