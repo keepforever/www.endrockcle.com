@@ -1,4 +1,3 @@
-
 a {
     color: $primary;
     font-weight: inherit;
@@ -65,4 +64,8 @@ a.fancy-cta {
             transform: translateX(20px);
         }
     }
+}
+
+a.show-location {
+    color: $end-rock-yellow;
 }
