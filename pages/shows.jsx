@@ -38,8 +38,8 @@ const Shows = (props) => {
                     </h4>
                 </div>
 
-                <div className="row start-xs mt-2 mb-4 txt-silver bottom-xs">
-                    <h1 className="m">Winter 2022</h1>
+                <div className="row start-xs mt-6 mb-4 txt-silver bottom-xs">
+                    <h1>Winter 2022</h1>
                 </div>
                 <hr />
 
