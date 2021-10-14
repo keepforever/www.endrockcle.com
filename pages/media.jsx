@@ -6,11 +6,8 @@ const Media = ({ files = [] }) => {
         <>
             <div className="masthead masthead-contact"></div>
             <div className="container txt-silver">
-                <div className="row start-xs my-2 txt-silver">
-                    <h1>Media</h1>
-                </div>
-                <div className="row center-xs mb-3">
-                    <h3 className="txt-underline">Promo</h3>
+                <div className="row mb-3">
+                    <h2 className="txt-underline">Promo</h2>
                 </div>
                 <div className="row center-xs mb-6">
                     <iframe
@@ -26,11 +23,21 @@ const Media = ({ files = [] }) => {
                     ></iframe>
                 </div>
 
-                <div className="row center-xs mb-3">
-                    <h3 className="txt-underline">Demos</h3>
+                <div className="row mb-3">
+                    <h2 className="txt-underline">Demos</h2>
                 </div>
 
-                <div className="row center-xs mb-6">
+                <div className="row mb-6">
+                    <div className="row center-xs mb-6">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/SyAMNObui-c"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
                     <iframe
                         width="560"
                         height="315"
@@ -55,9 +62,8 @@ const Media = ({ files = [] }) => {
                     ></iframe>
                 </div>
 
-
-                <div className="row center-xs mb-3">
-                    <h3 className="txt-underline">Photos</h3>
+                <div className="row mb-3">
+                    <h2 className="txt-underline">Photos</h2>
                 </div>
 
                 <div className="row display-flex-around">
