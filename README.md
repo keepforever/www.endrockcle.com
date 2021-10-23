@@ -1,3 +1,9 @@
+# Stuff
+
+https://tailwindcss.com/docs/customizing-colors
+
+https://www.npmjs.com/package/react-multi-carousel
+
 # Next.js + Tailwind CSS + TypeScript Starter
 
 [![CodeFactor](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/badge/main)](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/overview/main)
@@ -115,11 +121,13 @@ Inter fonts is a variable fonts that is self hosted and preloaded.
 ## Usage Guide
 
 ### 1. Change defaults
+
 There are some things you need to change including title, urls, favicons, etc. Here are the list
 
 #### `components/Seo.tsx`
 
 Change title, sitename, url, and opengraph image
+
 ```tsx
 const defaultMeta = {
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
@@ -181,13 +189,11 @@ export default function TestPage() {
       <Seo templateTitle='Test' />
       <main>
         <section className=''>
-          <div className='layout'>
-            
-          </div>
+          <div className='layout'></div>
         </section>
       </main>
     </>
-  )
+  );
 }
 ```
 
@@ -198,9 +204,9 @@ To make a new component, It is encouraged to use `export default function`. Beca
 Snippets: `rc`
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 export default function Component() {
-  return <div></div>
+  return <div></div>;
 }
 ```
 
@@ -209,7 +215,7 @@ export default function Component() {
 Snippets: `ir`
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 ```
 
 ### useState Hook
@@ -217,7 +223,7 @@ import * as React from 'react'
 Snippets: `us`
 
 ```tsx
-const [state, setState] = React.useState(initialState)
+const [state, setState] = React.useState(initialState);
 ```
 
 ### useEffect Hook
@@ -225,7 +231,7 @@ const [state, setState] = React.useState(initialState)
 Snippets: `uf`
 
 ```tsx
-React.useEffect(() => {}, [])
+React.useEffect(() => {}, []);
 ```
 
 ### useReducer Hook
@@ -233,7 +239,7 @@ React.useEffect(() => {}, [])
 Snippets: `ur`
 
 ```tsx
-const [state, dispatch] = React.useReducer(someReducer, {})
+const [state, dispatch] = React.useReducer(someReducer, {});
 ```
 
 ### useRef Hook
@@ -241,7 +247,7 @@ const [state, dispatch] = React.useReducer(someReducer, {})
 Snippets: `urf`
 
 ```tsx
-const someRef = React.useRef()
+const someRef = React.useRef();
 ```
 
 ### Region Comment
