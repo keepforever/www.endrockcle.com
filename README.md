@@ -2,7 +2,7 @@
 
 https://tailwindcss.com/docs/customizing-colors
 
-https://www.npmjs.com/package/react-multi-carousel
+https://github.com/YIZHUANG/react-multi-carousel
 
 # Next.js + Tailwind CSS + TypeScript Starter
 

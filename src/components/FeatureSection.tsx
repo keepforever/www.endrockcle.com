@@ -1,32 +1,28 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
-import { FaDrum } from 'react-icons/fa';
+// import { FaDrum } from 'react-icons/fa';
 
 export const FeatureSection = () => {
   return (
-    <div className='relative pt-8 pb-32 overflow-hidden'>
+    <div className='relative pt-32 pb-32 overflow-hidden'>
       {/* One */}
 
       <div className='relative'>
         <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
+          {/* Left Text */}
+
           <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
             <div>
-              {/* <div>
-                <span className='h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600'>
-                  <FaDrum
-                    className='h-6 w-6 text-gray-200'
-                    aria-hidden='true'
-                  />
-                </span>
-              </div> */}
               <div className='mt-6'>
                 <h2 className='text-3xl font-extrabold tracking-tight text-gray-200'>
-                  Stay on top of customer support
+                  End Rock is a high-energy, alternative rock cover band
                 </h2>
                 <p className='mt-4 text-lg text-gray-200'>
-                  The President, Vice President and all other Officers of the
-                  President from Office, or Title, of any kind whatever, from
-                  any King, Prince, or foreign State.
+                  End Rock is a high-energy, alternative rock cover band based
+                  in Cleveland, Ohio. We play alternative rock from the ‘90s and
+                  early ‘00s, and also like to break out a classic or two when
+                  the crowd is feeling it.
                 </p>
                 <div className='mt-6'>
                   <a
@@ -42,13 +38,16 @@ export const FeatureSection = () => {
               <blockquote>
                 <div>
                   <p className='text-base text-gray-200'>
-                    If all of this sounds astonishing to you, thats because it
+                    If all of this sounds astonishing to you, that's because it
                     is! What does the term accounting. Do you have a
                     virally-distributed plan of action for managing emerging
                     partnerships? Without data hygiene supervising, you will
                     lack cross-media CAE.
                   </p>
                 </div>
+
+                {/* Footer */}
+
                 <footer className='mt-3'>
                   <div className='flex items-center space-x-3'>
                     <div className='flex-shrink-0'>
@@ -66,10 +65,15 @@ export const FeatureSection = () => {
               </blockquote>
             </div>
           </div>
+
+          {/* Image Container */}
+
           <div className='mt-12 sm:mt-16 lg:mt-0'>
             <div className='pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full'>
+              {/* Image */}
+
               <img
-                className='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
+                className='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-10 lg:h-full lg:w-auto lg:max-w-none'
                 src='collision-bend/full-band-1.jpg'
                 alt='full end rock band'
               />
@@ -84,16 +88,8 @@ export const FeatureSection = () => {
         <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
           <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2'>
             <div>
-              <div>
-                <span className='h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600'>
-                  <FaDrum
-                    className='h-6 w-6 text-gray-200'
-                    aria-hidden='true'
-                  />
-                </span>
-              </div>
               <div className='mt-6'>
-                <h2 className='text-3xl font-extrabold tracking-tight text-gray-900'>
+                <h2 className='text-3xl font-extrabold tracking-tight text-gray-300'>
                   Better understand your customers
                 </h2>
                 <p className='mt-4 text-lg text-gray-200'>

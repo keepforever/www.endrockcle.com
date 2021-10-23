@@ -56,7 +56,9 @@ const Navbar: React.FC = () => {
     <Disclosure
       as='nav'
       className={clsx('sticky top-0 transition-colors duration-500 z-10', {
-        'bg-gray-800': shouldBeOpaque,
+        'backdrop-filter backdrop-blur-lg bg-opacity-40 bg-black':
+          shouldBeOpaque,
+        'bg-black': !shouldBeOpaque,
       })}
     >
       {({ open }) => (
@@ -98,7 +100,7 @@ const Navbar: React.FC = () => {
                     onClick={() =>
                       setTheme(theme === 'dark' ? 'light' : 'dark')
                     }
-                    className='bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+                    className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
                   >
                     <span className='sr-only'>Toggle Dark Mode</span>
                     {theme === 'dark' ? (
@@ -111,7 +113,7 @@ const Navbar: React.FC = () => {
                   {/* Profile dropdown */}
                   <Menu as='div' className='ml-3 relative'>
                     <div>
-                      <Menu.Button className='max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'>
+                      <Menu.Button className='p-2 max-w-xs text-gray-400 hover:text-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'>
                         <span className='sr-only'>Open user menu</span>
                         <RiMenu2Fill className='h-6 w-6' aria-hidden='true' />
                       </Menu.Button>

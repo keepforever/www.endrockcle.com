@@ -4,7 +4,8 @@ import { FaDrum, FaGuitar } from 'react-icons/fa';
 
 import { FeatureSection } from '@/components/FeatureSection';
 import AppShell from '@/components/layouts/AppShell';
-import { ScrollJunk } from '@/components/ScrollJunk';
+import { SongCarousel } from '@/components/SongCarousel';
+// import { ScrollJunk } from '@/components/ScrollJunk';
 
 const features = [
   {
@@ -95,7 +96,10 @@ const HomePage: React.FC = () => {
       </div>
 
       <FeatureSection />
-      <ScrollJunk />
+
+      <SongCarousel />
+
+      {/* <ScrollJunk /> */}
     </AppShell>
   );
 };

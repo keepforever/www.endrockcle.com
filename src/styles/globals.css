@@ -47,8 +47,8 @@
   }
 
   body {
-    @apply text-sm font-primary md:text-base min-h-screen;
-    background-image: url('/svg/wavey-fingerprint.svg');
+    @apply text-sm font-primary md:text-base min-h-screen bg-hero-light dark:bg-hero-dark bg-cover;
+    /* background-image: url('/svg/wavey-fingerprint.svg'); */
     /* background-color: #001252; */
     /* background-image: url('/flat-mountains.svg'); */
     /* background-attachment: fixed; */

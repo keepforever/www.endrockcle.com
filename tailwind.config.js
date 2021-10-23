@@ -27,6 +27,9 @@ module.exports = {
           500: withOpacity('--tw-clr-primary-500'),
         },
         dark: '#222222',
+        'erc-red': '#EE3142',
+        'erc-yellow': '#E9E71F',
+        'erc-blue': '#201B50',
       },
       keyframes: {
         flicker: {
@@ -43,6 +46,10 @@ module.exports = {
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
+      },
+      backgroundImage: {
+        'hero-dark': "url('/svg/wavey-fingerprint.svg')",
+        'hero-light': "url('/svg/slanted-gradient.svg')",
       },
     },
   },
