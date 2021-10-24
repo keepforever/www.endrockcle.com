@@ -2,12 +2,17 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import fs from 'fs';
+import Head from 'next/head';
 
 import AppShell from '@/components/layouts/AppShell';
 
 export default function Media({ images = [] }) {
   return (
     <AppShell>
+      <Head>
+        <title>EndRock | Media</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <div className='relative'>
         <div className='absolute inset-0'>
           <img

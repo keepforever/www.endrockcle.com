@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
+import Head from 'next/head';
+
 import AppShell from '@/components/layouts/AppShell';
 
 import { shuffle } from '@/utils/shuffle';
@@ -8,6 +10,10 @@ import { songList } from '@/utils/songList';
 export default function SongList() {
   return (
     <AppShell>
+      <Head>
+        <title>EndRock | Song List</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <div className='relative'>
         <div className='absolute inset-0'>
           <img

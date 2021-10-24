@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
 // import { FaDrum } from 'react-icons/fa';
+import Link from 'next/link';
 
 export const FeatureSection = () => {
   return (
@@ -19,18 +20,16 @@ export const FeatureSection = () => {
                   High-energy, Alternative Rock
                 </h2>
                 <p className='mt-4 text-lg text-gray-300'>
-                  End Rock is a high-energy, alternative rock cover band based
-                  in Cleveland, Ohio. We play alternative rock from the ‘90s and
-                  early ‘00s, and also like to break out a classic or two when
-                  the crowd is feeling it.
+                  <strong>EndRock</strong> is a high-energy, alternative rock
+                  cover band based in Cleveland, Ohio. We play alternative rock
+                  from the ‘90s and early ‘00s.
                 </p>
                 <div className='mt-6'>
-                  <a
-                    href='#'
-                    className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-300 bg-indigo-600 hover:bg-indigo-700'
-                  >
-                    Get started
-                  </a>
+                  <Link href='/contact'>
+                    <a className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-300 bg-erc-red hover:bg-erc-yellow hover:text-erc-blue transition duration-500 ease-in-out'>
+                      Book Now
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

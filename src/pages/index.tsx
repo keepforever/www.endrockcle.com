@@ -1,15 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from 'next/head';
 import React from 'react';
 import { FaFacebook, FaInstagramSquare } from 'react-icons/fa';
 
 import { FeatureSection } from '@/components/FeatureSection';
 import AppShell from '@/components/layouts/AppShell';
 import { SongCarousel } from '@/components/SongCarousel';
-// import { ScrollJunk } from '@/components/ScrollJunk';
+import UpcomingShows from '@/components/UpcomingShows';
 
 const HomePage: React.FC = () => {
   return (
     <AppShell>
+      <Head>
+        <title>EndRock | Home</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <div className='w-full h-screen flex justify-center items-center relative'>
         <video
           autoPlay={true}
@@ -62,9 +67,9 @@ const HomePage: React.FC = () => {
 
       <FeatureSection />
 
-      <SongCarousel />
+      <UpcomingShows />
 
-      {/* <ScrollJunk /> */}
+      <SongCarousel />
     </AppShell>
   );
 };
