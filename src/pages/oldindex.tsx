@@ -18,7 +18,7 @@ export default function HomePage() {
               A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
               Import, Seo, Link component, pre-configured with Husky{' '}
             </p>
-            <p className='mt-2 text-sm text-gray-200'>
+            <p className='mt-2 text-sm text-gray-300'>
               <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
                 See the repository
               </CustomLink>

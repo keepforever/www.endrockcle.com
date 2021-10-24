@@ -1,39 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { FaDrum, FaGuitar } from 'react-icons/fa';
+import { FaFacebook, FaInstagramSquare } from 'react-icons/fa';
 
 import { FeatureSection } from '@/components/FeatureSection';
 import AppShell from '@/components/layouts/AppShell';
 import { SongCarousel } from '@/components/SongCarousel';
 // import { ScrollJunk } from '@/components/ScrollJunk';
-
-const features = [
-  {
-    name: 'Competitive exchange rates',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaDrum,
-  },
-  {
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaGuitar,
-  },
-  // {
-  //   name: 'Transfers are instant',
-  //   description:
-  //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  //   icon: FaHeadphones,
-  // },
-
-  // {
-  //   name: 'Butts and Butts',
-  //   description:
-  //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  //   icon: FaPlay,
-  // },
-];
 
 const HomePage: React.FC = () => {
   return (
@@ -63,33 +35,26 @@ const HomePage: React.FC = () => {
               <img
                 src='logo-main-for-dark-bg.png'
                 alt='band logo'
-                className='lg:max-w-3xl md:max-w-2xl sm:max-w-xs object-contain mt-28 mb-8'
+                className='lg:max-w-3xl md:max-w-2xl sm:max-w-xs object-contain mt-44 mb-8'
               />
             </div>
 
-            <div className='flex justify-center'>
-              <div className='mt-10 max-w-4xl'>
-                <dl className='space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10'>
-                  {features.map((feature) => (
-                    <div key={feature.name} className='relative'>
-                      <dt>
-                        <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white'>
-                          <feature.icon
-                            className='h-6 w-6'
-                            aria-hidden='true'
-                          />
-                        </div>
-                        <p className='ml-16 text-lg leading-6 font-medium text-gray-300'>
-                          {feature.name}
-                        </p>
-                      </dt>
-                      <dd className='mt-2 ml-16 text-base kangaroo'>
-                        {feature.description}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
+            <div className='flex items-center justify-center space-x-6 border-t-2 border-gray-200 border-opacity-50 w-full max-w-3xl mx-auto pt-12'>
+              <a
+                href='https://www.facebook.com/EndRockCle'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaFacebook className='text-erc-yellow text-2xl h-12 w-12 opacity-70 hover:opacity-100' />
+              </a>
+
+              <a
+                href='https://www.instagram.com/endrockcle'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaInstagramSquare className='text-erc-red text-2xl h-12 w-12 opacity-70 hover:opacity-100' />
+              </a>
             </div>
           </div>
         </div>

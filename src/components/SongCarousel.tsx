@@ -32,14 +32,14 @@ export const SongCarousel: React.FC = () => {
       return (
         <div
           key={el.join('-')}
-          className='min-h-40 flex flex-wrap items-center justify-center mx-auto max-w-5xl'
+          className='min-h-40 flex flex-wrap justify-center mx-auto max-w-5xl'
         >
           {el.map((song) => (
             <div
-              className='mr-3 mb-6 py-2 px-6 text-gray-300 rounded-full bg-gray-900 flex-col'
+              className='mr-2 mb-4 lg:mb-12 py-2 px-6 text-gray-300 rounded-full bg-gray-900 flex-col'
               key={song.song}
             >
-              <div className='font-medium text-lg lg:text-2xl italic'>
+              <div className='font-medium text-base lg:text-2xl italic'>
                 "{song.song}"
               </div>
               <div className='pl-2 font-medium text-xs lg:text-sm'>
@@ -58,25 +58,23 @@ export const SongCarousel: React.FC = () => {
         <p className='mt-1 text-4xl font-extrabold text-gray-300 sm:text-5xl sm:tracking-tight lg:text-6xl'>
           Songs You Love
         </p>
-        <p className='max-w-xl mt-5 mx-auto text-xl text-gray-500'>
-          Start building for free, then add a site plan to go live. Account
-          plans unlock additional features.
+        <p className='max-w-xl mt-5 mx-auto text-xl text-gray-300'>
+          Playing a mix of 90's, 00's, and a few classics.
         </p>
       </div>
       <Carousel
         autoPlay
         className='py-10'
         swipeable={true}
-        draggable={true}
-        showDots={true}
+        draggable={false}
+        showDots={false}
         responsive={responsive}
-        ssr={false} // means to render carousel on server-side.
+        ssr={true} // means to render carousel on server-side.
         infinite={true}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={10000}
         keyBoardControl={true}
-        customTransition='transition-opacity ease-in-out duration-1000'
         // containerClass='bg-green-800'
-        removeArrowOnDeviceType={['tablet', 'mobile']}
+        // removeArrowOnDeviceType={['tablet', 'mobile']}
       >
         {please.map((p: React.ReactNode) => p)}
       </Carousel>

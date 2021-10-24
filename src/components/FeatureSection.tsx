@@ -15,10 +15,10 @@ export const FeatureSection = () => {
           <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
             <div>
               <div className='mt-6'>
-                <h2 className='text-3xl font-extrabold tracking-tight text-gray-200'>
-                  End Rock is a high-energy, alternative rock cover band
+                <h2 className='text-3xl font-extrabold tracking-tight text-gray-300'>
+                  High-energy, Alternative Rock
                 </h2>
-                <p className='mt-4 text-lg text-gray-200'>
+                <p className='mt-4 text-lg text-gray-300'>
                   End Rock is a high-energy, alternative rock cover band based
                   in Cleveland, Ohio. We play alternative rock from the ‘90s and
                   early ‘00s, and also like to break out a classic or two when
@@ -27,7 +27,7 @@ export const FeatureSection = () => {
                 <div className='mt-6'>
                   <a
                     href='#'
-                    className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-200 bg-indigo-600 hover:bg-indigo-700'
+                    className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-300 bg-indigo-600 hover:bg-indigo-700'
                   >
                     Get started
                   </a>
@@ -37,7 +37,7 @@ export const FeatureSection = () => {
             <div className='mt-8 border-t border-gray-200 pt-6'>
               <blockquote>
                 <div>
-                  <p className='text-base text-gray-200'>
+                  <p className='text-base text-gray-300'>
                     If all of this sounds astonishing to you, that's because it
                     is! What does the term accounting. Do you have a
                     virally-distributed plan of action for managing emerging
@@ -57,7 +57,7 @@ export const FeatureSection = () => {
                         alt='full end rock band'
                       />
                     </div>
-                    <div className='text-base font-medium text-gray-200'>
+                    <div className='text-base font-medium text-gray-300'>
                       Marcia Hill, Digital Marketing Manager
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export const FeatureSection = () => {
                 <h2 className='text-3xl font-extrabold tracking-tight text-gray-300'>
                   Better understand your customers
                 </h2>
-                <p className='mt-4 text-lg text-gray-200'>
+                <p className='mt-4 text-lg text-gray-300'>
                   Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis
                   bibendum malesuada faucibus lacinia porttitor. Pulvinar
                   laoreet sagittis viverra duis. In venenatis sem arcu pretium
@@ -101,7 +101,7 @@ export const FeatureSection = () => {
                 <div className='mt-6'>
                   <a
                     href='#'
-                    className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-200 bg-indigo-600 hover:bg-indigo-700'
+                    className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-300 bg-indigo-600 hover:bg-indigo-700'
                   >
                     Get started
                   </a>
