@@ -2,6 +2,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import clsx from 'clsx';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import React, { Fragment, useEffect, useState } from 'react';
 import {
@@ -19,8 +21,8 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
+  { name: 'Song List', href: '/song-list', current: true },
+  { name: 'Media', href: '/media', current: false },
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
   { name: 'Reports', href: '#', current: false },
@@ -39,6 +41,7 @@ const Navbar: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const [shouldBeOpaque, setShouldBeOpaque] = useState<boolean>();
   const [, setScrollY] = useState(0);
+  const router = useRouter();
 
   const handleScroll = (event: any) => {
     const scrollPos = event.target.scrollingElement.scrollTop;
@@ -67,11 +70,15 @@ const Navbar: React.FC = () => {
             <div className='flex items-center justify-between h-16'>
               <div className='flex items-center'>
                 <div className='flex-shrink-0'>
-                  <img
-                    className='w-24 cursor-pointer'
-                    src='/logo-navbar.png'
-                    alt='band logo'
-                  />
+                  <Link href='/'>
+                    <a href=''>
+                      <img
+                        className='w-24 cursor-pointer'
+                        src='/logo-navbar.png'
+                        alt='band logo'
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <div className='hidden md:block'>
                   <div className='ml-10 flex items-baseline space-x-4'>
@@ -80,12 +87,12 @@ const Navbar: React.FC = () => {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
-                            ? 'bg-gray-900 text-white'
+                          router.pathname === item.href
+                            ? 'bg-gray-800 text-white'
                             : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={router.pathname === item.href}
                       >
                         {item.name}
                       </a>
@@ -173,12 +180,14 @@ const Navbar: React.FC = () => {
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    item.current
+                    router.pathname === item.href
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={
+                    router.pathname === item.href ? 'page' : undefined
+                  }
                 >
                   {item.name}
                 </a>
