@@ -42,7 +42,7 @@ export const SongCarousel: React.FC = () => {
               <div className='font-medium text-base lg:text-2xl italic'>
                 "{song.song}"
               </div>
-              <div className='pl-2 font-medium text-xs lg:text-sm'>
+              <div className='font-medium text-xs lg:text-sm'>
                 {song.artist}
               </div>
             </div>

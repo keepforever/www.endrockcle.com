@@ -4,12 +4,11 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
-  description:
-    ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
-  url: 'https://tsnext-tw.thcl.dev',
-  image: 'https://theodorusclarence.com/favicon/large-og.jpg',
+  title: 'EndRock',
+  site_name: 'EndRock CLE',
+  description: "EndRock is a Cleveland Ohio based 90's Rock Cover Band.",
+  url: 'https://www.endrockcle.com/',
+  image: '',
   type: 'website',
   robots: 'follow, index',
 };

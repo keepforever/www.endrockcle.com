@@ -1,17 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 
 import AppShell from '@/components/layouts/AppShell';
+import Seo from '@/components/Seo';
 
 export default function Contact() {
   return (
     <AppShell>
-      <Head>
-        <title>EndRock | Contact</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      </Head>
+      <Seo templateTitle='Contact' />
+
       <div className='relative'>
         <div className='absolute inset-0'>
           <img
@@ -36,9 +34,6 @@ export default function Contact() {
             </h2>
             <div className='mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2'>
               <div>
-                <h3 className='text-lg leading-6 font-medium text-gray-300'>
-                  Call or Write
-                </h3>
                 <dl className='mt-2 text-base text-gray-300'>
                   <div>
                     <dt className='sr-only'>Email</dt>

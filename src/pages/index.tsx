@@ -5,12 +5,14 @@ import { FaFacebook, FaInstagramSquare } from 'react-icons/fa';
 
 import { FeatureSection } from '@/components/FeatureSection';
 import AppShell from '@/components/layouts/AppShell';
+import Seo from '@/components/Seo';
 import { SongCarousel } from '@/components/SongCarousel';
 import UpcomingShows from '@/components/UpcomingShows';
 
 const HomePage: React.FC = () => {
   return (
     <AppShell>
+      <Seo templateTitle='Home' />
       <Head>
         <title>EndRock | Home</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />

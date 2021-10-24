@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
-
 import AppShell from '@/components/layouts/AppShell';
+import Seo from '@/components/Seo';
 
 import { shuffle } from '@/utils/shuffle';
 import { songList } from '@/utils/songList';
@@ -10,10 +9,8 @@ import { songList } from '@/utils/songList';
 export default function SongList() {
   return (
     <AppShell>
-      <Head>
-        <title>EndRock | Song List</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      </Head>
+      <Seo templateTitle='Set List' />
+
       <div className='relative'>
         <div className='absolute inset-0'>
           <img
@@ -40,7 +37,7 @@ export default function SongList() {
               <div className='font-medium text-gray-300 lg:text-2xl'>
                 {el.song}
               </div>
-              <div className='pl-1 font-medium text-xs lg:text-sm italic text-erc-red'>
+              <div className='font-medium text-xs lg:text-sm italic text-erc-red'>
                 {el.artist}
               </div>
             </div>

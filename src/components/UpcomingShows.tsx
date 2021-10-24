@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
+import clsx from 'clsx';
 import { FaGlobe } from 'react-icons/fa';
 
 const shows = [
@@ -25,19 +26,25 @@ const shows = [
   },
 ];
 
-export default function Example() {
+export default function UpcomingShows({ shouldHideHeader = false }) {
   return (
     <>
-      <div className='text-center mb-16'>
-        <p className='mt-1 text-4xl font-extrabold text-gray-300 sm:text-5xl sm:tracking-tight lg:text-6xl'>
-          Upcoming Shows
-        </p>
-        <p className='max-w-xl mt-5 mx-auto text-xl text-gray-300'>
-          Come out and enjoy the show!
-        </p>
-      </div>
+      {!shouldHideHeader && (
+        <div className='text-center mb-16'>
+          <p className='mt-1 text-4xl font-extrabold text-gray-300 sm:text-5xl sm:tracking-tight lg:text-6xl'>
+            Upcoming Shows
+          </p>
+          <p className='max-w-xl mt-5 mx-auto text-xl text-gray-300'>
+            Come out and enjoy the show!
+          </p>
+        </div>
+      )}
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24'>
+      <div
+        className={clsx('max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24', {
+          'mt-32': shouldHideHeader,
+        })}
+      >
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
           {shows.map((s) => {
             return (
