@@ -5,7 +5,7 @@ import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
   title: 'EndRock',
-  site_name: 'EndRock CLE',
+  siteName: 'EndRockCLE',
   description: "EndRock is a Cleveland Ohio based 90's Rock Cover Band.",
   url: 'https://www.endrockcle.com/',
   image: '',
@@ -25,9 +25,16 @@ export default function Seo(props: SeoProps) {
     ...props,
   };
   meta['title'] = props.templateTitle
-    ? `${props.templateTitle} | ${meta.site_name}`
+    ? `${props.templateTitle} | ${meta.siteName}`
     : meta.title;
-  meta.image = openGraph(meta.title, meta.description);
+
+  // Use siteName if there is templateTitle
+  // but show full title if there is none
+  meta.image = openGraph({
+    description: meta?.description,
+    siteName: props.templateTitle ? meta.siteName : meta.title,
+    templateTitle: props.templateTitle,
+  });
 
   return (
     <Head>
@@ -38,7 +45,7 @@ export default function Seo(props: SeoProps) {
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
       <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content={meta.site_name} />
+      <meta property='og:site_name' content={meta.siteName} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />
@@ -160,3 +167,13 @@ const favicons: Array<Favicons> = [
     href: '/favicon/manifest.json',
   },
 ];
+
+// const defaultMeta = {
+//   title: 'EndRock',
+//   site_name: 'EndRockCLE',
+//   description: "EndRock is a Cleveland Ohio based 90's Rock Cover Band.",
+//   url: 'https://www.endrockcle.com/',
+//   image: '',
+//   type: 'website',
+//   robots: 'follow, index',
+// };
