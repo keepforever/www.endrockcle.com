@@ -1,10 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
+import { GetStaticProps } from 'next';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 
+import { Song } from '@/interfaces/Song';
 import { partition } from '@/utils/partition';
 import { shuffle } from '@/utils/shuffle';
-import { songList } from '@/utils/songList';
+import { supabase } from '@/utils/supabaseClient';
+
+type Props = {
+  songs: Song[];
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data: songs } = await supabase.from<Song>('songs').select('*');
+
+  return {
+    props: { songs },
+  };
+};
 
 const responsive = {
   desktop: {
@@ -24,33 +38,29 @@ const responsive = {
   },
 };
 
-export const SongCarousel: React.FC = () => {
-  const songsArrays = partition(songList, 7);
+export const SongCarousel: React.FC<Props> = ({ songs }) => {
+  const songsArrays = partition(songs, 7);
 
-  const please = shuffle(songsArrays).map(
-    (el: { artist: string; song: string }[]) => {
-      return (
-        <div
-          key={el.join('-')}
-          className='min-h-40 flex flex-wrap justify-center mx-auto max-w-5xl'
-        >
-          {el.map((song) => (
-            <div
-              className='mr-2 mb-4 lg:mb-12 py-2 px-6 text-gray-300 rounded-full bg-gray-900 flex-col'
-              key={song.song}
-            >
-              <div className='font-medium text-base lg:text-2xl italic'>
-                "{song.song}"
-              </div>
-              <div className='font-medium text-xs lg:text-sm'>
-                {song.artist}
-              </div>
+  const please = shuffle(songsArrays).map((el: Song[]) => {
+    return (
+      <div
+        key={el.join('-')}
+        className='min-h-40 flex flex-wrap justify-center mx-auto max-w-5xl'
+      >
+        {el.map((song) => (
+          <div
+            className='mr-2 mb-4 lg:mb-12 py-2 px-6 text-gray-300 rounded-full bg-gray-900 flex-col'
+            key={song.id}
+          >
+            <div className='font-medium text-base lg:text-2xl italic'>
+              "{song.title}"
             </div>
-          ))}
-        </div>
-      );
-    }
-  );
+            <div className='font-medium text-xs lg:text-sm'>{song.artist}</div>
+          </div>
+        ))}
+      </div>
+    );
+  });
 
   return (
     <>

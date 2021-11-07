@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import { FaFacebook, FaInstagramSquare } from 'react-icons/fa';
@@ -9,7 +10,22 @@ import Seo from '@/components/Seo';
 import { SongCarousel } from '@/components/SongCarousel';
 import UpcomingShows from '@/components/UpcomingShows';
 
-const HomePage: React.FC = () => {
+import { Song } from '@/interfaces/Song';
+import { supabase } from '@/utils/supabaseClient';
+
+type Props = {
+  songs: Song[];
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data: songs } = await supabase.from<Song>('songs').select('*');
+
+  return {
+    props: { songs },
+  };
+};
+
+const HomePage: React.FC<Props> = ({ songs }) => {
   return (
     <AppShell>
       <Seo templateTitle='Home' />
@@ -71,7 +87,7 @@ const HomePage: React.FC = () => {
 
       <UpcomingShows />
 
-      <SongCarousel />
+      <SongCarousel songs={songs} />
     </AppShell>
   );
 };
