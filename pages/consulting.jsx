@@ -1,7 +1,7 @@
-const consulting = props => {
+const consulting = (props) => {
     return (
         <div>
-            <h3>Hello consulting</h3>
+            <h3>Hello consultingX</h3>
         </div>
     );
 };
