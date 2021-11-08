@@ -11,8 +11,11 @@ import {
   RiLungsFill,
   RiMenu2Fill,
   RiMoonClearLine,
+  RiSkull2Fill,
   RiSunFill,
 } from 'react-icons/ri';
+
+import { supabase } from '@/utils/supabaseClient';
 
 // import { useUserProfile } from '@/hooks/useUserProfile';
 import SignUpModal from '../SignUpModal';
@@ -46,6 +49,10 @@ const Navbar: React.FC<Props> = ({
     setScrollY(scrollPos);
     if (scrollPos >= 75) setShouldBeOpaque(true);
     if (scrollPos < 75) setShouldBeOpaque(false);
+  };
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
   };
 
   useEffect(() => {
@@ -112,7 +119,7 @@ const Navbar: React.FC<Props> = ({
                       onClick={() => setIsSignUpModalOpen(true)}
                       className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
                     >
-                      <span className='sr-only'>Toggle Dark Mode</span>
+                      <span className='sr-only'>Open Sign In Modal</span>
 
                       <RiLungsFill className='h-6 w-6' aria-hidden='true' />
                     </button>
@@ -121,12 +128,12 @@ const Navbar: React.FC<Props> = ({
                   {authenticatedState === 'authenticated' && (
                     <button
                       type='button'
-                      onClick={() => setIsSignUpModalOpen(true)}
+                      onClick={() => handleSignOut()}
                       className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
                     >
-                      <span className='sr-only'>Toggle Dark Mode</span>
+                      <span className='sr-only'>Log Out</span>
 
-                      <RiLungsFill className='h-6 w-6' aria-hidden='true' />
+                      <RiSkull2Fill className='h-6 w-6' aria-hidden='true' />
                     </button>
                   )}
 
@@ -147,6 +154,29 @@ const Navbar: React.FC<Props> = ({
                 </div>
               </div>
               <div className='-mr-2 flex md:hidden'>
+                {authenticatedState === 'not-authenticated' && (
+                  <button
+                    type='button'
+                    onClick={() => setIsSignUpModalOpen(true)}
+                    className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+                  >
+                    <span className='sr-only'>Open Sign In Modal</span>
+
+                    <RiLungsFill className='h-6 w-6' aria-hidden='true' />
+                  </button>
+                )}
+
+                {authenticatedState === 'authenticated' && (
+                  <button
+                    type='button'
+                    onClick={() => handleSignOut()}
+                    className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+                  >
+                    <span className='sr-only'>Log Out</span>
+
+                    <RiSkull2Fill className='h-6 w-6' aria-hidden='true' />
+                  </button>
+                )}
                 {/* Mobile menu button */}
                 <button
                   type='button'
