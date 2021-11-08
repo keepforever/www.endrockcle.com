@@ -5,13 +5,17 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   RiCloseCircleFill,
+  RiLungsFill,
   RiMenu2Fill,
   RiMoonClearLine,
   RiSunFill,
 } from 'react-icons/ri';
+
+// import { useUserProfile } from '@/hooks/useUserProfile';
+import SignUpModal from '../SignUpModal';
 
 const navigation = [
   { name: 'Song List', href: '/song-list' },
@@ -24,9 +28,16 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Navbar: React.FC = () => {
+type Props = {
+  authenticatedState?: string;
+};
+
+const Navbar: React.FC<Props> = ({
+  authenticatedState = 'not-authenticated',
+}) => {
   const { theme, setTheme } = useTheme();
   const [shouldBeOpaque, setShouldBeOpaque] = useState<boolean>();
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState<boolean>();
   const [, setScrollY] = useState(0);
   const router = useRouter();
 
@@ -41,6 +52,12 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // const { user } = useUserProfile();
+
+  // console.group(`Navbar.tsx`);
+  // console.log('\n', '\n', `user = `, user, '\n', '\n');
+  // console.groupEnd();
 
   return (
     <Disclosure
@@ -89,6 +106,30 @@ const Navbar: React.FC = () => {
               </div>
               <div className='hidden md:block'>
                 <div className='ml-4 flex items-center md:ml-6'>
+                  {authenticatedState === 'not-authenticated' && (
+                    <button
+                      type='button'
+                      onClick={() => setIsSignUpModalOpen(true)}
+                      className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+                    >
+                      <span className='sr-only'>Toggle Dark Mode</span>
+
+                      <RiLungsFill className='h-6 w-6' aria-hidden='true' />
+                    </button>
+                  )}
+
+                  {authenticatedState === 'authenticated' && (
+                    <button
+                      type='button'
+                      onClick={() => setIsSignUpModalOpen(true)}
+                      className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+                    >
+                      <span className='sr-only'>Toggle Dark Mode</span>
+
+                      <RiLungsFill className='h-6 w-6' aria-hidden='true' />
+                    </button>
+                  )}
+
                   <button
                     type='button'
                     onClick={() =>
@@ -155,6 +196,11 @@ const Navbar: React.FC = () => {
               ))}
             </div>
           </Disclosure.Panel>
+
+          <SignUpModal
+            open={isSignUpModalOpen}
+            setOpen={setIsSignUpModalOpen}
+          />
         </>
       )}
     </Disclosure>

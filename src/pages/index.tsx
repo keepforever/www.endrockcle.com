@@ -15,6 +15,7 @@ import { supabase } from '@/utils/supabaseClient';
 
 type Props = {
   songs: Song[];
+  authenticatedState?: string;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -25,9 +26,9 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const HomePage: React.FC<Props> = ({ songs }) => {
+const HomePage: React.FC<Props> = ({ songs, authenticatedState }) => {
   return (
-    <AppShell>
+    <AppShell authenticatedState={authenticatedState}>
       <Seo templateTitle='Home' />
       <Head>
         <title>EndRock | Home</title>

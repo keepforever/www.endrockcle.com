@@ -6,10 +6,14 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from '../Footer';
 
-const AppShell: React.FC = ({ children }) => {
+type Props = {
+  authenticatedState?: string;
+};
+
+const AppShell: React.FC<Props> = ({ children, authenticatedState }) => {
   return (
     <div>
-      <Navbar />
+      <Navbar authenticatedState={authenticatedState || 'not-authenticated'} />
 
       <main>
         {/* <div className='max-w-7xl mx-auto py-6 sm:px-6 lg:px-8'>{children}</div> */}

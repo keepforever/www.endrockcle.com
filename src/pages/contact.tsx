@@ -5,9 +5,13 @@
 import AppShell from '@/components/layouts/AppShell';
 import Seo from '@/components/Seo';
 
-export default function Contact() {
+export default function Contact({
+  authenticatedState,
+}: {
+  authenticatedState: string;
+}) {
   return (
-    <AppShell>
+    <AppShell authenticatedState={authenticatedState}>
       <Seo templateTitle='Contact' />
 
       <div className='relative'>
