@@ -3,30 +3,15 @@
 import clsx from 'clsx';
 import { FaGlobe } from 'react-icons/fa';
 
-const shows = [
-  {
-    location: 'Garage Bar',
-    date: new Date('10/28/1984'),
-    time: '8 pm - 12 pm',
-    url: 'https://www.google.com',
-  },
+import { Show } from '@/interfaces/Show';
 
-  {
-    location: 'Shooters',
-    date: new Date('10/28/1984'),
-    time: '8 pm - 12 pm',
-    url: 'https://www.google.com',
-  },
-
-  {
-    location: 'The Basement',
-    date: new Date('10/28/1984'),
-    time: '8 pm - 12 pm',
-    url: 'https://www.google.com',
-  },
-];
-
-export default function UpcomingShows({ shouldHideHeader = false }) {
+export default function UpcomingShows({
+  shouldHideHeader = false,
+  shows,
+}: {
+  shouldHideHeader: boolean;
+  shows: Show[];
+}) {
   return (
     <>
       {!shouldHideHeader && (
@@ -42,7 +27,7 @@ export default function UpcomingShows({ shouldHideHeader = false }) {
 
       <div
         className={clsx('max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24', {
-          'mt-32': shouldHideHeader,
+          'mt-24': shouldHideHeader,
         })}
       >
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
@@ -50,11 +35,15 @@ export default function UpcomingShows({ shouldHideHeader = false }) {
             return (
               <div
                 className='flex-col bg-gray-800 text-gray-300 py-4 px-4 rounded-md backdrop-filter backdrop-blur-lg bg-opacity-50 hover:shadow-lg transition duration-500 ease-in-out'
-                key={s.location}
+                key={s.id}
               >
-                <div className='font-extrabold text-2xl mb-2'>{s.location}</div>
-                <div className='font-normal'>{s.date.toDateString()}</div>
-                <div className='font-normal mb-2'>{s.time}</div>
+                <div className='font-extrabold text-2xl mb-2'>
+                  {s.venueName}
+                </div>
+                <div className='font-normal'>
+                  {new Date(s.date).toDateString()}
+                </div>
+                <div className='font-normal mb-2'>{s.beginEnd}</div>
                 {s.url && (
                   <a
                     className='flex items-center text-erc-yellow hover:text-erc-red transition duration-500 ease-in-out'

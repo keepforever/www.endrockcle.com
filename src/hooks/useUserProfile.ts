@@ -16,7 +16,6 @@ export const useUserProfile = () => {
       let profileDataResp = null;
       try {
         profileDataResp = await supabase.auth.user();
-        console.log('\n', `profileDataResp = `, profileDataResp, '\n');
 
         setApiData(profileDataResp);
       } catch (error: any) {

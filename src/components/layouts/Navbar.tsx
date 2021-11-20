@@ -60,12 +60,6 @@ const Navbar: React.FC<Props> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // const { user } = useUserProfile();
-
-  // console.group(`Navbar.tsx`);
-  // console.log('\n', '\n', `user = `, user, '\n', '\n');
-  // console.groupEnd();
-
   return (
     <Disclosure
       as='nav'
@@ -91,22 +85,25 @@ const Navbar: React.FC<Props> = ({
                     </a>
                   </Link>
                 </div>
+
+                {/* Desktop Links */}
+
                 <div className='hidden md:block'>
                   <div className='ml-10 flex items-baseline space-x-4'>
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          router.pathname === item.href
-                            ? 'bg-gray-800 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={router.pathname === item.href}
-                      >
-                        {item.name}
-                      </a>
+                      <Link key={item.name} href={item.href}>
+                        <a
+                          className={classNames(
+                            router.pathname === item.href
+                              ? 'bg-gray-800 text-white'
+                              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            'px-3 py-2 rounded-md text-sm font-medium'
+                          )}
+                          aria-current={router.pathname === item.href}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

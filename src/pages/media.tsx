@@ -6,9 +6,12 @@ import fs from 'fs';
 import AppShell from '@/components/layouts/AppShell';
 import Seo from '@/components/Seo';
 
-export default function Media({ images = [] }) {
+export default function Media({
+  images = [],
+  authenticatedState = 'not-authenticated',
+}) {
   return (
-    <AppShell>
+    <AppShell authenticatedState={authenticatedState}>
       <Seo templateTitle='Media' />
       <div className='relative'>
         <div className='absolute inset-0'>
