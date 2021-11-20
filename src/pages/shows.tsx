@@ -88,7 +88,7 @@ const Shows: React.FC<Props> = ({ shows, authenticatedState = '' }) => {
 
       {authenticatedState === 'authenticated' && (
         <details className='container flex flex-wrap max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 mt-6'>
-          <summary>Add Show</summary>
+          <summary className='text-gray-300'>Add Show</summary>
           <div className='container flex flex-wrap max-w-7xl mx-auto'>
             <div className='inline-block rounded-lg px-10 py-6 w-full md:w-3/6 backdrop-filter backdrop-blur-lg bg-opacity-40 bg-gray-600'>
               <form id='showForm' onSubmit={handleSubmitShow}>
