@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import Footer from '../Footer';
 
 type Props = {
-  authenticatedState: string;
+  authenticatedState?: string;
 };
 
 const AppShell: React.FC<Props> = ({ children, authenticatedState }) => {
