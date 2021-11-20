@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
+import toast from 'react-hot-toast';
 
 import AppShell from '@/components/layouts/AppShell';
 import Seo from '@/components/Seo';
@@ -28,40 +29,26 @@ const Shows: React.FC<Props> = ({ shows, authenticatedState = '' }) => {
 
   const handleSubmitShow = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const data = new FormData(event.target as HTMLFormElement);
 
-    const { value: venueName } = document?.getElementById?.(
-      'venueName'
-    ) as HTMLInputElement;
-
-    const { value: beginEnd } = document?.getElementById?.(
-      'beginEnd'
-    ) as HTMLInputElement;
-
-    const { value: url } = document?.getElementById?.(
-      'url'
-    ) as HTMLInputElement;
-
-    const { value: date } = document?.getElementById?.(
-      'date'
-    ) as HTMLInputElement;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const payload: any = {};
+    data.forEach((value, key) => {
+      payload[key] = (value as string).trim();
+    });
 
     let createShowResp = null;
     try {
-      createShowResp = await supabase.from('shows').insert([
-        {
-          venueName: venueName.trim(),
-          beginEnd: beginEnd.trim(),
-          url: url.trim(),
-          date: date.trim(),
-        },
-      ]);
+      createShowResp = await supabase.from('shows').insert(payload); // could also be [payloadOne, payloadTwo, ...]
     } catch (error) {
       alert('Show failed ot create. Better call Saul!');
     }
     const myForm = document?.getElementById?.('showForm') as HTMLFormElement;
     if (createShowResp) {
-      alert(`Show created!`);
-      router.reload();
+      toast.success('Show added');
+      setTimeout(() => {
+        router.reload();
+      }, 4000);
       myForm.reset();
     }
   };

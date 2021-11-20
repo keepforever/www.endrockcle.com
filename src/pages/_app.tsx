@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import '@/styles/globals.css';
 import 'react-multi-carousel/lib/styles.css';
@@ -55,6 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute='class'>
       <Component {...pageProps} authenticatedState={authenticatedState} />
+      <Toaster />
     </ThemeProvider>
   );
 }

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
+import router from 'next/router';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 import AppShell from '@/components/layouts/AppShell';
 import Seo from '@/components/Seo';
@@ -25,23 +27,26 @@ export const getStaticProps: GetStaticProps = async () => {
 const SongList: React.FC<Props> = ({ songs, authenticatedState = '' }) => {
   const handleSubmitSong = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const { value: artist } = document?.getElementById?.(
-      'artist'
-    ) as HTMLInputElement;
+    const data = new FormData(event.target as HTMLFormElement);
 
-    const { value: title } = document?.getElementById?.(
-      'title'
-    ) as HTMLInputElement;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const payload: any = {};
+    data.forEach((value, key) => {
+      payload[key] = (value as string).trim();
+    });
+
     let createSongResp = null;
     try {
-      createSongResp = await supabase.from('songs').insert([{ artist, title }]);
-      // const { data, error } = createSongResp;
+      createSongResp = await supabase.from('songs').insert(payload); // could also be [payloadOne, payloadTwo, ...]
     } catch (error) {
       alert('Song failed ot create. Better call Saul!');
     }
     const myForm = document?.getElementById?.('songForm') as HTMLFormElement;
     if (createSongResp) {
-      alert(`Song created!`);
+      toast.success('Song added');
+      setTimeout(() => {
+        router.reload();
+      }, 4000);
       myForm.reset();
     }
   };
