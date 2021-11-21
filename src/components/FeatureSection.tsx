@@ -110,7 +110,7 @@ export const FeatureSection = () => {
             <div className='pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full'>
               <img
                 className='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none'
-                src='collision-bend/full-band-1.jpg'
+                src='collision-bend/clapping-vantage.jpg'
                 alt='full end rock band'
               />
             </div>
