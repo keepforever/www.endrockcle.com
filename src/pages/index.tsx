@@ -2,7 +2,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { FaFacebook, FaInstagramSquare } from 'react-icons/fa';
+import { FaFacebook /* FaInstagramSquare */ } from 'react-icons/fa';
 
 import { FeatureSection } from '@/components/FeatureSection';
 import AppShell from '@/components/layouts/AppShell';
@@ -75,13 +75,13 @@ const HomePage: React.FC<Props> = ({ songs, shows, authenticatedState }) => {
                 <FaFacebook className='text-erc-yellow text-2xl h-12 w-12 opacity-70 hover:opacity-100' />
               </a>
 
-              <a
+              {/* <a
                 href='https://www.instagram.com/endrockcle'
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <FaInstagramSquare className='text-erc-red text-2xl h-12 w-12 opacity-70 hover:opacity-100' />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

@@ -16,29 +16,37 @@ export const FeatureSection = () => {
           <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
             <div>
               <div className='mt-6'>
-                <h2 className='text-3xl font-extrabold tracking-tight text-gray-300'>
+                <h2 className='text-6xl font-extrabold tracking-tight text-gray-300'>
                   High-energy, Alternative Rock
                 </h2>
-                <p className='mt-4 text-lg text-gray-300'>
+                <p className='mt-4 text-xl text-gray-300'>
                   <strong>EndRock</strong> is a high-energy, alternative rock
                   cover band based in Cleveland, Ohio. We play alternative rock
                   from the ‘90s and early ‘00s.
                 </p>
-                <div className='mt-6'>
+                <div className='mt-16 flex justify-center md:justify-start'>
                   <Link href='/contact'>
-                    <a className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-300 bg-erc-red hover:bg-erc-yellow hover:text-erc-blue transition duration-500 ease-in-out'>
+                    <a className=' px-8 py-4 text-gray-300 text-4xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
                       Book Now
                     </a>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className='mt-8 pt-6'>
+            <div>
+              <div className='mt-16'>
+                <h2 className='text-3xl font-medium text-gray-300'>
+                  Watch the Promo:
+                </h2>
+              </div>
+            </div>
+            <div className='pt-6'>
               <iframe
-                width='560'
-                height='315'
+                width='600'
+                height='375'
                 style={{
                   maxWidth: '100%',
+                  minWidth: '100%',
                 }}
                 src='https://www.youtube.com/embed/vI3DbQcGr7Q'
                 frameBorder='0'
@@ -71,34 +79,35 @@ export const FeatureSection = () => {
           <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2'>
             <div>
               <div className='mt-6'>
-                <h2 className='text-3xl font-extrabold tracking-tight text-gray-300'>
+                <h2 className='text-6xl font-extrabold tracking-tight text-gray-300'>
                   EndRock Live in Concert
                 </h2>
 
-                <p className='mt-4 text-lg text-gray-300'>
-                  Live from Garage Bar, Willoughby
-                </p>
-
-                <div className='mt-6'>
-                  <Link href='/song-list'>
-                    <a className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-300 bg-erc-red hover:bg-erc-yellow hover:text-erc-blue transition duration-500 ease-in-out'>
-                      See Our Set List
-                    </a>
-                  </Link>
-                </div>
+                <h2 className='text-2xl font-medium text-gray-300 mt-16'>
+                  Live from Garage Bar, Willoughby:
+                </h2>
 
                 <div className='mt-6'>
                   <iframe
-                    width='560'
-                    height='315'
-                    src='https://www.youtube.com/embed/SyAMNObui-c'
+                    width='600'
+                    height='375'
                     style={{
                       maxWidth: '100%',
+                      minWidth: '100%',
                     }}
+                    src='https://www.youtube.com/embed/SyAMNObui-c'
                     frameBorder='0'
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                     allowFullScreen
                   ></iframe>
+                </div>
+
+                <div className='mt-16'>
+                  <Link href='/song-list'>
+                    <a className='px-8 py-4 text-gray-300 text-4xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
+                      View The Set List
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
