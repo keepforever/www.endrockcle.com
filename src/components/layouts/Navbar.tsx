@@ -8,17 +8,12 @@ import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react';
 import {
   RiCloseCircleFill,
-  RiLungsFill,
   RiMenu2Fill,
   RiMoonClearLine,
-  RiSkull2Fill,
   RiSunFill,
 } from 'react-icons/ri';
 
-import { supabase } from '@/utils/supabaseClient';
-
 // import { useUserProfile } from '@/hooks/useUserProfile';
-import SignUpModal from '../SignUpModal';
 
 const navigation = [
   { name: 'Song List', href: '/song-list' },
@@ -31,16 +26,11 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-type Props = {
-  authenticatedState?: string;
-};
+type Props = Record<string, never>;
 
-const Navbar: React.FC<Props> = ({
-  authenticatedState = 'not-authenticated',
-}) => {
+const Navbar: React.FC<Props> = () => {
   const { theme, setTheme } = useTheme();
   const [shouldBeOpaque, setShouldBeOpaque] = useState<boolean>();
-  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState<boolean>();
   const [, setScrollY] = useState(0);
   const router = useRouter();
 
@@ -49,10 +39,6 @@ const Navbar: React.FC<Props> = ({
     setScrollY(scrollPos);
     if (scrollPos >= 75) setShouldBeOpaque(true);
     if (scrollPos < 75) setShouldBeOpaque(false);
-  };
-
-  const handleSignOut = async () => {
-    await supabase.auth.signOut();
   };
 
   useEffect(() => {
@@ -110,30 +96,6 @@ const Navbar: React.FC<Props> = ({
               </div>
               <div className='hidden md:block'>
                 <div className='ml-4 flex items-center md:ml-6'>
-                  {authenticatedState === 'not-authenticated' && (
-                    <button
-                      type='button'
-                      onClick={() => setIsSignUpModalOpen(true)}
-                      className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                    >
-                      <span className='sr-only'>Open Sign In Modal</span>
-
-                      <RiLungsFill className='h-6 w-6' aria-hidden='true' />
-                    </button>
-                  )}
-
-                  {authenticatedState === 'authenticated' && (
-                    <button
-                      type='button'
-                      onClick={() => handleSignOut()}
-                      className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                    >
-                      <span className='sr-only'>Log Out</span>
-
-                      <RiSkull2Fill className='h-6 w-6' aria-hidden='true' />
-                    </button>
-                  )}
-
                   <button
                     type='button'
                     onClick={() =>
@@ -151,29 +113,6 @@ const Navbar: React.FC<Props> = ({
                 </div>
               </div>
               <div className='-mr-2 flex md:hidden'>
-                {authenticatedState === 'not-authenticated' && (
-                  <button
-                    type='button'
-                    onClick={() => setIsSignUpModalOpen(true)}
-                    className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                  >
-                    <span className='sr-only'>Open Sign In Modal</span>
-
-                    <RiLungsFill className='h-6 w-6' aria-hidden='true' />
-                  </button>
-                )}
-
-                {authenticatedState === 'authenticated' && (
-                  <button
-                    type='button'
-                    onClick={() => handleSignOut()}
-                    className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                  >
-                    <span className='sr-only'>Log Out</span>
-
-                    <RiSkull2Fill className='h-6 w-6' aria-hidden='true' />
-                  </button>
-                )}
                 {/* Mobile menu button */}
                 <button
                   type='button'
@@ -223,11 +162,6 @@ const Navbar: React.FC<Props> = ({
               ))}
             </div>
           </Disclosure.Panel>
-
-          <SignUpModal
-            open={isSignUpModalOpen}
-            setOpen={setIsSignUpModalOpen}
-          />
         </>
       )}
     </Disclosure>

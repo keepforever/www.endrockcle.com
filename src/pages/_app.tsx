@@ -1,61 +1,14 @@
-import { AuthChangeEvent, Session } from '@supabase/gotrue-js';
 import { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
-import { useEffect, useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import '@/styles/globals.css';
 import 'react-multi-carousel/lib/styles.css';
 
-import { supabase } from '@/utils/supabaseClient';
-
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const [authenticatedState, setAuthenticatedState] =
-    useState('not-authenticated');
-
-  useEffect(() => {
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        handleAuthChange(event, session);
-        if (event === 'SIGNED_IN') {
-          setAuthenticatedState('authenticated');
-          // router.push('/profile');
-        }
-        if (event === 'SIGNED_OUT') {
-          setAuthenticatedState('not-authenticated');
-        }
-      }
-    );
-    checkUser();
-    return () => {
-      authListener?.unsubscribe();
-    };
-  }, [router]);
-
-  async function checkUser() {
-    const user = await supabase.auth.user();
-    if (user) {
-      setAuthenticatedState('authenticated');
-    }
-  }
-
-  async function handleAuthChange(
-    event: AuthChangeEvent,
-    session: Session | null
-  ) {
-    await fetch('/api/auth', {
-      method: 'POST',
-      headers: new Headers({ 'Content-Type': 'application/json' }),
-      credentials: 'same-origin',
-      body: JSON.stringify({ event, session }),
-    });
-  }
-
   return (
     <ThemeProvider attribute='class'>
-      <Component {...pageProps} authenticatedState={authenticatedState} />
+      <Component {...pageProps} />
       <Toaster />
     </ThemeProvider>
   );

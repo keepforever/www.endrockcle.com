@@ -8,12 +8,9 @@ import React from 'react';
 import AppShell from '@/components/layouts/AppShell';
 import Seo from '@/components/Seo';
 
-export default function Media({
-  images = [],
-  authenticatedState = 'not-authenticated',
-}) {
+export default function Media({ images = [] }) {
   return (
-    <AppShell authenticatedState={authenticatedState}>
+    <AppShell>
       <Seo templateTitle='Media' />
       <div className='relative'>
         <div className='absolute inset-0'>

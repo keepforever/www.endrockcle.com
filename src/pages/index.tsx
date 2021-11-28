@@ -10,28 +10,25 @@ import Seo from '@/components/Seo';
 import { SongCarousel } from '@/components/SongCarousel';
 import UpcomingShows from '@/components/UpcomingShows';
 
+import { shows } from '@/constants/shows';
+import { songs } from '@/constants/songs';
 import { Show } from '@/interfaces/Show';
 import { Song } from '@/interfaces/Song';
-import { supabase } from '@/utils/supabaseClient';
 
 type Props = {
   songs: Song[];
   shows: Show[];
-  authenticatedState?: string;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: songs } = await supabase.from<Song>('songs').select('*');
-  const { data: shows } = await supabase.from<Show>('shows').select('*');
-
   return {
     props: { songs, shows },
   };
 };
 
-const HomePage: React.FC<Props> = ({ songs, shows, authenticatedState }) => {
+const HomePage: React.FC<Props> = ({ songs, shows }) => {
   return (
-    <AppShell authenticatedState={authenticatedState}>
+    <AppShell>
       <Seo templateTitle='Home' />
       <Head>
         <title>EndRock | Home</title>

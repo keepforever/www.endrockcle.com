@@ -34,7 +34,7 @@ export default function UpcomingShows({
           {shows.map((s) => {
             return (
               <div
-                className='flex-col bg-gray-800 text-gray-300 py-4 px-4 rounded-md backdrop-filter backdrop-blur-lg bg-opacity-50 hover:shadow-lg transition duration-500 ease-in-out'
+                className='flex-col bg-gray-600 text-gray-300 py-4 px-4 rounded-lg backdrop-filter backdrop-blur-lg bg-opacity-60 hover:shadow-lg transition duration-500 ease-in-out hover:drop-shadow-lg hover:bg-opacity-70'
                 key={s.id}
               >
                 <div className='font-extrabold text-2xl mb-2'>

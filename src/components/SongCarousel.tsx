@@ -3,18 +3,16 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 
+import { songs } from '@/constants/songs';
 import { Song } from '@/interfaces/Song';
 import { partition } from '@/utils/partition';
 import { shuffle } from '@/utils/shuffle';
-import { supabase } from '@/utils/supabaseClient';
 
 type Props = {
   songs: Song[];
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: songs } = await supabase.from<Song>('songs').select('*');
-
   return {
     props: { songs },
   };
@@ -49,13 +47,15 @@ export const SongCarousel: React.FC<Props> = ({ songs }) => {
       >
         {el.map((song) => (
           <div
-            className='mr-2 mb-4 lg:mb-12 py-2 px-6 text-gray-300 rounded-full bg-gray-900 flex-col'
-            key={song.id}
+            className='mr-2 mb-4 lg:mb-12 py-2 px-6 text-gray-300 rounded-full flex-col backdrop-filter backdrop-blur-lg bg-opacity-40 bg-gray-600'
+            key={song.title}
           >
-            <div className='font-medium text-base lg:text-2xl italic'>
-              "{song.title}"
+            <div className='font-medium text-gray-300 lg:text-2xl'>
+              {song.title}
             </div>
-            <div className='font-medium text-xs lg:text-sm'>{song.artist}</div>
+            <div className='font-medium text-xs lg:text-sm italic text-erc-red'>
+              {song.artist}
+            </div>
           </div>
         ))}
       </div>
