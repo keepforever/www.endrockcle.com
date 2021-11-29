@@ -49,7 +49,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-dark': "url('/svg/wavey-fingerprint.svg')",
-        'hero-light': "url('/svg/slanted-gradient.svg')",
+        'hero-light': "url('/svg/abstract-timekeeper.svg')",
       },
     },
   },
