@@ -1,16 +1,16 @@
 export const shows = [
   {
     id: 1,
-    date: '01/15/2022',
-    venueName: 'North Pole',
-    beginEnd: '8 pm - 12 am',
-    url: 'https://www.facebook.com/EndRockCle',
+    date: '04/15/2022',
+    venueName: 'Collision Bend Brewery',
+    beginEnd: '7 pm - 11 pm',
+    url: 'https://www.collisionbendbrewery.com/',
   },
   {
     id: 2,
-    date: '02/15/2022',
-    venueName: 'Death Valley',
-    beginEnd: '6 pm - 9 pm',
-    url: 'https://www.facebook.com/EndRockCle',
+    date: '08/18/2022',
+    venueName: 'The Roundhouse (PIB)',
+    beginEnd: '8 pm - 11 pm',
+    url: 'https://www.theroundhousebar.com/',
   },
 ];

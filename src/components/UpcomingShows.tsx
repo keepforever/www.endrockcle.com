@@ -47,7 +47,7 @@ export default function UpcomingShows({
                 {s.url && (
                   <a
                     className='flex items-center text-erc-yellow hover:text-erc-red transition duration-500 ease-in-out'
-                    href='https://www.facebook.com/EndRockCle'
+                    href={s.url}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
