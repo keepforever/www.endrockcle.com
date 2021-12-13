@@ -94,7 +94,9 @@ const Navbar: React.FC<Props> = () => {
                   </div>
                 </div>
               </div>
-              <div className='hidden md:block'>
+              {/* Light/Dark mode toggle  */}
+
+              {/* <div className='hidden md:block'>
                 <div className='ml-4 flex items-center md:ml-6'>
                   <button
                     type='button'
@@ -111,7 +113,7 @@ const Navbar: React.FC<Props> = () => {
                     )}
                   </button>
                 </div>
-              </div>
+              </div> */}
               <div className='-mr-2 flex md:hidden'>
                 {/* Mobile menu button */}
                 <button

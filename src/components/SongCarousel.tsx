@@ -37,7 +37,7 @@ const responsive = {
 };
 
 export const SongCarousel: React.FC<Props> = ({ songs }) => {
-  const songsArrays = partition(songs, 7);
+  const songsArrays = partition(songs, 5);
 
   const please = shuffle(songsArrays).map((el: Song[]) => {
     return (

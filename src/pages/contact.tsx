@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-
 import AppShell from '@/components/layouts/AppShell';
 import Seo from '@/components/Seo';
 
@@ -26,15 +25,14 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className='pl-6'>
-        <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8'>
-          <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
-            <h2 className='text-2xl font-extrabold text-gray-300 sm:text-3xl'>
-              Get in touch
-            </h2>
-            <div className='mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2'>
-              <div>
-                <dl className='mt-2 text-base text-gray-300'>
+      <div className='py-20'>
+        <div className='mx-auto max-w-4xl lg:px-8 px-4'>
+          <div className='mb-24'>
+            <div className='mt-6'>
+              <h2 className='text-2xl lg:text-4xl font-extrabold tracking-tight text-gray-300'>
+                Message Us for More Info
+              </h2>
+              {/* <dl className='mt-2 text-base text-gray-300'>
                   <div>
                     <dt className='sr-only'>Email</dt>
                     <dd>endrockcle@gmail.com</dd>
@@ -43,23 +41,32 @@ export default function Contact() {
                     <dt className='sr-only'>Phone Number</dt>
                     <dd>(440) 479-9073</dd>
                   </div>
-                </dl>
+                </dl> */}
+              <div className='flex justify-start mt-16'>
+                <a
+                  href='https://www.facebook.com/EndRockCle'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='px-8 py-4 text-gray-300 text-2xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'
+                >
+                  Facebook Messenger
+                </a>
               </div>
-              {/* <div>
-                <h3 className='text-lg leading-6 font-medium text-gray-300'>
-                  Press
-                </h3>
-                <dl className='mt-2 text-base text-gray-300'>
-                  <div>
-                    <dt className='sr-only'>Email</dt>
-                    <dd>support@example.com</dd>
-                  </div>
-                  <div className='mt-1'>
-                    <dt className='sr-only'>Phone number</dt>
-                    <dd>+1 (555) 123-4567</dd>
-                  </div>
-                </dl>
-              </div> */}
+
+              <div className='flex justify-start mt-16'>
+                <a
+                  href='mailto:endrockcle@gmail.com'
+                  className='px-8 py-4 text-gray-300 text-2xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'
+                >
+                  Direct Email
+                </a>
+              </div>
+
+              <div className='flex justify-start mt-16'>
+                <a className='px-8 py-4 text-gray-300 text-2xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
+                  (440) 479-9073
+                </a>
+              </div>
             </div>
           </div>
         </div>
