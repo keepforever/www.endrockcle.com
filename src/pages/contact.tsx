@@ -58,13 +58,15 @@ export default function Contact() {
                   href='mailto:endrockcle@gmail.com'
                   className='px-8 py-4 text-gray-300 text-2xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'
                 >
-                  Direct Email
+                  Direct Email <br />
+                  <small>endrockcle@gmail.com</small>
                 </a>
               </div>
 
               <div className='flex justify-start mt-16'>
                 <a className='px-8 py-4 text-gray-300 text-2xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
-                  (440) 479-9073
+                  Phone <br />
+                  <small>(440) 479-9073</small>
                 </a>
               </div>
             </div>
