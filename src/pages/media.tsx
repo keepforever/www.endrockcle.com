@@ -40,10 +40,10 @@ export default function Media({ images = [] }) {
         })}
       </div>
 
-      <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
-        <div className='mt-16 flex justify-center md:justify-start'>
+      <div className='mx-auto max-w-4xl lg:px-8 px-4'>
+        <div className='flex justify-center mt-16'>
           <Link href='/contact'>
-            <a className=' px-8 py-4 text-gray-300 text-4xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
+            <a className='px-8 py-4 text-gray-300 text-4xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
               Book Now
             </a>
           </Link>
