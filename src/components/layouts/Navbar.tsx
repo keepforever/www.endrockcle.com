@@ -4,14 +4,9 @@ import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react';
-import {
-  RiCloseCircleFill,
-  RiMenu2Fill,
-  RiMoonClearLine,
-  RiSunFill,
-} from 'react-icons/ri';
+import { RiCloseCircleFill, RiMenu2Fill } from 'react-icons/ri';
 
 // import { useUserProfile } from '@/hooks/useUserProfile';
 
@@ -29,7 +24,7 @@ function classNames(...classes: any[]) {
 type Props = Record<string, never>;
 
 const Navbar: React.FC<Props> = () => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
   const [shouldBeOpaque, setShouldBeOpaque] = useState<boolean>();
   const [, setScrollY] = useState(0);
   const router = useRouter();
@@ -116,18 +111,7 @@ const Navbar: React.FC<Props> = () => {
               </div> */}
               <div className='-mr-2 flex md:hidden'>
                 {/* Mobile menu button */}
-                <button
-                  type='button'
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className='p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-                >
-                  <span className='sr-only'>Toggle Dark Mode</span>
-                  {theme === 'dark' ? (
-                    <RiSunFill className='h-6 w-6' aria-hidden='true' />
-                  ) : (
-                    <RiMoonClearLine className='h-6 w-6' aria-hidden='true' />
-                  )}
-                </button>
+
                 <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (

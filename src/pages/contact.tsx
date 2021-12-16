@@ -32,6 +32,10 @@ export default function Contact() {
               <h2 className='text-2xl lg:text-4xl font-extrabold tracking-tight text-gray-300'>
                 Message Us for More Info
               </h2>
+              <p className='mt-4 text-xl text-gray-300'>
+                <strong>Now</strong> accepting dates for all of 2022! Reach out
+                at any of the channels below to book us for your event.
+              </p>
               {/* <dl className='mt-2 text-base text-gray-300'>
                   <div>
                     <dt className='sr-only'>Email</dt>

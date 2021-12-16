@@ -30,6 +30,22 @@ export const FeatureSection = () => {
           </div>
         </div>
 
+        {/* <div className='relative my-24'>
+          <div className='absolute inset-0'>
+            <img
+              className='w-full h-full object-cover'
+              src='media-header.jpg'
+              alt='full band'
+            />
+            <div className='absolute inset-0' aria-hidden='true' />
+          </div>
+          <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 opacity-0'>
+            <h1 className='text-right text-4xl font-extrabold tracking-tight text-gray-300 sm:text-5xl lg:text-6xl'>
+              Media
+            </h1>
+          </div>
+        </div> */}
+
         <div>
           <div className='mt-6'>
             <h2 className='text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-300'>
