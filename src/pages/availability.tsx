@@ -43,9 +43,8 @@ const Shows: React.FC = () => {
               </h2>
               <p className='mt-4 text-xl text-gray-300'>
                 <strong>The Dates Below</strong> are an approximation of our
-                currently availability throughout 2022. <br /> <br /> If you
-                don't see a date there you would like to book, please ask
-                anyways.
+                current availability throughout 2022. <br /> <br /> If you don't
+                see a date there you would like to book, please ask anyways.
               </p>
             </div>
           </div>
