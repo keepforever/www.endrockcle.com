@@ -65,12 +65,12 @@ const Shows: React.FC = () => {
               <div className='font-extrabold text-2xl mb-2'>
                 {getDayName(date)}
               </div>
-              <div className='font-normal mb-4'>{date.toDateString()}</div>
-              <Link href='/contact'>
+              <div className='font-normal'>{date.toDateString()}</div>
+              {/* <Link href='/contact'>
                 <a className='px-2 py-1 text-gray-300 text-xl  border-2 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
                   Book Now
                 </a>
-              </Link>
+              </Link> */}
             </div>
           ))}
         </div>
