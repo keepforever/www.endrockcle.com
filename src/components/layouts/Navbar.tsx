@@ -15,6 +15,7 @@ const navigation = [
   { name: 'Media', href: '/media' },
   { name: 'Contact', href: '/contact' },
   { name: 'Shows', href: '/shows' },
+  { name: 'Availability', href: '/availability' },
 ];
 
 function classNames(...classes: any[]) {

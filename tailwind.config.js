@@ -48,8 +48,8 @@ module.exports = {
         flicker: 'flicker 3s linear infinite',
       },
       backgroundImage: {
-        'hero-dark': "url('/svg/wavey-fingerprint.svg')",
-        'hero-light': "url('/svg/abstract-timekeeper.svg')",
+        'hero-dark': "url('/svg/endless-constellation.svg')",
+        'hero-light': "url('/svg/endless-constellation.svg')",
       },
     },
   },
