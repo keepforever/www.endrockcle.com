@@ -1,37 +1,37 @@
 const blackoutDays = [
-  '02/04/2022',
-  '03/11/2022',
-  '03/12/2022',
-  '03/13/2022',
-  '04/01/2022',
-  '04/08/2022',
-  '04/09/2022',
-  '04/10/2022',
-  '04/15/2022',
-  '04/16/2022',
-  '04/22/2022',
-  '04/23/2022',
-  '04/24/2022',
-  '04/29/2022',
-  '05/13/2022',
-  '05/27/2022',
-  '06/03/2022',
-  '06/04/2022',
-  '06/17/2022',
-  '06/18/2022',
-  '06/19/2022',
-  '06/24/2022',
-  '06/25/2022',
-  '06/26/2022',
-  '07/30/2022',
-  '07/31/2022',
-  '08/05/2022',
-  '08/06/2022',
-  '08/18/2022',
-  '08/19/2022',
-  '08/20/2022',
-  '09/02/2022',
-  '09/03/2022',
+  '2/04/2022',
+  '3/11/2022',
+  '3/12/2022',
+  '3/13/2022',
+  '4/01/2022',
+  '4/08/2022',
+  '4/09/2022',
+  '4/10/2022',
+  '4/15/2022',
+  '4/16/2022',
+  '4/22/2022',
+  '4/23/2022',
+  '4/24/2022',
+  '4/29/2022',
+  '5/13/2022',
+  '5/27/2022',
+  '6/03/2022',
+  '6/04/2022',
+  '6/17/2022',
+  '6/18/2022',
+  '6/19/2022',
+  '6/24/2022',
+  '6/25/2022',
+  '6/26/2022',
+  '7/30/2022',
+  '7/31/2022',
+  '8/05/2022',
+  '8/06/2022',
+  '8/18/2022',
+  '8/19/2022',
+  '8/20/2022',
+  '9/02/2022',
+  '9/03/2022',
   '10/08/2022',
   '12/23/2022',
   '12/24/2022',
@@ -49,21 +49,6 @@ export const convertDate = (date: Date) => {
 // generate an array of dates for each day of the year
 export const daysOfYear = Array.from({ length: 365 }, (_, i) => {
   return new Date(2022, 0, i + 1);
-});
-
-export const availableDates = daysOfYear.filter((date, index) => {
-  if (
-    index > 45 &&
-    (date.getDay() === 0 || date.getDay() === 6 || date.getDay() === 5)
-  ) {
-    const tempDateString = date.toLocaleDateString('en-US', {
-      day: '2-digit',
-      month: 'numeric',
-      year: 'numeric',
-    });
-    return !blackoutDays.includes(tempDateString);
-  }
-  return false;
 });
 
 // convert date to MM/DD/YYYY
@@ -115,3 +100,16 @@ export function getOrdinalNum(n: number) {
       : '')
   );
 }
+
+export const availableDates = daysOfYear.filter((date, index) => {
+  if (
+    index > 45 &&
+    (date.getDay() === 0 || date.getDay() === 6 || date.getDay() === 5)
+  ) {
+    const indexOfFoundDate = blackoutDays.indexOf(convertDateToString(date));
+    const shouldReturnTrue = indexOfFoundDate === -1;
+    return shouldReturnTrue;
+  } else {
+    return false;
+  }
+});
