@@ -58,9 +58,9 @@ const Shows: React.FC = () => {
               events.
             </p>
 
-            <p className='mt-4 mb-6 text-xl text-gray-300'>
+            <p className='mt-4 mb-6 text-sm text-gray-300'>
               <strong>Use the search box</strong> below to filter the available
-              dates by day of the week (e.g. Monday, Tuesday, etc.) or by month
+              dates by day of the week (e.g. Friday, Saturday, etc.) or by month
               (e.g. Jan, Feb, etc).
             </p>
           </div>
@@ -81,12 +81,12 @@ const Shows: React.FC = () => {
             id='search'
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            placeholder='Mon, Tue, Feb, Jan, Oct, etc.'
+            placeholder='Friday, Saturday, March, April, etc.'
           />
           <button
             onClick={() => setSearchValue('')}
             type='button'
-            className='inline-flex items-center px-6 py-2 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400'
+            className='h-full inline-flex items-center px-6 py-2 border border-gray-400 shadow-sm text-xl rounded-md text-gray-900 bg-gray-400 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition duration-500 ease-in-out'
           >
             Clear Search
           </button>
@@ -100,8 +100,10 @@ const Shows: React.FC = () => {
               const monthName = getMonthName(date);
               const dayName = getDayName(date);
               return (
-                monthName.toLowerCase().includes(searchValue.toLowerCase()) ||
-                dayName.toLowerCase().includes(searchValue.toLowerCase())
+                monthName
+                  .toLowerCase()
+                  .includes(searchValue.toLowerCase().trim()) ||
+                dayName.toLowerCase().includes(searchValue.toLowerCase().trim())
               );
             })
             .map((date, index) => (
