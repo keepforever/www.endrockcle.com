@@ -75,7 +75,7 @@ const Shows: React.FC = () => {
         </label>
         <div className='mt-3'>
           <input
-            className='shadow-sm bg-gray-500 w-full md:w-3/4 text-2xl rounded-md inline-block mr-3 mb-3 placeholder-gray-200 placeholder-opacity-60'
+            className='shadow-sm bg-gray-300 w-full md:w-3/4 text-2xl rounded-md inline-block mr-3 mb-3 placeholder-gray-500 placeholder-opacity-30 text-gray-500'
             type='search'
             name='search'
             id='search'
