@@ -52,10 +52,9 @@ const Shows: React.FC = () => {
               Choose From Below
             </h2>
             <p className='mt-4 text-xl text-gray-300'>
-              <strong>The dates below</strong> are an approximation of our
-              current availability throughout 2022. We're primarily looking for
-              Fri, Sat, Sun gigs, but willing to play weekdays for select
-              events.
+              Please inquire about any weekdays (Mon thru Thur) availability
+              separately. We are primarily booking weekends, but, are open to
+              weekdays for select events.
             </p>
 
             <p className='mt-4 mb-6 text-sm text-gray-300'>
@@ -81,7 +80,7 @@ const Shows: React.FC = () => {
             id='search'
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            placeholder='Friday, Saturday, March, April, etc.'
+            placeholder='Friday, March, etc.'
           />
           <button
             onClick={() => setSearchValue('')}
