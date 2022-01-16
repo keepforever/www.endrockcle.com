@@ -1,43 +1,4 @@
-const blackoutDays = [
-  '2/04/2022',
-  '3/11/2022',
-  '3/12/2022',
-  '3/13/2022',
-  '4/01/2022',
-  '4/08/2022',
-  '4/09/2022',
-  '4/10/2022',
-  '4/15/2022',
-  '4/16/2022',
-  '4/22/2022',
-  '4/23/2022',
-  '4/24/2022',
-  '4/29/2022',
-  '4/30/2022',
-  '5/13/2022',
-  '5/27/2022',
-  '6/03/2022',
-  '6/04/2022',
-  '6/17/2022',
-  '6/18/2022',
-  '6/19/2022',
-  '6/24/2022',
-  '6/25/2022',
-  '6/26/2022',
-  '7/30/2022',
-  '7/31/2022',
-  '8/05/2022',
-  '8/06/2022',
-  '8/18/2022',
-  '8/19/2022',
-  '8/20/2022',
-  '9/02/2022',
-  '9/03/2022',
-  '10/08/2022',
-  '12/23/2022',
-  '12/24/2022',
-  '12/25/2022',
-];
+import { blackoutDays } from '../constants/blackoutDays';
 
 // convert single date to format MM/DD/YYYY
 export const convertDate = (date: Date) => {
@@ -103,14 +64,22 @@ export function getOrdinalNum(n: number) {
 }
 
 export const availableDates = daysOfYear.filter((date, index) => {
-  if (
-    index > 45 &&
-    (date.getDay() === 0 || date.getDay() === 6 || date.getDay() === 5)
-  ) {
-    const indexOfFoundDate = blackoutDays.indexOf(convertDateToString(date));
-    const shouldReturnTrue = indexOfFoundDate === -1;
-    return shouldReturnTrue;
-  } else {
-    return false;
-  }
+  const isAfterDayFortyFive = index > 52;
+
+  const isFriSatSun =
+    date.getDay() === 0 || date.getDay() === 6 || date.getDay() === 5;
+  const convertedDate = convertDate(date);
+  const isBlackoutDay = blackoutDays.includes(convertedDate);
+
+  // if (convertDate(date) === '5/6/2022') {
+  // console.group(`blackout.ts`);
+  // console.log('\n', `isAfterDayFortyFive = `, isAfterDayFortyFive, '\n');
+  // console.log('\n', `isFriSatSun = `, isFriSatSun, '\n');
+  // console.log('\n', `convertedDate = `, convertedDate, '\n');
+  // console.log('\n', `blackoutDays = `, blackoutDays, '\n');
+  // console.log('\n', `isBlackoutDay = `, isBlackoutDay, '\n');
+  // console.groupEnd();
+  // }
+
+  return isAfterDayFortyFive && isFriSatSun && !isBlackoutDay;
 });

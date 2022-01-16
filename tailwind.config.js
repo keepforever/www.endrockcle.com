@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
@@ -13,7 +14,7 @@ function withOpacity(variableName) {
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
@@ -21,15 +22,17 @@ module.exports = {
         primary: ['Inter', ...fontFamily.sans],
       },
       colors: {
+        dark: '#222222',
+        gray: colors.neutral,
+        current: 'currentColor',
+        'erc-red': '#EE3142',
+        'erc-yellow': '#E9E71F',
+        'erc-blue': '#201B50',
         primary: {
           // Customize it on globals.css :root
           400: withOpacity('--tw-clr-primary-400'),
           500: withOpacity('--tw-clr-primary-500'),
         },
-        dark: '#222222',
-        'erc-red': '#EE3142',
-        'erc-yellow': '#E9E71F',
-        'erc-blue': '#201B50',
       },
       keyframes: {
         flicker: {
@@ -52,9 +55,6 @@ module.exports = {
         'hero-light': "url('/svg/endless-constellation.svg')",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),

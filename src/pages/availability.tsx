@@ -25,6 +25,7 @@ const Shows: React.FC = () => {
       setShowCopyIndex('');
     }, 2000);
   };
+
   return (
     <AppShell>
       <Seo templateTitle='Availability' />

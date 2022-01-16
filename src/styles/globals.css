@@ -85,6 +85,6 @@
   }
 
   .kangaroo {
-    @apply text-blue-400 dark:text-yellow-400;
+    @apply text-blue-400 dark:text-amber-400;
   }
 }
