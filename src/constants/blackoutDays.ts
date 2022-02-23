@@ -5,6 +5,8 @@ export const blackoutDays = [
   '3/13/2022',
   '3/26/2022', // sean
   '4/1/2022',
+  '4/2/2022', // grindstone taphouse Berea oh gig
+  '4/3/2022', // one show per weekend blackout
   '4/8/2022',
   '4/9/2022',
   '4/10/2022',
