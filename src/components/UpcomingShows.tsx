@@ -37,13 +37,14 @@ export default function UpcomingShows({
                 className='flex-col bg-gray-600 text-gray-300 py-4 px-4 rounded-lg backdrop-filter backdrop-blur-lg bg-opacity-60 hover:shadow-lg transition duration-500 ease-in-out hover:drop-shadow-lg hover:bg-opacity-70'
                 key={s.id}
               >
-                <div className='font-extrabold text-2xl mb-2'>
+                <div className='font-extrabold text-2xl md:text-3xl mb-1'>
                   {s.venueName}
                 </div>
+                <div className='font-bold text-xl mb-2 italic'>{s.city}</div>
                 <div className='font-normal'>
                   {new Date(s.date).toDateString()}
                 </div>
-                <div className='font-normal mb-2'>{s.beginEnd}</div>
+                <div className='font-normal mb-3'>{s.beginEnd}</div>
                 {s.url && (
                   <a
                     className='flex items-center text-erc-yellow hover:text-erc-red transition duration-500 ease-in-out'
