@@ -40,9 +40,11 @@ export const blackoutDays = [
   '8/18/2022', // Roundhouse show (PIB)
   '8/19/2022',
   '8/20/2022',
-  '9/2/2022', // OSPW
-  '9/3/2022', // OSPW
-  '9/10/2022', // THe works show
+  '9/2/2022', // Elena's Wedding
+  '9/3/2022', // Elena's wedding
+  '9/9/2022', // OSPW
+  '9/10/2022', // The works show
+  '9/11/2022', // OSPW
   '10/8/2022',
   '12/23/2022',
   '12/24/2022',
