@@ -16,14 +16,14 @@ export const shows = [
   {
     id: 3,
     date: '05/06/2022',
-    venueName: 'The Basement (Twinsburg, Oh)',
+    venueName: 'The Basement (Twinsburg)',
     beginEnd: '8 pm - 12 pm',
     url: 'https://www.facebook.com/TheBasementTwinsburg',
   },
   {
     id: 4,
     date: '07/22/2022',
-    venueName: 'The Basement (Twinsburg, Oh)',
+    venueName: 'The Basement (Twinsburg)',
     beginEnd: '8 pm - 12 pm',
     url: 'https://www.facebook.com/TheBasementTwinsburg',
   },
