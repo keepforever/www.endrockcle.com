@@ -40,11 +40,13 @@ export default function UpcomingShows({
                 <div className='font-extrabold text-2xl md:text-3xl mb-1'>
                   {s.venueName}
                 </div>
-                <div className='font-bold text-xl mb-2 italic'>{s.city}</div>
-                <div className='font-normal'>
+                <div className='font-bold text-xl mb-2 italic text-erc-yellow'>
+                  {s.city}
+                </div>
+                <div className='font-normal text-xl'>
                   {new Date(s.date).toDateString()}
                 </div>
-                <div className='font-normal mb-3'>{s.beginEnd}</div>
+                <div className='font-normal mb-3 text-xl'>{s.beginEnd}</div>
                 {s.url && (
                   <a
                     className='flex items-center text-erc-yellow hover:text-erc-red transition duration-500 ease-in-out'
