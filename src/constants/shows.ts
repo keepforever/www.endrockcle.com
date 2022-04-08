@@ -29,6 +29,15 @@ export const shows: Show[] = [
   },
 
   {
+    id: 32,
+    date: '06/04/2022',
+    city: 'Cuyahoga Falls',
+    venueName: "McArthur's Brew House",
+    beginEnd: '7 pm - 10 pm',
+    url: 'https://www.facebook.com/mcarthursbrewhouse',
+  },
+
+  {
     id: 5,
     date: '07/09/2022',
     venueName: 'The Workz',
