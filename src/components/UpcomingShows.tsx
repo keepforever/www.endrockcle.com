@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
 import clsx from 'clsx';
+import { isAfter } from 'date-fns';
 import { FaGlobe } from 'react-icons/fa';
 
 import { Show } from '@/interfaces/Show';
@@ -32,11 +33,25 @@ export default function UpcomingShows({
       >
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
           {shows.map((s) => {
+            const currentDate = new Date();
+            const showDate = new Date(s.date);
+            const isInFuture = isAfter(showDate, currentDate);
+
             return (
               <div
-                className='flex-col bg-gray-600 text-gray-300 py-4 px-4 rounded-lg backdrop-filter backdrop-blur-lg bg-opacity-60 hover:shadow-lg transition duration-500 ease-in-out hover:drop-shadow-lg hover:bg-opacity-70'
+                className={clsx(
+                  'flex-col bg-gray-600 text-gray-300 py-4 px-4 rounded-lg backdrop-filter backdrop-blur-lg bg-opacity-60 hover:shadow-lg transition duration-500 ease-in-out hover:drop-shadow-lg hover:bg-opacity-70 relative',
+                  {
+                    'opacity-80': !isInFuture,
+                  }
+                )}
                 key={s.id}
               >
+                {!isInFuture ? (
+                  <div className='absolute top-20 left-14 text-6xl text-erc-red font-extrabold -rotate-12 opacity-70'>
+                    ROCKED!
+                  </div>
+                ) : null}
                 <div className='font-extrabold text-2xl md:text-3xl mb-1'>
                   {s.venueName}
                 </div>
