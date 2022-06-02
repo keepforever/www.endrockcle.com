@@ -64,7 +64,7 @@ export function getOrdinalNum(n: number) {
 }
 
 export const availableDates = daysOfYear.filter((date, index) => {
-  const isAfterDayFortyFive = index > 98;
+  const isAfterDayFortyFive = index > 153;
 
   const isFriSatSun =
     date.getDay() === 0 || date.getDay() === 6 || date.getDay() === 5;
