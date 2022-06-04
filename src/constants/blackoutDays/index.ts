@@ -1,1 +1,1 @@
-export { blackoutDays } from './blackoutDays';
+export { blackoutDays } from './combinedBlackoutDays';
