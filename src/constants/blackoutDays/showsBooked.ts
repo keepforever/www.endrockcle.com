@@ -20,6 +20,9 @@ export const showsBooked = [
   '8/19/2022', // OSPW
   '8/20/2022', // OSPW
   '8/21/2022', // OSPW
+  '8/26/2022', // McArthur's Show (rescheduled)
+  '8/28/2022', // OSPW
+  '9/4/2022', // OSPW
   '9/9/2022', // OSPW
   '9/10/2022', // The works show
   '9/11/2022', // OSPW

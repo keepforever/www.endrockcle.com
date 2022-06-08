@@ -63,23 +63,18 @@ export function getOrdinalNum(n: number) {
   );
 }
 
+// function to determine if date is in the past
+export const isPast = (date: Date) => {
+  return date < new Date();
+};
+
 export const availableDates = daysOfYear.filter((date, index) => {
   const isAfterDayFortyFive = index > 153;
-
+  const isDateInPast = isPast(date);
   const isFriSatSun =
     date.getDay() === 0 || date.getDay() === 6 || date.getDay() === 5;
   const convertedDate = convertDate(date);
   const isBlackoutDay = blackoutDays.includes(convertedDate);
 
-  // if (convertDate(date) === '5/6/2022') {
-  // console.group(`blackout.ts`);
-  // console.log('\n', `isAfterDayFortyFive = `, isAfterDayFortyFive, '\n');
-  // console.log('\n', `isFriSatSun = `, isFriSatSun, '\n');
-  // console.log('\n', `convertedDate = `, convertedDate, '\n');
-  // console.log('\n', `blackoutDays = `, blackoutDays, '\n');
-  // console.log('\n', `isBlackoutDay = `, isBlackoutDay, '\n');
-  // console.groupEnd();
-  // }
-
-  return isAfterDayFortyFive && isFriSatSun && !isBlackoutDay;
+  return isAfterDayFortyFive && isFriSatSun && !isBlackoutDay && !isDateInPast;
 });
