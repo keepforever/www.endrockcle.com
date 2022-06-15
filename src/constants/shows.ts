@@ -7,7 +7,7 @@ export const shows: Show[] = [
     venueName: 'Grindstone Tap House',
     city: 'Berea',
     beginEnd: '8 pm - 11 pm',
-    url: 'https://www.google.com/maps/search/?api=1&query=826%20Front%20Street%2C%20Berea%2C%20OH%2044017&query_place_id=ChIJA2_i48qUMIgRbVuO-nNEs7Q',
+    url: 'https://www.facebook.com/GrindstoneTaps',
   },
 
   {
@@ -29,7 +29,7 @@ export const shows: Show[] = [
   },
 
   {
-    id: 5,
+    id: 4,
     date: '07/09/2022',
     venueName: 'The Workz',
     city: 'Cuyahoga Falls',
@@ -38,7 +38,7 @@ export const shows: Show[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     date: '07/22/2022',
     venueName: 'The Basement',
     city: 'Twinsburg',
@@ -56,7 +56,7 @@ export const shows: Show[] = [
   },
 
   {
-    id: 32,
+    id: 7,
     date: '08/26/2022',
     city: 'Cuyahoga Falls',
     venueName: "McArthur's Brew House",
@@ -65,11 +65,20 @@ export const shows: Show[] = [
   },
 
   {
-    id: 7,
+    id: 8,
     date: '09/10/2022',
     venueName: 'The Workz',
     city: 'Cuyahoga Falls',
     beginEnd: '8 pm - 11 pm',
     url: 'https://www.facebook.com/playattheworkz/events/?ref=page_internal',
+  },
+
+  {
+    id: 9,
+    date: '10/22/2022',
+    venueName: 'Grindstone Tap House',
+    city: 'Berea',
+    beginEnd: '8 pm - 11 pm',
+    url: 'https://www.facebook.com/GrindstoneTaps',
   },
 ];

@@ -26,4 +26,7 @@ export const showsBooked = [
   '9/9/2022', // OSPW
   '9/10/2022', // The works show
   '9/11/2022', // OSPW
+  '10/21/2022', // OSPW
+  '10/22/2022', // Grindstone show
+  '10/23/2022', // OSPW
 ];
