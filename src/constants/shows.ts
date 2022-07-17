@@ -30,7 +30,7 @@ export const shows: Show[] = [
 
   {
     id: 4,
-    date: '07/09/2022',
+    date: '7/09/2022',
     venueName: 'The Workz',
     city: 'Cuyahoga Falls',
     beginEnd: '8 pm - 11 pm',

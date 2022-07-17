@@ -37,6 +37,11 @@ export default function UpcomingShows({
             const showDate = new Date(s.date);
             const isInFuture = isAfter(showDate, currentDate);
 
+            // eslint-disable-next-line no-console
+            console.info('\n', `s = `, s, '\n');
+            // eslint-disable-next-line no-console
+            console.info('\n', `isInFuture = `, isInFuture, '\n');
+
             return (
               <div
                 className={clsx(
