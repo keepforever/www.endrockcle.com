@@ -107,7 +107,7 @@ export const FeatureSection = () => {
                     maxWidth: '100%',
                     minWidth: '100%',
                   }}
-                  src='https://www.youtube.com/embed/SyAMNObui-c'
+                  src='https://www.youtube.com/embed/am_p8kuoRHQ'
                   frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen
