@@ -51,7 +51,7 @@ export const shows: Show[] = [
     date: '08/18/2022',
     venueName: 'The Roundhouse (PIB)',
     city: 'Put-in-Bay',
-    beginEnd: '8 pm - 11 pm',
+    beginEnd: '8:30 pm - 12 am',
     url: 'https://www.theroundhousebar.com/',
   },
 
