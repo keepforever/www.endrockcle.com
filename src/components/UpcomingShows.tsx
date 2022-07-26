@@ -38,7 +38,7 @@ export default function UpcomingShows({
             const isInFuture = isAfter(showDate, currentDate);
 
             // eslint-disable-next-line no-console
-            console.info('\n', `s = `, s, '\n');
+            console.info('\n', `s.date = `, s.date, '\n');
             // eslint-disable-next-line no-console
             console.info('\n', `isInFuture = `, isInFuture, '\n');
 
@@ -53,7 +53,7 @@ export default function UpcomingShows({
                 key={s.id}
               >
                 {!isInFuture ? (
-                  <div className='absolute top-20 left-14 text-6xl text-erc-red font-extrabold -rotate-12 opacity-70'>
+                  <div className='top-20 left-14 text-6xl text-erc-red font-extrabold -rotate-12 opacity-70 absolute'>
                     ROCKED!
                   </div>
                 ) : null}
