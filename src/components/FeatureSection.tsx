@@ -15,7 +15,7 @@ export const FeatureSection = () => {
             <h2 className='text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-300'>
               High-energy, Alternative Rock
             </h2>
-            <p className='mt-4 text-xl text-gray-300'>
+            <p className='mt-4 text-2xl text-gray-300'>
               <strong>EndRock</strong> is a high-energy, alternative rock cover
               band based in Cleveland, Ohio. We play alternative rock from the
               ‘90s and early ‘00s.
@@ -51,7 +51,7 @@ export const FeatureSection = () => {
             <h2 className='text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-300'>
               Hype Video, Incoming!
             </h2>
-            <p className='mt-4 text-xl text-gray-300'>
+            <p className='mt-4 text-2xl text-gray-300'>
               <strong>Watch</strong> our promo video, get excited, and book us
               for your venue or private party.
             </p>
@@ -96,10 +96,7 @@ export const FeatureSection = () => {
                 EndRock Live in Concert
               </h2>
 
-              <div className='mt-6 max-w-2xl mx-auto'>
-                <h2 className='text-2xl font-medium text-gray-300 mt-16'>
-                  Live from Grindstone, Berea:
-                </h2>
+              <div className='mt-6 max-w-2xl mx-auto mb-16'>
                 <iframe
                   width='600'
                   height='375'
@@ -112,6 +109,28 @@ export const FeatureSection = () => {
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen
                 ></iframe>
+                <h2 className='text-2xl font-medium text-gray-300 mt-4'>
+                  "Say it Ain't So" (Weezer Cover) @ Grindstone, Berea
+                </h2>
+              </div>
+
+              <div className='mt-6 max-w-2xl mx-auto'>
+                <iframe
+                  width='600'
+                  height='375'
+                  style={{
+                    maxWidth: '100%',
+                    minWidth: '100%',
+                  }}
+                  src='https://www.youtube.com/embed/CF9Tc9Chibs'
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                ></iframe>
+                <h2 className='text-2xl font-medium text-gray-300 mt-4'>
+                  "Man in the Box" (Alice in Chains Cover) @ The Workz, Cuyahoga
+                  Falls
+                </h2>
               </div>
 
               <div className='flex justify-center mt-16'>
