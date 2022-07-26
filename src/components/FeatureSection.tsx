@@ -98,7 +98,7 @@ export const FeatureSection = () => {
 
               <div className='mt-6 max-w-2xl mx-auto'>
                 <h2 className='text-2xl font-medium text-gray-300 mt-16'>
-                  Live from Garage Bar, Willoughby:
+                  Live from Grindstone, Berea:
                 </h2>
                 <iframe
                   width='600'
