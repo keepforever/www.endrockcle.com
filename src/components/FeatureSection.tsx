@@ -133,6 +133,24 @@ export const FeatureSection = () => {
                 </h2>
               </div>
 
+              <div className='mt-6 max-w-2xl mx-auto'>
+                <iframe
+                  width='600'
+                  height='375'
+                  style={{
+                    maxWidth: '100%',
+                    minWidth: '100%',
+                  }}
+                  src='https://www.youtube.com/embed/h-IHjMfmyYw'
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                ></iframe>
+                <h2 className='text-2xl font-medium text-gray-300 mt-4'>
+                  "Sabotage" (Beastie Boys Cover) @ Stella's Downtown CLE
+                </h2>
+              </div>
+
               <div className='flex justify-center mt-16'>
                 <Link href='/song-list'>
                   <a className='px-8 py-4 text-gray-300 text-4xl  border-4 border-gray-300 hover:border-erc-yellow hover:text-erc-yellow transition duration-500 ease-in-out'>
