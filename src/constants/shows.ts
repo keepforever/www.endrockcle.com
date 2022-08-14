@@ -75,6 +75,15 @@ export const shows: Show[] = [
 
   {
     id: 9,
+    date: '09/23/2022',
+    venueName: 'Clutch Lanes & Sports Center',
+    city: 'Cuyahoga Falls',
+    beginEnd: '8 pm - 11 pm',
+    url: 'https://www.facebook.com/ClutchLanes',
+  },
+
+  {
+    id: 10,
     date: '10/22/2022',
     venueName: 'Grindstone Tap House',
     city: 'Berea',
