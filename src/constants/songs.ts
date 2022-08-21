@@ -294,4 +294,9 @@ export const songs = [
     artist: 'Rage Against the Machine',
     title: 'Bulls on Parade',
   },
+  {
+    id: 101,
+    artist: 'Rancid',
+    title: 'Ruby Soho',
+  },
 ];

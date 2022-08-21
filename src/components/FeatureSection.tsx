@@ -1,7 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-/* This example requires Tailwind CSS v2.0+ */
-// import { FaDrum } from 'react-icons/fa';
 import Link from 'next/link';
 
 export const FeatureSection = () => {
@@ -29,22 +27,6 @@ export const FeatureSection = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className='relative my-24'>
-          <div className='absolute inset-0'>
-            <img
-              className='w-full h-full object-cover'
-              src='media-header.jpg'
-              alt='full band'
-            />
-            <div className='absolute inset-0' aria-hidden='true' />
-          </div>
-          <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 opacity-0'>
-            <h1 className='text-right text-4xl font-extrabold tracking-tight text-gray-300 sm:text-5xl lg:text-6xl'>
-              Media
-            </h1>
-          </div>
-        </div> */}
 
         <div>
           <div className='mt-6'>
@@ -92,9 +74,28 @@ export const FeatureSection = () => {
         <div className='mx-auto'>
           <div>
             <div className='mt-6'>
-              <h2 className='text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-300'>
+              <h2 className='text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-300 mb-12'>
                 EndRock Live in Concert
               </h2>
+
+              <div className='mt-6 max-w-2xl mx-auto mb-16'>
+                <iframe
+                  width='600'
+                  height='375'
+                  style={{
+                    maxWidth: '100%',
+                    minWidth: '100%',
+                  }}
+                  src='https://www.youtube.com/embed/V_HBF9MwuT4'
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                ></iframe>
+                <h2 className='text-2xl font-medium text-gray-300 mt-4'>
+                  "Seven Nation Army" (The White Stripes Cover) @ The Roundhouse
+                  Bar, Put-in-Bay Falls
+                </h2>
+              </div>
 
               <div className='mt-6 max-w-2xl mx-auto mb-16'>
                 <iframe
@@ -114,7 +115,7 @@ export const FeatureSection = () => {
                 </h2>
               </div>
 
-              <div className='mt-6 max-w-2xl mx-auto'>
+              <div className='mt-6 max-w-2xl mx-auto mb-16'>
                 <iframe
                   width='600'
                   height='375'

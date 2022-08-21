@@ -36,16 +36,7 @@ export default function Contact() {
                 <strong>Now</strong> accepting dates for all of 2022! Reach out
                 at any of the channels below to book us for your event.
               </p>
-              {/* <dl className='mt-2 text-base text-gray-300'>
-                  <div>
-                    <dt className='sr-only'>Email</dt>
-                    <dd>endrockcle@gmail.com</dd>
-                  </div>
-                  <div className='mt-1'>
-                    <dt className='sr-only'>Phone Number</dt>
-                    <dd>(440) 479-9073</dd>
-                  </div>
-                </dl> */}
+
               <div className='flex justify-start mt-16'>
                 <a
                   href='https://www.facebook.com/EndRockCle'
