@@ -83,7 +83,7 @@ export const shows: Show[] = [
 
   {
     id: 9,
-    isPast: false,
+    isPast: true,
     date: '09/23/2022',
     venueName: 'Clutch Lanes & Sports Center',
     city: 'Cuyahoga Falls',
