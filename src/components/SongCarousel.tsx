@@ -8,6 +8,8 @@ import { Song } from '@/interfaces/Song';
 import { partition } from '@/utils/partition';
 import { shuffle } from '@/utils/shuffle';
 
+import { EndRockGradientText } from './EndRockGradientText';
+
 type Props = {
   songs: Song[];
 };
@@ -66,7 +68,9 @@ export const SongCarousel: React.FC<Props> = ({ songs }) => {
     <>
       <div className='text-center'>
         <p className='mt-1 text-4xl font-extrabold text-gray-300 sm:text-5xl sm:tracking-tight lg:text-6xl'>
-          Songs You Love
+          <EndRockGradientText className='leading-relaxed'>
+            Songs You Love
+          </EndRockGradientText>
         </p>
         <p className='max-w-xl mt-5 mx-auto text-xl text-gray-300'>
           Playing a mix of 90's, 00's, and a few classics.

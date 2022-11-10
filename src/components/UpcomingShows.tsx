@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
 import clsx from 'clsx';
-import { FaGlobe } from 'react-icons/fa';
 
 import { Show } from '@/interfaces/Show';
+
+import { EndRockGradientText } from './EndRockGradientText';
+import { ShowCardAlt } from './ShowCardAlt';
 
 export default function UpcomingShows({
   shouldHideHeader = false,
@@ -17,7 +19,9 @@ export default function UpcomingShows({
       {!shouldHideHeader && (
         <div className='text-center mb-16'>
           <p className='mt-1 text-4xl font-extrabold text-gray-300 sm:text-5xl sm:tracking-tight lg:text-6xl'>
-            Upcoming Shows
+            <EndRockGradientText className='leading-relaxed'>
+              Upcoming Shows
+            </EndRockGradientText>
           </p>
           <p className='max-w-xl mt-5 mx-auto text-xl text-gray-300'>
             Come out and enjoy the show!
@@ -30,46 +34,9 @@ export default function UpcomingShows({
           'mt-24': shouldHideHeader,
         })}
       >
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
           {shows.map((s) => {
-            return (
-              <div
-                className={clsx(
-                  'flex-col bg-gray-600 text-gray-300 py-4 px-4 rounded-lg backdrop-filter backdrop-blur-lg bg-opacity-60 hover:shadow-lg transition duration-500 ease-in-out hover:drop-shadow-lg hover:bg-opacity-70 relative',
-                  {
-                    'opacity-80': s.isPast,
-                  }
-                )}
-                key={s.id}
-              >
-                {s.isPast ? (
-                  <div className='top-20 left-14 text-6xl text-erc-red font-extrabold -rotate-12 opacity-70 absolute'>
-                    ROCKED!
-                  </div>
-                ) : null}
-                <div className='font-extrabold text-2xl md:text-3xl mb-1'>
-                  {s.venueName}
-                </div>
-                <div className='font-bold text-xl mb-2 italic text-erc-yellow'>
-                  {s.city}
-                </div>
-                <div className='font-normal text-xl'>
-                  {new Date(s.date).toDateString()}
-                </div>
-                <div className='font-normal mb-3 text-xl'>{s.beginEnd}</div>
-                {s.url && (
-                  <a
-                    className='flex items-center text-erc-yellow hover:text-erc-red transition duration-500 ease-in-out'
-                    href={s.url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FaGlobe className='h-6 w-6 opacity-70 hover:opacity-100 mr-2' />
-                    website
-                  </a>
-                )}
-              </div>
-            );
+            return <ShowCardAlt key={s.id} show={s} />;
           })}
         </div>
       </div>
