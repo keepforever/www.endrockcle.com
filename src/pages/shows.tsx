@@ -8,7 +8,7 @@ import { PageHeaderWithTitle } from '@/components/PageHeaderWithTitle';
 import Seo from '@/components/Seo';
 import UpcomingShows from '@/components/UpcomingShows';
 
-import { shows } from '@/constants/shows';
+import { shows2022 as shows } from '@/constants/shows2022';
 import { Show } from '@/interfaces/Show';
 
 type Props = {

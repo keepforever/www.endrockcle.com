@@ -1,6 +1,6 @@
 import { Show } from '@/interfaces/Show';
 
-export const shows: Show[] = [
+export const shows2022: Show[] = [
   {
     id: 1,
     isPast: true,
@@ -99,5 +99,15 @@ export const shows: Show[] = [
     city: 'Berea',
     beginEnd: '8 pm - 11 pm',
     url: 'https://www.facebook.com/GrindstoneTaps',
+  },
+
+  {
+    id: 11,
+    isPast: false,
+    date: '03/03/2023',
+    venueName: "Sassy's Bar & Grill",
+    city: 'Twinsburg',
+    beginEnd: '9 pm - 12 pm',
+    url: 'https://www.facebook.com/sassysbarandgrille/',
   },
 ];

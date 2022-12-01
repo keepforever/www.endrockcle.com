@@ -10,7 +10,7 @@ import Seo from '@/components/Seo';
 import { SongCarousel } from '@/components/SongCarousel';
 import UpcomingShows from '@/components/UpcomingShows';
 
-import { shows } from '@/constants/shows';
+import { shows2022 as shows } from '@/constants/shows2022';
 import { songs } from '@/constants/songs';
 import { Show } from '@/interfaces/Show';
 import { Song } from '@/interfaces/Song';

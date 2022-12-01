@@ -14,8 +14,15 @@ export const ShowCardAlt: React.FC<Props> = ({ show }) => {
   return (
     <div
       key={show.id}
-      className='mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60'
+      className='mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60 relative'
     >
+      {show.isPast ? (
+        <div className='absolute top-1/4 left-[40%] -rotate-12 opacity-60'>
+          <span className='text-4xl sm:text-5xl text-erc-red tracking-tight font-extrabold'>
+            Rocked
+          </span>
+        </div>
+      ) : null}
       {/* date square */}
 
       <div className='flex w-16 items-center justify-center rounded bg-erc-red bg-opacity-75 py-2'>
