@@ -33,7 +33,7 @@ export default function Contact() {
                 Message Us for More Info
               </h2>
               <p className='mt-4 text-xl text-gray-300'>
-                <strong>Now</strong> accepting dates for all of 2022! Reach out
+                <strong>Now</strong> accepting dates for all of 2023! Reach out
                 at any of the channels below to book us for your event.
               </p>
 
