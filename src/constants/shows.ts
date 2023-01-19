@@ -73,7 +73,7 @@ export const shows: Show[] = [
   {
     id: 6,
     isPast: false,
-    date: '11/23/2023',
+    date: '11/22/2023',
     venueName: 'Grindstone Tap House',
     city: 'Berea',
     beginEnd: '7 pm - 10 pm',
