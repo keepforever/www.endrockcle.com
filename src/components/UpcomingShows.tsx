@@ -23,7 +23,7 @@ export default function UpcomingShows({
               Upcoming Shows
             </EndRockGradientText>
           </p>
-          <p className='max-w-xl mt-5 mx-auto text-xl text-gray-300'>
+          <p className='max-w-xl mt-5 mx-auto text-2xl text-gray-300'>
             Come out and enjoy the show!
           </p>
         </div>
