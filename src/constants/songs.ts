@@ -299,4 +299,44 @@ export const songs = [
     artist: 'Rancid',
     title: 'Ruby Soho',
   },
+  {
+    id: 102,
+    artist: 'Good Charlotte',
+    title: 'The Anthem',
+  },
+  {
+    id: 103,
+    artist: 'Stone Temple Pilots',
+    title: 'Interstate Love Song',
+  },
+  {
+    id: 104,
+    artist: 'Radiohead',
+    title: 'Creep',
+  },
+  {
+    id: 105,
+    artist: 'Weezer',
+    title: 'My Name Is Jonas',
+  },
+  {
+    id: 106,
+    artist: 'The Killers',
+    title: 'When You Were Young',
+  },
+  {
+    id: 107,
+    artist: 'Green Day',
+    title: 'Longview',
+  },
+  {
+    id: 108,
+    artist: 'Marcy Playground',
+    title: 'Sex and Candy',
+  },
+  {
+    id: 109,
+    artist: 'Rob Zombie',
+    title: 'Dragula',
+  },
 ];

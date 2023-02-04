@@ -6,27 +6,15 @@ import Link from 'next/link';
 import React from 'react';
 
 import AppShell from '@/components/layouts/AppShell';
+import { PageHeaderWithTitle } from '@/components/PageHeaderWithTitle';
 import Seo from '@/components/Seo';
 
 export default function Media({ images = [] }) {
   return (
     <AppShell>
       <Seo templateTitle='Media' />
-      <div className='relative'>
-        <div className='absolute inset-0'>
-          <img
-            className='w-full h-full object-cover'
-            src='media-header.jpg'
-            alt='full band'
-          />
-          <div className='absolute inset-0' aria-hidden='true' />
-        </div>
-        <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 opacity-80'>
-          <h1 className='text-right text-4xl font-extrabold tracking-tight text-gray-300 sm:text-5xl lg:text-6xl'>
-            Media
-          </h1>
-        </div>
-      </div>
+
+      <PageHeaderWithTitle title='Media' imageUrl='media-header.jpg' />
 
       <div className='container grid grid-cols-1 gap-3 md:gap-12 md:grid-cols-2 px-2 mx-auto mt-20'>
         {images.map((url) => {

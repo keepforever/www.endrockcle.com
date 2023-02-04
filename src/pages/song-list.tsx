@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import AppShell from '@/components/layouts/AppShell';
+import { PageHeaderWithTitle } from '@/components/PageHeaderWithTitle';
 import Seo from '@/components/Seo';
 
 import { songs } from '@/constants/songs';
@@ -25,21 +26,10 @@ const SongList: React.FC<Props> = ({ songs }) => {
     <AppShell>
       <Seo templateTitle='Set List' />
 
-      <div className='relative'>
-        <div className='absolute inset-0'>
-          <img
-            className='w-full h-full object-cover'
-            src='collision-bend/band-line-up.jpg'
-            alt='full band'
-          />
-          <div className='absolute inset-0' aria-hidden='true' />
-        </div>
-        <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 opacity-80'>
-          <h1 className='text-right text-4xl font-extrabold tracking-tight text-gray-300 sm:text-5xl lg:text-6xl'>
-            Songs
-          </h1>
-        </div>
-      </div>
+      <PageHeaderWithTitle
+        title='Songs We Play'
+        imageUrl='collision-bend/band-line-up.jpg'
+      />
 
       <div className='container flex flex-wrap max-w-lg md:max-w-6xl lg:max-w-8xl mx-auto mt-16 px-2'>
         {shuffle(songs).map((el: { artist: string; title: string }) => {

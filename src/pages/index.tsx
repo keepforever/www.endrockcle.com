@@ -2,7 +2,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { FaFacebook /* FaInstagramSquare */ } from 'react-icons/fa';
+import { FaFacebook, FaInstagramSquare } from 'react-icons/fa';
 
 import { FeatureSection } from '@/components/FeatureSection';
 import AppShell from '@/components/layouts/AppShell';
@@ -68,8 +68,17 @@ const HomePage: React.FC<Props> = ({ songs, shows }) => {
                 href='https://www.facebook.com/EndRockCle'
                 target='_blank'
                 rel='noopener noreferrer'
+                className='border-2 border-erc-yellow rounded-md p-1 opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out hover:bg-erc-blue hover:bg-opacity-50'
               >
-                <FaFacebook className='h-12 w-12 text-2xl text-erc-yellow opacity-70 hover:opacity-100' />
+                <FaFacebook className='h-12 w-12 text-2xl text-erc-yellow' />
+              </a>
+              <a
+                href='https://www.instagram.com/endrockcle/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='border-2 border-erc-yellow rounded-md p-1 opacity-70 hover:opacity-100 transition-opacity duration-300 ease-in-out hover:bg-erc-blue hover:bg-opacity-50'
+              >
+                <FaInstagramSquare className='h-12 w-12 text-2xl text-erc-yellow' />
               </a>
             </div>
           </div>
@@ -77,6 +86,7 @@ const HomePage: React.FC<Props> = ({ songs, shows }) => {
       </div>
 
       <FeatureSection />
+
       <div className='bg-gray-600 bg-opacity-40 py-12'>
         <UpcomingShows shouldHideHeader={false} shows={shows} />
       </div>
