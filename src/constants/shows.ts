@@ -55,7 +55,7 @@ export const shows: Show[] = [
     isPast: false,
     date: '06/10/2023',
     venueName: 'Mercury Music Lounge',
-    city: 'Put-in-Bay',
+    city: 'Lakewood',
     beginEnd: '9 pm - 1 am',
     url: 'https://www.facebook.com/MercuryMusicLounge',
   },
@@ -80,15 +80,15 @@ export const shows: Show[] = [
     url: 'https://www.theroundhousebar.com/',
   },
 
-  {
-    id: 9,
-    isPast: false,
-    date: '09/02/2023',
-    venueName: 'Private Event',
-    city: 'XO',
-    beginEnd: '?? - ??',
-    url: 'https://www.facebook.com/EndRockCle',
-  },
+  // {
+  //   id: 9,
+  //   isPast: false,
+  //   date: '09/02/2023',
+  //   venueName: 'Private Event',
+  //   city: 'XO',
+  //   beginEnd: '?? - ??',
+  //   url: 'https://www.facebook.com/EndRockCle',
+  // },
 
   {
     id: 10,
