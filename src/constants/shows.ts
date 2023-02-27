@@ -99,8 +99,18 @@ export const shows: Show[] = [
     beginEnd: '1 pm - 4 pm',
     url: 'https://www.theroundhousebar.com/',
   },
+
   {
     id: 11,
+    isPast: false,
+    date: '10/14/2023',
+    venueName: 'The Workz',
+    city: 'Cuyahoga Falls',
+    beginEnd: '8 pm - 11 pm',
+    url: 'https://www.facebook.com/playattheworkz/about',
+  },
+  {
+    id: 12,
     isPast: false,
     date: '11/22/2023',
     venueName: 'Grindstone Tap House',
