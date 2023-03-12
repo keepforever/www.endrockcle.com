@@ -14,7 +14,7 @@ export const ShowCardAlt: React.FC<Props> = ({ show }) => {
   return (
     <div
       key={show.id}
-      className='mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60 relative'
+      className='mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60 relative text-gray-200'
     >
       {show.isPast ? (
         <div className='absolute top-1/4 left-[40%] -rotate-12 opacity-60'>
