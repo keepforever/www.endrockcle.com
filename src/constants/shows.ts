@@ -3,7 +3,7 @@ import { Show } from '@/interfaces/Show';
 export const shows: Show[] = [
   {
     id: 1,
-    isPast: false,
+    isPast: true,
     date: '03/03/2023',
     venueName: "Sassy's Bar & Grille",
     city: 'Twinsburg',
@@ -12,7 +12,7 @@ export const shows: Show[] = [
   },
   {
     id: 2,
-    isPast: false,
+    isPast: true,
     date: '03/17/2023',
     venueName: 'Grindstone Tap House',
     city: 'Berea (St. Paddy’s Day 🍀)',
@@ -72,6 +72,16 @@ export const shows: Show[] = [
 
   {
     id: 8,
+    isPast: false,
+    date: '07/28/2023',
+    venueName: 'South Euclid Summer Concert Series',
+    city: 'South Euclid',
+    beginEnd: '7 pm - 10 pm',
+    url: 'https://www.facebook.com/EndRockCle/events',
+  },
+
+  {
+    id: 9,
     isPast: false,
     date: '08/03/2023',
     venueName: 'The Round House Bar',
