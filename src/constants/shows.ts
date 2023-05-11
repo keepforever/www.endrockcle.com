@@ -91,7 +91,7 @@ export const shows: Show[] = [
   },
 
   // {
-  //   id: 9,
+  //   id: 91,
   //   isPast: false,
   //   date: '09/02/2023',
   //   venueName: 'Private Event',
@@ -99,6 +99,16 @@ export const shows: Show[] = [
   //   beginEnd: '?? - ??',
   //   url: 'https://www.facebook.com/EndRockCle',
   // },
+
+  {
+    id: 92,
+    isPast: false,
+    date: '09/09/2023',
+    venueName: 'Shooters on the Water',
+    city: 'Cleveland',
+    beginEnd: '5pm - 9pm',
+    url: 'https://www.facebook.com/shootersflats/',
+  },
 
   {
     id: 10,

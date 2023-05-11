@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { format } from 'date-fns';
 import React from 'react';
 import { FaChevronRight, FaGlobe } from 'react-icons/fa';
@@ -14,7 +15,10 @@ export const ShowCardAlt: React.FC<Props> = ({ show }) => {
   return (
     <div
       key={show.id}
-      className='mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60 relative text-gray-200'
+      className={clsx(
+        'mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60 relative text-gray-200',
+        show.isPast && 'opacity-70'
+      )}
     >
       {show.isPast ? (
         <div className='absolute top-1/4 left-[40%] -rotate-12 opacity-60'>
@@ -27,13 +31,13 @@ export const ShowCardAlt: React.FC<Props> = ({ show }) => {
 
       <div className='flex w-16 items-center justify-center rounded bg-erc-red bg-opacity-75 py-2'>
         <div className='text-center'>
-          <div className='font-semibold leading-4'>
+          <div className='font-semibold leading-4 text-xl mb-1'>
             {format(dateObject, 'MMM')}
           </div>
           <div className='text-2xl font-bold leading-6 tracking-wider'>
             {format(dateObject, 'dd')}
           </div>
-          <div className='text-xs'>{format(dateObject, 'yyyy')}</div>
+          <div className='text-md'>{format(dateObject, 'yyyy')}</div>
         </div>
       </div>
 
