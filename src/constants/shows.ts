@@ -22,7 +22,7 @@ export const shows: Show[] = [
 
   {
     id: 3,
-    isPast: false,
+    isPast: true,
     date: '05/13/2023',
     venueName: 'Grindstone Tap House',
     city: 'Berea',
