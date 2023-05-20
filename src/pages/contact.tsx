@@ -10,7 +10,7 @@ export default function Contact() {
     <AppShell>
       <Seo templateTitle='Contact' />
 
-      <PageHeaderWithTitle title='Media' imageUrl='media-header.jpg' />
+      <PageHeaderWithTitle title='Contact' imageUrl='media-header.jpg' />
 
       <div className='py-20'>
         <div className='mx-auto max-w-4xl lg:px-8 px-4'>
