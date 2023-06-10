@@ -32,7 +32,7 @@ export const shows: Show[] = [
 
   {
     id: 4,
-    isPast: false,
+    isPast: true,
     date: '06/03/2023',
     venueName: 'The Round House Bar',
     city: 'Put-in-Bay',
@@ -42,7 +42,7 @@ export const shows: Show[] = [
 
   {
     id: 5,
-    isPast: false,
+    isPast: true,
     date: '06/04/2023',
     venueName: 'The Round House Bar',
     city: 'Put-in-Bay',
