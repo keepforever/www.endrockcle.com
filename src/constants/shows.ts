@@ -52,7 +52,7 @@ export const shows: Show[] = [
 
   {
     id: 6,
-    isPast: false,
+    isPast: true,
     date: '06/10/2023',
     venueName: 'Mercury Music Lounge',
     city: 'Lakewood',
