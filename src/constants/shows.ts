@@ -62,7 +62,7 @@ export const shows: Show[] = [
 
   {
     id: 7,
-    isPast: false,
+    isPast: true,
     date: '07/07/2023',
     venueName: 'Grindstone Tap House',
     city: 'Berea',
@@ -72,7 +72,7 @@ export const shows: Show[] = [
 
   {
     id: 8,
-    isPast: false,
+    isPast: true,
     date: '07/28/2023',
     venueName: 'South Euclid Summer Concert Series',
     city: 'South Euclid',
@@ -82,7 +82,7 @@ export const shows: Show[] = [
 
   {
     id: 9,
-    isPast: false,
+    isPast: true,
     date: '08/03/2023',
     venueName: 'The Round House Bar',
     city: 'Put-in-Bay',
