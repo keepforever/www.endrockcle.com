@@ -102,7 +102,7 @@ export const shows: Show[] = [
 
   {
     id: 92,
-    isPast: false,
+    isPast: true,
     date: '09/09/2023',
     venueName: 'Shooters on the Water',
     city: 'Cleveland',
@@ -112,7 +112,7 @@ export const shows: Show[] = [
 
   {
     id: 10,
-    isPast: false,
+    isPast: true,
     date: '09/17/2023',
     venueName: 'Oktoberfest',
     city: 'Cuyahoga Falls',
@@ -122,7 +122,7 @@ export const shows: Show[] = [
 
   {
     id: 11,
-    isPast: false,
+    isPast: true,
     date: '10/14/2023',
     venueName: 'The Workz',
     city: 'Cuyahoga Falls',
@@ -137,5 +137,14 @@ export const shows: Show[] = [
     city: 'Berea',
     beginEnd: '7 pm - 10 pm',
     url: 'https://www.facebook.com/GrindstoneTaps',
+  },
+  {
+    id: 13,
+    isPast: false,
+    date: '12/02/2023',
+    venueName: 'Mercury Music Lounge',
+    city: 'Lakewood',
+    beginEnd: '9 pm - 1 am',
+    url: 'https://www.facebook.com/MercuryMusicLounge',
   },
 ];
