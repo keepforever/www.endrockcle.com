@@ -117,7 +117,7 @@ export const shows: Show[] = [
     venueName: 'Oktoberfest',
     city: 'Cuyahoga Falls',
     beginEnd: '1 pm - 4 pm',
-    url: 'https://www.theroundhousebar.com/',
+    url: 'https://oktoberfestcfo.com/',
   },
 
   {
@@ -131,7 +131,7 @@ export const shows: Show[] = [
   },
   {
     id: 12,
-    isPast: false,
+    isPast: true,
     date: '11/22/2023',
     venueName: 'Grindstone Tap House',
     city: 'Berea',
@@ -164,5 +164,83 @@ export const shows: Show[] = [
     city: 'Twinsburg',
     beginEnd: '8 pm - 12 pm',
     url: 'https://www.facebook.com/sassysbarandgrille/',
+  },
+  {
+    id: 16,
+    isPast: false,
+    date: '03/22/2024',
+    venueName: 'Mercury Music Lounge',
+    city: 'Lakewood',
+    beginEnd: '9 pm - 1 am',
+    url: 'https://www.facebook.com/MercuryMusicLounge',
+  },
+  {
+    id: 17,
+    isPast: false,
+    date: '05/24/2024',
+    venueName: 'Mercury Music Lounge',
+    city: 'Lakewood',
+    beginEnd: '9 pm - 1 am',
+    url: 'https://www.facebook.com/MercuryMusicLounge',
+  },
+
+  {
+    id: 18,
+    isPast: false,
+    date: '06/14/2024',
+    venueName: 'Shooters on the Water',
+    city: 'Cleveland',
+    beginEnd: '9pm - 1am',
+    url: 'https://www.facebook.com/shootersflats/',
+  },
+
+  {
+    id: 19,
+    isPast: false,
+    date: '07/13/2024',
+    venueName: 'Shooters on the Water',
+    city: 'Cleveland',
+    beginEnd: '9pm - 1am',
+    url: 'https://www.facebook.com/shootersflats/',
+  },
+
+  {
+    id: 20,
+    isPast: false,
+    date: '09/06/2024',
+    venueName: 'Shooters on the Water',
+    city: 'Cleveland',
+    beginEnd: '9pm - 1am',
+    url: 'https://www.facebook.com/shootersflats/',
+  },
+
+  {
+    id: 21,
+    isPast: false,
+    date: '09/13/2024',
+    venueName: 'Mercury Music Lounge',
+    city: 'Lakewood',
+    beginEnd: '9 pm - 1 am',
+    url: 'https://www.facebook.com/MercuryMusicLounge',
+  },
+
+  {
+    id: 22,
+    isPast: false,
+    date: '09/20/2024',
+    venueName: 'Oktoberfest',
+    city: 'Cuyahoga Falls',
+    beginEnd: '1 pm - 4 pm',
+    url: 'https://oktoberfestcfo.com/',
+  },
+
+  {
+    id: 23,
+    isPast: false,
+    date: '11/23/2024',
+    venueName: 'Mercury Music Lounge',
+    city: 'Lakewood',
+    beginEnd: '9 pm - 1 am',
+    url: 'https://www.facebook.com/MercuryMusicLounge',
   },
 ];
