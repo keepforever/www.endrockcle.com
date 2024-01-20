@@ -17,7 +17,7 @@ export const ShowCardAlt: React.FC<Props> = ({ show }) => {
       key={show.id}
       className={clsx(
         'mb-6 flex gap-2 rounded bg-gray-600 bg-opacity-60 relative text-gray-200',
-        show.isPast && 'opacity-70'
+        show.isPast && 'opacity-75'
       )}
     >
       {show.isPast ? (

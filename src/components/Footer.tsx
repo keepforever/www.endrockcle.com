@@ -8,6 +8,7 @@ export const navigation = {
     { name: 'Media', href: '/media' },
     { name: 'Contact', href: '/contact' },
     { name: 'Shows', href: '/shows' },
+    { name: 'Show Archive', href: '/show-archive' },
   ],
   social: [
     {
