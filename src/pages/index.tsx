@@ -39,7 +39,7 @@ const HomePage: React.FC<Props> = ({ songs, shows }) => {
           autoPlay={true}
           className='absolute inset-0 h-screen w-full object-cover'
           id='myVideo'
-          src='/end-rock-hero-video.mp4'
+          src='/holiday-hangover-hero-vid.mp4'
           poster='/end-rock-stellas-large.jpg'
           playsInline={true}
           disablePictureInPicture={true}
