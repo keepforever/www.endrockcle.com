@@ -55,6 +55,16 @@ export const shows: Show[] = [
     beginEnd: '9pm - 1am',
     url: 'https://www.facebook.com/shootersflats/',
   },
+
+  {
+    id: 8737,
+    isPast: false,
+    date: '08/03/2024',
+    venueName: 'South Euclid Summer Concert Series',
+    city: 'South Euclid',
+    beginEnd: '7 pm - 10 pm',
+    url: 'https://www.facebook.com/EndRockCle/events',
+  },
   {
     id: 191,
     isPast: false,
