@@ -2,7 +2,6 @@ import { Show } from '@/interfaces/Show';
 
 export const shows: Show[] = [
   {
-    id: 14,
     isPast: true,
     date: '01/06/2024',
     venueName: 'House of Blues',
@@ -11,7 +10,6 @@ export const shows: Show[] = [
     url: 'https://www.houseofblues.com/cleveland/concert-events',
   },
   {
-    id: 15,
     isPast: false,
     date: '03/08/2024',
     venueName: "Sassy's Bar & Grille",
@@ -20,7 +18,6 @@ export const shows: Show[] = [
     url: 'https://www.facebook.com/sassysbarandgrille/',
   },
   {
-    id: 16,
     isPast: false,
     date: '03/22/2024',
     venueName: 'Mercury Music Lounge',
@@ -29,7 +26,23 @@ export const shows: Show[] = [
     url: 'https://www.facebook.com/MercuryMusicLounge',
   },
   {
-    id: 17,
+    isPast: false,
+    date: '04/06/2024',
+    // venueName: 'House of Blues',
+    venueName: 'TBA',
+    city: 'Cleveland',
+    beginEnd: '8 pm - 9 pm',
+    url: 'https://www.houseofblues.com/cleveland/concert-events',
+  },
+  {
+    isPast: false,
+    date: '05/18/2024',
+    venueName: 'The Workz',
+    city: 'Cuyahoga Falls',
+    beginEnd: '7 pm - 10 pm',
+    url: 'https://www.facebook.com/playattheworkz/events/?ref=page_internal',
+  },
+  {
     isPast: false,
     date: '05/24/2024',
     venueName: 'Mercury Music Lounge',
@@ -38,16 +51,38 @@ export const shows: Show[] = [
     url: 'https://www.facebook.com/MercuryMusicLounge',
   },
   {
-    id: 18,
     isPast: false,
-    date: '06/14/2024',
+    date: '06/07/2024',
+    venueName: 'The Round House Bar',
+    city: 'Put-in-Bay',
+    beginEnd: '9 pm - 12 am',
+    url: 'https://www.theroundhousebar.com/',
+  },
+  {
+    isPast: false,
+    date: '06/08/2024',
+    venueName: 'The Round House Bar',
+    city: 'Put-in-Bay',
+    beginEnd: '9 pm - 12 am',
+    url: 'https://www.theroundhousebar.com/',
+  },
+  {
+    isPast: false,
+    date: '06/21/2024',
     venueName: 'Shooters on the Water',
     city: 'Cleveland',
     beginEnd: '9pm - 1am',
     url: 'https://www.facebook.com/shootersflats/',
   },
   {
-    id: 19,
+    isPast: false,
+    date: '07/06/2024',
+    venueName: 'Wild Eagle',
+    city: 'Cleveland',
+    beginEnd: '10pm - 1am',
+    url: 'https://www.wildeagle.com/copy-of-events',
+  },
+  {
     isPast: false,
     date: '07/13/2024',
     venueName: 'Shooters on the Water',
@@ -57,7 +92,14 @@ export const shows: Show[] = [
   },
 
   {
-    id: 8737,
+    isPast: false,
+    date: '07/26/2024',
+    venueName: 'Time Warp',
+    city: 'Westlake',
+    beginEnd: '9pm - 1am',
+    url: 'https://www.facebook.com/timewarpbarwestlake/',
+  },
+  {
     isPast: false,
     date: '08/03/2024',
     venueName: 'South Euclid Summer Concert Series',
@@ -66,7 +108,6 @@ export const shows: Show[] = [
     url: 'https://www.facebook.com/EndRockCle/events',
   },
   {
-    id: 191,
     isPast: false,
     date: '08/14/2024',
     venueName: 'The Round House Bar',
@@ -75,7 +116,6 @@ export const shows: Show[] = [
     url: 'https://www.theroundhousebar.com/',
   },
   {
-    id: 192,
     isPast: false,
     date: '08/15/2024',
     venueName: 'The Round House Bar',
@@ -84,7 +124,6 @@ export const shows: Show[] = [
     url: 'https://www.theroundhousebar.com/',
   },
   {
-    id: 20,
     isPast: false,
     date: '09/06/2024',
     venueName: 'Shooters on the Water',
@@ -93,7 +132,6 @@ export const shows: Show[] = [
     url: 'https://www.facebook.com/shootersflats/',
   },
   {
-    id: 21,
     isPast: false,
     date: '09/13/2024',
     venueName: 'Mercury Music Lounge',
@@ -102,7 +140,6 @@ export const shows: Show[] = [
     url: 'https://www.facebook.com/MercuryMusicLounge',
   },
   {
-    id: 22,
     isPast: false,
     date: '09/20/2024',
     venueName: 'Oktoberfest',
@@ -111,7 +148,14 @@ export const shows: Show[] = [
     url: 'https://oktoberfestcfo.com/',
   },
   {
-    id: 23,
+    isPast: false,
+    date: '10/19/2024',
+    venueName: 'The Workz',
+    city: 'Cuyahoga Falls',
+    beginEnd: '7 pm - 10 pm',
+    url: 'https://www.facebook.com/playattheworkz/events/?ref=page_internal',
+  },
+  {
     isPast: false,
     date: '11/23/2024',
     venueName: 'Mercury Music Lounge',
@@ -119,4 +163,4 @@ export const shows: Show[] = [
     beginEnd: '9 pm - 1 am',
     url: 'https://www.facebook.com/MercuryMusicLounge',
   },
-];
+].map((show, index) => ({ ...show, id: index + 1 }));
